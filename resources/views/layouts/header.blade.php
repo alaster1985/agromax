@@ -6,11 +6,9 @@
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agromax</title>
-    {{--<link rel="stylesheet" href="css/fontawesome-free-5.6.3-web/css/all.css">--}}
-    {{--<link rel="stylesheet" href="bootstrap/bootstrap.min.css">--}}
-    {{--<link rel="stylesheet" href="css/style.css">--}}
     <link rel="stylesheet" href="{{asset('css/fontawesome-free-5.6.3-web/css/all.css')}}">
     <link rel="stylesheet" href="{{asset('bootstrap/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/nice-select.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
 </head>
 <body class="main-page">
@@ -41,7 +39,7 @@
                             <li class="site-nav__item "><a class="site-nav__link" href="/exclusive">Make
                                     exclusive order</a></li>
                             <li class="site-nav__item "><a class="site-nav__link"
-                                                           href="/confirmation">Charity</a></li>
+                                                           href="/charity">Charity</a></li>
                             <li class="site-nav__item "><a class="site-nav__link" href="/contacts">Contacts</a>
                             </li>
                             <li class="site-nav__item site-nav__item--search">

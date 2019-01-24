@@ -13,7 +13,8 @@
 
 Route::get('/', 'MainController@index')->name('index');
 Route::get('/exclusive', 'MainController@exclusive')->name('exclusive');
-Route::get('/confirmation/{id}', 'MainController@confirmation')->name('confirmation');
+Route::get('/confirmation/{id}', 'MainController@confirmationById')->name('confirmationById');
+Route::post('/confirmation', 'MainController@confirmation')->name('confirmation');
 Route::get('/charity', 'MainController@charity')->name('charity');
 Route::get('/contacts', 'MainController@contacts')->name('contacts');
 Route::get('/founder', 'MainController@founder')->name('founder');

@@ -19,14 +19,21 @@ class MainController extends Controller
     public function exclusive()
     {
         $deliveries = Delivery::getDeliveries();
-        $categories = Category::getCategories();
-        return view('exclusive', ['categories' => $categories, 'deliveries' => $deliveries]);
+        $products = Product::getProducts();
+        return view('exclusive', ['products' => $products, 'deliveries' => $deliveries]);
     }
 
-    public function confirmation($id)
+    public function confirmationById($id)
     {
         $lot = Lot::getLotById($id);
         return view('confirmation', ['lot' => $lot]);
+    }
+
+    public function confirmation(Request $request)
+    {
+        $data = $request;
+        $exclusiveLot = Lot::makeExclusiveLot($data);
+        return view('confirmation', ['lot' => $exclusiveLot]);
     }
 
     public function charity()

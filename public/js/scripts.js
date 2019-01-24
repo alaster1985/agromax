@@ -2,16 +2,16 @@ $(document).ready(function(){
 	var exclusivenName = $("#exclusive-name");
 	var otherName = $("#other-name");
     var navigation = $(".site-nav__list");
- 
-    if ($("select").length > 0) {
-        $("select").niceSelect();    
-    }
+
+    $("select").niceSelect();
 
 	exclusivenName.on("change",function(){
-		if(exclusivenName.val() == "Other"){
+		if(exclusivenName.val() === "Other"){
 			otherName.css("display" , "table");
+			otherName.find('.other').prop('required',true);
 		}else{
 			otherName.css("display" , "none");
+            otherName.find('.other').prop('required',false);
 		}
 	});
 
@@ -31,11 +31,11 @@ $(document).ready(function(){
             }
         },
         onLanguageSelected: function(e){
-            if (e == "ar_TN"){
+            if (e === "ar_TN"){
                 navigation.addClass("site-nav__list--reverse"); 
              }else{
                 navigation.removeClass("site-nav__list--reverse"); 
-             };
+             }
         }
     });
 

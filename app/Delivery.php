@@ -13,6 +13,12 @@ class Delivery extends Model
         return $deliveries;
     }
 
+    public static function getDeliveryById($id)
+    {
+        $delivery = DB::table('deliveries')->where('deliveries.id', '=', $id)->get();
+        return $delivery;
+    }
+
     public function lot()
     {
         return $this->hasMany('App/Lot');

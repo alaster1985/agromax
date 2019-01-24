@@ -32,6 +32,7 @@
 <script src="{{asset('js/jquery.js')}}"></script>
 <script src="{{asset('js/jquery.localizationTool.min.js')}}"> </script>
 <script src="{{asset('bootstrap/bootstrap.min.js')}}"></script>
+<script src="{{asset('js/jquery.nice-select.min.js')}}"></script>
 <script src="{{asset('js/scripts.js')}}"></script>
 
 </body>

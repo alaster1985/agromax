@@ -7,14 +7,22 @@ use Illuminate\Support\Facades\DB;
 
 class Product extends Model
 {
-    public static function getProductsByCategory($id)
+    public static function getProductsByCategoryId($id)
     {
-        return DB::table('products')->where('category_id', '=', $id)->get();
+        $productsByCategoryId = DB::table('products')->where('category_id', '=', $id)->get();
+        return $productsByCategoryId;
     }
 
     public static function getProducts()
     {
-        return DB::table('products')->get();
+        $products = DB::table('products')->orderBy('name')->get();
+        return $products;
+    }
+
+    public static function getProductById($id)
+    {
+        $product = DB::table('products')->where('products.id', '=', $id)->get();
+        return $product;
     }
 
     public function category()

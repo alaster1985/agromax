@@ -19,7 +19,7 @@
                     <tr>
                         <td>{{$lot->delivery}}</td>
                         <td>{{$lot->tons}} tons</td>
-                        <td>{{$lot->price}}$</td>
+                        <td>{{$lot->price}} $</td>
                     </tr>
                     </tbody>
                 </table>

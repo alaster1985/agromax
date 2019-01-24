@@ -42,6 +42,12 @@ class Lot extends Model
         return $lotById;
     }
 
+    public static function makeExclusiveLot($data)
+    {
+        $exclusiveLot = new ExclusiveLot($data);
+        return $exclusiveLot;
+    }
+
     public function delivery()
     {
         return $this->belongsTo('App/Delivery');

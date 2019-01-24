@@ -1,0 +1,93 @@
+.header{
+	margin-bottom: 20px;
+}
+
+.header__logo-wr{
+	float: left;
+	text-transform: uppercase;
+	width: 100px;
+	height: 90px;
+	position:relative;
+	z-index: 1;
+}
+
+.header__top{
+	border-bottom: 1px solid #61625f;
+	margin: 20px 0;
+	padding-bottom: 20px;
+	z-index: 2;
+}
+
+.localizationTool{
+	color: #333333;
+    background: #c480c4;
+    position: relative;
+    width: 130px;
+    z-index: 3;
+}
+.localizationTool .ltool-dropdown-label{
+	outline: none;
+}
+
+.localizationTool .ltool-language-name {
+    color: #2c2121;
+}
+
+.localizationTool li {
+    display: block;
+    background: #cf97cf;
+    padding: 5px;
+}
+
+.localizationTool .ltool-dropdown-label {
+    color: #fff !important;
+}
+.localizationTool .ltool-dropdown-label .ltool-language-name{
+	color: #fff;
+}
+
+.localizationTool.ltool-is-visible .ltool-dropdown-label-arrow{
+	border-bottom: 10px solid #fff;
+}
+.localizationTool .ltool-dropdown-label-arrow{
+	border-top: 10px solid #fff;
+}
+
+
+.localizationTool li.ltool-is-selected{
+	background-color: #e0bae1;
+}
+
+.localizationTool li:hover{
+	background-color: #e0bae1;
+}
+
+.localizationTool .ltool-language-flag{
+	margin-top: 5px;
+}
+
+@media (max-width: 992px) {
+    .header__logo-wr{
+        width: 75px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+	.header__logo-wr{
+        width: 85px;
+        height: 70px;
+    }
+
+	.header__logo{
+		float: left;
+	}
+	.header__site-nav{
+		float: none;
+	}
+
+	.site-nav-btn{
+		float: right;
+	}
+
+}

@@ -1,0 +1,118 @@
+@import "fonts.css";
+
+body{
+	color: #666666;
+	font-size: 14px;
+	box-sizing: border-box;
+	position: relative;
+	font-family: 'robotolight', "Arial" ,sans-serif;
+}
+
+main{
+	overflow: hidden;
+}
+
+*, *:before, *:after {
+  	box-sizing: border-box;
+}
+
+a{
+	color: #2b2b2b;
+	cursor: pointer;
+	font-family: inherit;
+	text-decoration:none;
+	outline: none;
+	&:hover,
+	&:focus,
+	&:active,
+	&:disabled{
+		text-decoration: none;
+		color: #2b2b2b;
+	}	
+}
+
+p{
+	padding: 0;
+	margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+	color: #2b2b2b;
+	text-transform: uppercase;
+	padding: 0;
+	margin: 0;
+}
+
+
+ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+img{
+	width:100%;
+	height: auto;
+}
+
+input{
+	outline: none;
+	font-family: 'robotolight';
+}
+
+select{
+	border: none;
+	background-color: transparent ;
+	outline: none;
+}
+input,select{
+	font-family: inherit;
+	outline: none;
+	&:hover,
+	&:focus{
+		cursor: pointer;
+	}
+}
+
+.visually-hidden{
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  left: 0;
+}
+
+
+html,//push footer to the bottom
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+
+@import url("../css/jquery.localizationTool.css");
+@import url("blocks/header.less");
+@import url("blocks/site-nav.less");
+@import url("blocks/sliders.less");
+@import url("blocks/products.less");
+@import url("blocks/offers.less");
+@import url("blocks/conformation.less");
+@import url("blocks/exclusive-order.less");
+@import url("blocks/socials.less");
+@import url("blocks/foundation.less");
+@import url("blocks/footer.less");
+
+

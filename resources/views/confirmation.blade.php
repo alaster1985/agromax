@@ -4,9 +4,9 @@
         <div class="row">
             <div class="offers__item offers__item--selected col-sm-4">
                 <a class="offer__img-wr" href="#">
-                    <img src="images/port.jpg" alt="Our offers">
+                    <img src="{{asset($lot->port_photo)}}" alt="Our offers">
                 </a>
-                <h3 class="offers__title">Lorem ipsum</h3>
+                <h3 class="offers__title">{{$lot->product}}</h3>
                 <table class="offers__table">
                     <thead>
                     <tr>
@@ -17,9 +17,9 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td>FOB</td>
-                        <td>100 tons</td>
-                        <td>500$</td>
+                        <td>{{$lot->delivery}}</td>
+                        <td>{{$lot->tons}} tons</td>
+                        <td>{{$lot->price}}$</td>
                     </tr>
                     </tbody>
                 </table>

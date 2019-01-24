@@ -7,9 +7,10 @@ use Illuminate\Support\Facades\DB;
 
 class Delivery extends Model
 {
-    public static function getCategories()
+    public static function getDeliveries()
     {
-        return DB::table('deliveries')->get();
+        $deliveries = DB::table('deliveries')->get();
+        return $deliveries;
     }
 
     public function lot()

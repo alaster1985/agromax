@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Delivery;
 use App\Lot;
 use App\Product;
 use Illuminate\Http\Request;
@@ -17,12 +18,15 @@ class MainController extends Controller
 
     public function exclusive()
     {
-        return view('exclusive');
+        $deliveries = Delivery::getDeliveries();
+        $categories = Category::getCategories();
+        return view('exclusive', ['categories' => $categories, 'deliveries' => $deliveries]);
     }
 
-    public function confirmation()
+    public function confirmation($id)
     {
-        return view('confirmation');
+        $lot = Lot::getLotById($id);
+        return view('confirmation', ['lot' => $lot]);
     }
 
     public function charity()
@@ -42,8 +46,9 @@ class MainController extends Controller
 
     public function offers($id)
     {
+        $category = Category::getCategoryById($id);
         $lots = Lot::getLotsByCategoryId($id);
-        return view('offers', ['lots' => $lots]);
+        return view('offers', ['lots' => $lots, 'category' => $category]);
     }
 
     public function offersAll()

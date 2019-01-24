@@ -9,7 +9,14 @@ class Category extends Model
 {
     public static function getCategories()
     {
-        return DB::table('categories')->get();
+        $categories = DB::table('categories')->orderBy('name')->get();
+        return $categories;
+    }
+
+    public static function getCategoryById($id)
+    {
+        $categoryById = DB::table('categories')->where('categories.id', '=', $id)->get()[0]->name;
+        return $categoryById;
     }
 
     public function product()

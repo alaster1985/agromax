@@ -69,5 +69,7 @@
             </div>
         </div>
     </section>
+    <div class="modal-overlay"></div>
+    <div class="modal__confirm">Your order has been processed<span class="modal__confirm-close fa fa-times"></span></div>
 </main>
 @include('layouts.footer')

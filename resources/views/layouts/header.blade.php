@@ -32,16 +32,13 @@
                     </div>
                     <div class="header__site-nav-wrapper navbar-collapse collapse">
                         <ul class="header__site-nav site-nav__list">
-                            <li class="site-nav__item "><a class="site-nav__link" href="/">Our company</a>
-                            </li>
-                            <li class="site-nav__item "><a class="site-nav__link" href="/founder">Our
-                                    founder</a></li>
-                            <li class="site-nav__item "><a class="site-nav__link" href="/exclusive">Make
-                                    exclusive order</a></li>
-                            <li class="site-nav__item "><a class="site-nav__link"
-                                                           href="/charity">Charity</a></li>
-                            <li class="site-nav__item "><a class="site-nav__link" href="/contacts">Contacts</a>
-                            </li>
+                            <li class="site-nav__item"><a class="site-nav__link" href="/">Company</a></li>
+                            <li class="site-nav__item"><a class="site-nav__link" href="/products">Products</a></li>
+                            <li class="site-nav__item"><a class="site-nav__link" href="/founder">Founder</a></li>
+                            <li class="site-nav__item"><a class="site-nav__link" href="/exclusive">Make exclusive order</a></li>
+                            <li class="site-nav__item"><a class="site-nav__link" href="/partnership">Partnership program</a></li>
+                            <li class="site-nav__item"><a class="site-nav__link" href="/charity">Charity</a></li>
+                            <li class="site-nav__item"><a class="site-nav__link" href="/contacts">Contacts</a></li>
                             <li class="site-nav__item site-nav__item--search">
                                 <div class="site-nav__search-icon fa fa-search">
                                     <form class="site-nav__search-form">

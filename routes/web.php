@@ -21,3 +21,5 @@ Route::get('/contacts', 'MainController@contacts')->name('contacts');
 Route::get('/founder', 'MainController@founder')->name('founder');
 Route::get('/offers', 'MainController@offersAll')->name('offersAll');
 Route::get('/offers/{id}', 'MainController@offers')->name('offers');
+Route::get('/products', function () {return view('products');});
+Route::get('/partnership', function () {return view('partnership');});

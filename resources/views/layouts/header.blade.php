@@ -32,8 +32,8 @@
                     </div>
                     <div class="header__site-nav-wrapper navbar-collapse collapse">
                         <ul class="header__site-nav site-nav__list">
-                            <li class="site-nav__item"><a class="site-nav__link" href="/">Company</a></li>
-                            <li class="site-nav__item"><a class="site-nav__link" href="/products">Products</a></li>
+                            <li class="site-nav__item"><a class="site-nav__link" href="/">Products</a></li>
+                            <li class="site-nav__item"><a class="site-nav__link" href="/company">Company</a></li>
                             <li class="site-nav__item"><a class="site-nav__link" href="/founder">Founder</a></li>
                             <li class="site-nav__item"><a class="site-nav__link" href="/exclusive">Make exclusive order</a></li>
                             <li class="site-nav__item"><a class="site-nav__link" href="/partnership">Partnership program</a></li>

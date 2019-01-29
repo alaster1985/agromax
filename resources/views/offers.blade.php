@@ -30,7 +30,7 @@
                             </tr>
                             </tbody>
                         </table>
-                        <a class="offers__btn" href="/confirmation">Make order</a>
+                        <a class="offers__btn" href="/confirmation/{{$lot->id}}">Make order</a>
                     </div>
 
                 @endforeach

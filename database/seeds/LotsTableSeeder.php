@@ -39,7 +39,7 @@ class LotsTableSeeder extends Seeder
                     'delivery_id' => $indd,
                     'tons' => $tons[$indt],
                     'price' => $prices[$indp],
-                    'port' => 'Some porn № ' . ($i + $ind1 + $j +$indd + $indp + $indt),
+                    'port' => 'Some port № ' . ($i + $ind1 + $j +$indd + $indp + $indt),
                     'port_photo' => 'images/port.jpg',
                 ]);
             }

@@ -24,10 +24,22 @@ class Lot extends Model
     {
         $lots = DB::table('lots')
             ->select('lots.id', 'product_id', 'category_id', 'prod.name', 'prod.photo', 'deliveries.name as delivery',
-                'price', 'tons')
+                'price', 'tons', 'special')
             ->join('products as prod', 'product_id', '=', 'prod.id')
             ->join('deliveries', 'delivery_id', '=', 'deliveries.id')
             ->orderBy('prod.name')
+            ->get();
+        return $lots;
+    }
+
+    public static function getSpecialLots()
+    {
+        $lots = DB::table('lots')
+            ->select('lots.id', 'product_id', 'category_id', 'prod.name', 'prod.photo', 'deliveries.name as delivery',
+                'price', 'tons')
+            ->join('products as prod', 'product_id', '=', 'prod.id')
+            ->join('deliveries', 'delivery_id', '=', 'deliveries.id')
+            ->where('special', '=', 1)
             ->get();
         return $lots;
     }

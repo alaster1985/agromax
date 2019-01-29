@@ -13,7 +13,18 @@ class MainController extends Controller
     public function index()
     {
         $categories = Category::getCategories();
-        return view('index', ['categories' => $categories]);
+        $specialLots = Lot::getSpecialLots();
+        return view('index', ['categories' => $categories, 'specialLots' => $specialLots]);
+    }
+
+    public function company()
+    {
+        return view('company');
+    }
+
+    public function partnership()
+    {
+        return view('partnership');
     }
 
     public function exclusive()

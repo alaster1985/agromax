@@ -24,3 +24,4 @@ Route::get('/offers/{id}', 'MainController@offers')->name('offers');
 Route::get('/company', 'MainController@company')->name('company');
 Route::get('/partnership', 'MainController@partnership')->name('partnership');
 //Route::get('/company', function () {return view('products');});
+Route::get('/charityar', function () {return view('charityar');});

@@ -8,11 +8,11 @@ class Description extends Model
 {
     public function language()
     {
-        return $this->belongsTo('App/Language');
+        return $this->belongsTo('App\Language');
     }
 
     public function product()
     {
-        return $this->belongsTo('App/Product');
+        return $this->belongsTo('App\Product');
     }
 }

@@ -27,21 +27,21 @@ class Product extends Model
 
     public function category()
     {
-        return $this->belongsTo('App/Category');
+        return $this->belongsTo('App\Category');
     }
 
     public function description()
     {
-        return $this->hasMany('App/Description');
+        return $this->hasMany('App\Description');
     }
 
     public function lot()
     {
-        return $this->hasMany('App/Lot');
+        return $this->hasMany('App\Lot');
     }
 
     public function order()
     {
-        return $this->hasMany('App/Order');
+        return $this->hasMany('App\Order');
     }
 }

@@ -8,21 +8,21 @@ class Order extends Model
 {
     public function status()
     {
-        return $this->belongsTo('App/Status');
+        return $this->belongsTo('App\Status');
     }
 
     public function stage()
     {
-        return $this->belongsTo('App/Stage');
+        return $this->belongsTo('App\Stage');
     }
 
     public function delivery()
     {
-        return $this->belongsTo('App/Delivery');
+        return $this->belongsTo('App\Delivery');
     }
 
     public function product()
     {
-        return $this->belongsTo('App/Product');
+        return $this->belongsTo('App\Product');
     }
 }

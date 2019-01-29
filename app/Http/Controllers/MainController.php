@@ -53,9 +53,15 @@ class MainController extends Controller
 
     public function offers($id)
     {
-        $category = Category::getCategoryById($id);
-        $lots = Lot::getLotsByCategoryId($id);
-        return view('offers', ['lots' => $lots, 'category' => $category]);
+//        $a = Lot::find(15)->product->name;
+//        dd($a);
+        if (isset(Category::getCategoryById($id)[0])){
+            $category = Category::getCategoryById($id)[0]->name;
+            $lots = Lot::getLotsByCategoryId($id);
+            return view('offers', ['lots' => $lots, 'category' => $category]);
+        } else {
+            return $this->offersAll();
+        }
     }
 
     public function offersAll()

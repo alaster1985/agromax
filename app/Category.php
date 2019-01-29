@@ -15,12 +15,12 @@ class Category extends Model
 
     public static function getCategoryById($id)
     {
-        $categoryById = DB::table('categories')->where('categories.id', '=', $id)->get()[0]->name;
+        $categoryById = DB::table('categories')->where('categories.id', '=', $id)->get();
         return $categoryById;
     }
 
     public function product()
     {
-        return $this->hasMany('App/Product');
+        return $this->hasMany('App\Product');
     }
 }

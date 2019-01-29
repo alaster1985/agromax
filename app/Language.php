@@ -8,6 +8,6 @@ class Language extends Model
 {
     public function description()
     {
-        return $this->hasMany('App/Description');
+        return $this->hasMany('App\Description');
     }
 }

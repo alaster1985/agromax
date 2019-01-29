@@ -21,11 +21,11 @@ class Delivery extends Model
 
     public function lot()
     {
-        return $this->hasMany('App/Lot');
+        return $this->hasMany('App\Lot');
     }
 
     public function order()
     {
-        return $this->hasMany('App/Order');
+        return $this->hasMany('App\Order');
     }
 }

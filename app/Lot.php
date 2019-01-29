@@ -50,11 +50,11 @@ class Lot extends Model
 
     public function delivery()
     {
-        return $this->belongsTo('App/Delivery');
+        return $this->belongsTo('App\Delivery');
     }
 
     public function product()
     {
-        return $this->belongsTo('App/Product');
+        return $this->belongsTo('App\Product');
     }
 }

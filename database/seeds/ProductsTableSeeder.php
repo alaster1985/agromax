@@ -15,7 +15,6 @@ class ProductsTableSeeder extends Seeder
         $categories = [
             'sorghum',
             'beans',
-            'barley',
             'mustard',
             'chickpea',
             'linen(grain)',
@@ -25,14 +24,19 @@ class ProductsTableSeeder extends Seeder
             'lupine',
             'spelt',
             'safflower',
-            'corn',
             'wheat common',
+            'oat',
+            'potato',
+            'rapeseed',
+            'sunflower',
+            'barley',
+            'corn',
+            'soybean',
         ];
 
         $photos = [
             'sorghum',
             'beans',
-            'barley',
             'mustard',
             'chickpea',
             'linen',
@@ -42,11 +46,17 @@ class ProductsTableSeeder extends Seeder
             'lupine',
             'spelt',
             'safflower',
-            'corn',
             'wheat-common',
+            'oat',
+            'potato',
+            'rapeseed',
+            'sunflower',
+            'barley',
+            'corn',
+            'soybean',
         ];
 
-        for ($i = 0; $i < 14; $i++) {
+        for ($i = 0; $i < 19; $i++) {
             for ($j = 0; $j < 2; $j++) {
                 DB::table('products')->insert([
                     'name' => $categories[$i] . '_№_' . ($j + 1),

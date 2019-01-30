@@ -5,7 +5,7 @@
             <h2 class="exclusive__title visually-hidden">Exclusive order</h2>
             <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                 <img class="exclusive__img" src="{{asset('images/port.jpg')}}" alt="Exclusive order">
-                <form action="{{Route('confirmation')}}" method="POST" enctype="multipart/form-data">
+                <form action="{{Route('exConfirm')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="exclusive__item input-group">
                         <span class="exclusive__title input-group-addon">Name</span>

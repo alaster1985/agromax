@@ -22,7 +22,7 @@
         </div>
         <div class="row clearfix">
             <div class="header__bottom col-sm-12">
-                <div class="header__logo-wr"><a href="/"><img src="{{asset('images/logo.jpg')}}" alt="Agromax"></a>
+                <div class="header__logo-wr"><a href="{{ Request::root() }}"><img src="{{asset('images/logo.jpg')}}" alt="Agromax"></a>
                 </div>
                 <div class="header__site-nav site-nav navbar navbar-default clearfix" role="navigation">
                     <div class="navbar-header">
@@ -32,14 +32,14 @@
                     </div>
                     <div class="header__site-nav-wrapper navbar-collapse collapse">
                         <ul class="header__site-nav site-nav__list">
-                            <li class="site-nav__item"><a class="site-nav__link" href="/">Products</a></li>
-                            <li class="site-nav__item"><a class="site-nav__link" href="/company">Company</a></li>
-                            <li class="site-nav__item"><a class="site-nav__link" href="/founder">Founder</a></li>
-                            <li class="site-nav__item"><a class="site-nav__link" href="/exclusive">Make exclusive order</a></li>
-                            <li class="site-nav__item"><a class="site-nav__link" href="/partnership">Partnership program</a></li>
-                            <li class="site-nav__item"><a class="site-nav__link" href="/charity">Charity</a></li>
-                            <li class="site-nav__item"><a class="site-nav__link" href="/charityar">Charity ar</a></li>
-                            <li class="site-nav__item"><a class="site-nav__link" href="/contacts">Contacts</a></li>
+                            <li class="site-nav__item"><a class="site-nav__link" href="products">Products</a></li>
+                            <li class="site-nav__item"><a class="site-nav__link" href="company">Company</a></li>
+                            <li class="site-nav__item"><a class="site-nav__link" href="founder">Founder</a></li>
+                            <li class="site-nav__item"><a class="site-nav__link" href="exclusive">Make exclusive order</a></li>
+                            <li class="site-nav__item"><a class="site-nav__link" href="partnership">Partnership program</a></li>
+                            <li class="site-nav__item"><a class="site-nav__link" href="charity">Charity</a></li>
+                            <li class="site-nav__item"><a class="site-nav__link" href="charityar">Charity ar</a></li>
+                            <li class="site-nav__item"><a class="site-nav__link" href="contacts">Contacts</a></li>
                             <li class="site-nav__item site-nav__item--search">
                                 <div class="site-nav__search-icon fa fa-search">
                                     <form class="site-nav__search-form">

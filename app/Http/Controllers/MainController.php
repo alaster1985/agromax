@@ -5,16 +5,34 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Delivery;
 use App\Lot;
+use App\Order;
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class MainController extends Controller
 {
+    var $_dataRoutes = null;
+
+//    public function __construct()
+//    {
+//        $this->_dataRoutes = array(
+//            'cucumber' => function($parent, $pdo, $reqData) {
+//                /*  */
+//                return new Order();
+//            },
+//            'patyto' => function($parent, $pdo, $reqData) {
+//                /*  */
+//                return new Product();
+//            });
+//    }
+
+
     public function index()
     {
-        $categories = Category::getCategories();
-        $specialLots = Lot::getSpecialLots();
-        return view('index', ['categories' => $categories, 'specialLots' => $specialLots]);
+        $categoriesUp = Category::getUpperCategories();
+        $categoriesLow = Category::getLowerCategories();
+        return view('index', ['categoriesUp' => $categoriesUp, 'categoriesLow' => $categoriesLow]);
     }
 
     public function company()
@@ -34,14 +52,21 @@ class MainController extends Controller
         return view('exclusive', ['products' => $products, 'deliveries' => $deliveries]);
     }
 
-    public function confirmationById($id)
+    public function confirmationById(Request $request)
     {
-        $lot = Lot::getLotById($id);
+        $lot = Lot::getLotById($request->offer);
         return view('confirmation', ['lot' => $lot]);
     }
 
-    public function confirmation(Request $request)
+    public function exConfirm(Request $request)
     {
+//        // TODO:
+//        if (array_key_exists($request->get('cat')) {
+//            $mediator = $this->_dataRoutes[$request->get('cat')]($this, $myPDO, $request);
+//            return new View($mediator)
+//        }) else {
+//
+//    };
         $data = $request;
         $exclusiveLot = Lot::makeExclusiveLot($data);
         return view('confirmation', ['lot' => $exclusiveLot]);
@@ -62,17 +87,11 @@ class MainController extends Controller
         return view('founder');
     }
 
-    public function offers($id)
+    public function offers(Request $request)
     {
-//        $a = Lot::find(15)->product->name;
-//        dd($a);
-        if (isset(Category::getCategoryById($id)[0])){
-            $category = Category::getCategoryById($id)[0]->name;
-            $lots = Lot::getLotsByCategoryId($id);
-            return view('offers', ['lots' => $lots, 'category' => $category]);
-        } else {
-            return $this->offersAll();
-        }
+        $category = Category::getCategoryById($request->cat)[0]->name;
+        $lots = Lot::getLotsByCategoryId($request->cat);
+        return view('offers', ['lots' => $lots, 'category' => $category]);
     }
 
     public function offersAll()

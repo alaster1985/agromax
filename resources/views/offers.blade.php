@@ -10,7 +10,7 @@
                 @foreach($lots as $lot)
 
                     <div class="offers__item col-sm-4 col-md-3">
-                        <a class="offer__img-wr" href="/confirmation/{{$lot->id}}">
+                        <a class="offer__img-wr" href="{{ Request::root() . '/confirmation/?' . Request::getQueryString() . '&offer=' . $lot->id}}">
                             <img src="{{asset($lot->photo)}}" alt="Our offers">
                         </a>
                         <h3 class="offers__title">{{$lot->name}}</h3>
@@ -30,7 +30,7 @@
                             </tr>
                             </tbody>
                         </table>
-                        <a class="offers__btn" href="/confirmation/{{$lot->id}}">Make order</a>
+                        <a class="offers__btn" href="{{ Request::root() . '/confirmation/?' . Request::getQueryString() . '&offer=' . $lot->id}}">Make order</a>
                     </div>
 
                 @endforeach

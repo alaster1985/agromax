@@ -13,15 +13,13 @@
 
 Route::get('/', 'MainController@index')->name('index');
 Route::get('/exclusive', 'MainController@exclusive')->name('exclusive');
-Route::get('/confirmation/{id}', 'MainController@confirmationById')->name('confirmationById');
-Route::post('/confirmation', 'MainController@confirmation')->name('confirmation');
-Route::get('/confirmation', 'MainController@index')->name('index');
+Route::get('/confirmation', 'MainController@confirmationById')->name('confirmationById');
+Route::post('/exConfirm', 'MainController@exConfirm')->name('exConfirm');
+Route::get('/products', 'MainController@index')->name('index');
 Route::get('/charity', 'MainController@charity')->name('charity');
 Route::get('/contacts', 'MainController@contacts')->name('contacts');
 Route::get('/founder', 'MainController@founder')->name('founder');
-Route::get('/offers', 'MainController@offersAll')->name('offersAll');
-Route::get('/offers/{id}', 'MainController@offers')->name('offers');
+Route::get('/offers', 'MainController@offers')->name('offers');
 Route::get('/company', 'MainController@company')->name('company');
 Route::get('/partnership', 'MainController@partnership')->name('partnership');
-//Route::get('/company', function () {return view('products');});
 Route::get('/charityar', function () {return view('charityar');});

@@ -13,25 +13,31 @@ class CategoriesTableSeeder extends Seeder
     public function run()
     {
         $categories = [
-            'sorghum' => 'sorghum',
-            'beans' => 'beans',
-            'barley' => 'barley',
-            'mustard' => 'mustard',
-            'chickpea' => 'chickpea',
-            'linen(grain)' => 'linen',
-            'red & green lentils' => 'redLentils',
-            'coriander' => 'coriander',
-            'millet' => 'millet',
-            'lupine' => 'lupine',
-            'spelt' => 'spelt',
-            'safflower' => 'safflower',
-            'corn' => 'corn',
-            'wheat common' => 'wheat-common',
+            '1sorghum' => 'sorghum',
+            '1beans' => 'beans',
+            '1mustard' => 'mustard',
+            '1chickpea' => 'chickpea',
+            '1linen(grain)' => 'linen',
+            '1red & green lentils' => 'redLentils',
+            '1coriander' => 'coriander',
+            '1millet' => 'millet',
+            '1lupine' => 'lupine',
+            '1spelt' => 'spelt',
+            '1safflower' => 'safflower',
+            '2wheat common' => 'wheat-common',
+            '2oat' => 'oat',
+            '2potato' => 'potato',
+            '2rapeseed' => 'rapeseed',
+            '2sunflower' => 'sunflower',
+            '2barley' => 'barley',
+            '2corn' => 'corn',
+            '2soybean' => 'soybean',
         ];
         foreach ($categories as $key => $value) {
             DB::table('categories')->insert([
-                'name' => $key,
+                'name' => substr($key, 1),
                 'photo' => 'images/products/' . $value . '.jpg',
+                'type' => $key{0} == 1 ? 'upper' : 'lower',
             ]);
         }
     }

@@ -7,6 +7,22 @@ use Illuminate\Support\Facades\DB;
 
 class Category extends Model
 {
+    public static function getUpperCategories()
+    {
+        $categories = DB::table('categories')
+            ->where('type', '=', 'upper')
+            ->orderBy('name')->get();
+        return $categories;
+    }
+
+    public static function getLowerCategories()
+    {
+        $categories = DB::table('categories')
+            ->where('type', '=', 'lower')
+            ->orderBy('name')->get();
+        return $categories;
+    }
+
     public static function getCategories()
     {
         $categories = DB::table('categories')->orderBy('name')->get();

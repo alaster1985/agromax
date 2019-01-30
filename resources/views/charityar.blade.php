@@ -29,12 +29,12 @@
                         <div class="header__site-nav-wrapper navbar-collapse collapse">
                             <ul class="header__site-nav site-nav__list site-nav__list--reverse">
                                 <li class="site-nav__item "><a class="site-nav__link" href="/">المنتجات الخاصة بنا</a></li>
-                                <li class="site-nav__item "><a class="site-nav__link" href="/company">الشركة الخاصة بنا</a></li>
-                                <li class="site-nav__item "><a class="site-nav__link" href="/founder">المؤسس</a></li>
-                                <li class="site-nav__item "><a class="site-nav__link" href="/exclusive">عمل طلبية حصرية</a></li>
-                                <li class="site-nav__item "><a class="site-nav__link" href="/partnership">برنامج الشراكة الخاص بنا</a></li>
-                                <li class="site-nav__item "><a class="site-nav__link" href="/charity">العروض الخاصة بنا</a></li>
-                                <li class="site-nav__item "><a class="site-nav__link" href="/contacts">المؤسس</a></li>
+                                <li class="site-nav__item "><a class="site-nav__link" href="company">الشركة الخاصة بنا</a></li>
+                                <li class="site-nav__item "><a class="site-nav__link" href="founder">المؤسس</a></li>
+                                <li class="site-nav__item "><a class="site-nav__link" href="exclusive">عمل طلبية حصرية</a></li>
+                                <li class="site-nav__item "><a class="site-nav__link" href="partnership">برنامج الشراكة الخاص بنا</a></li>
+                                <li class="site-nav__item "><a class="site-nav__link" href="charity">العروض الخاصة بنا</a></li>
+                                <li class="site-nav__item "><a class="site-nav__link" href="contacts">المؤسس</a></li>
                                 <div class="site-nav__search-icon fa fa-search">
                                     <form class="site-nav__search-form">
                                         <input class="site-nav__search" type="text" placeholder="البحث عن ...">

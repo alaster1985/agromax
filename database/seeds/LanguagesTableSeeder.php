@@ -17,6 +17,7 @@ class LanguagesTableSeeder extends Seeder
             'Germany' => ['de_DE' => 'forGermany'],
             'Turkey' => ['tr_TR' => 'forTurkey'],
             'Italy' => ['it_IT' => 'forItaly'],
+            'France' => ['fr_FR' => 'forFrance'],
             'نائب عينة' => ['ar_TN' => 'forArabian'],
         ];
         foreach ($languages as $name => $value) {

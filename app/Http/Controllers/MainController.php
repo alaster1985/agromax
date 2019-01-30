@@ -4,11 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Delivery;
+use App\Http\Requests\ExclusiveLot;
 use App\Lot;
-use App\Order;
 use App\Product;
 use Illuminate\Http\Request;
-use Illuminate\View\View;
 
 class MainController extends Controller
 {
@@ -58,7 +57,7 @@ class MainController extends Controller
         return view('confirmation', ['lot' => $lot]);
     }
 
-    public function exConfirm(Request $request)
+    public function exConfirm(ExclusiveLot $request)
     {
 //        // TODO:
 //        if (array_key_exists($request->get('cat')) {

@@ -1,6 +1,9 @@
 @include('layouts.header')
 <main>
     <section class="container exclusive">
+        @if ($errors)
+            <div class="error">{{($errors->first())}}</div>
+        @endif
         <div class="row">
             <h2 class="exclusive__title visually-hidden">Exclusive order</h2>
             <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">

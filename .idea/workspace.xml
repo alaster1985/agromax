@@ -5,27 +5,230 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33d6ce99-6b15-4c95-b8f5-855d36a87d25" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/products/oat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/products/potato.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/products/rapeseed.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/products/soybean.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/products/sunflower.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hgignore" beforeDir="false" afterPath="$PROJECT_DIR$/.hgignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/agromax.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/agromax.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b90a904b-c787-44f1-b898-f4fe584e7dd1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b90a904b-c787-44f1-b898-f4fe584e7dd1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/pinofran.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/pinofran.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Delivery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Delivery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Description.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Description.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ExclusiveLot.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ExclusiveLot.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DeliveriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DeliveriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DescriptionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DescriptionsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LanguagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LanguagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LotsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LotsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrdersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrdersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StatusesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StatusesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Language.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Language.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Lot.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Lot.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Stage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Stage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Status.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Status.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_01_22_114624_create_delivery_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_01_22_114624_create_delivery_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2019_01_22_114643_create_category_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_01_22_114643_create_category_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_01_22_124444_create_product_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_01_22_124444_create_product_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_01_22_124536_create_lot_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_01_22_124536_create_lot_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_01_22_124548_create_order_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_01_22_124548_create_order_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_01_22_124634_create_languages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_01_22_124634_create_languages_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_01_23_080526_create_descriptions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_01_23_080526_create_descriptions_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_01_23_080700_create_statuses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_01_23_080700_create_statuses_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_01_23_080711_create_stages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_01_23_080711_create_stages_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_23_080853_create_foreign_key_relationships_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_23_080853_create_foreign_key_relationships_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/CategoriesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CategoriesTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DeliveriesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DeliveriesTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/DescriptionsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DescriptionsTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/LanguagesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/LanguagesTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/LotsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/LotsTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/ProductsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ProductsTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/StagesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/StagesTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/StatusesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/StatusesTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dump.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dump.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/css/all.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/css/all.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/css/all.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/css/all.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-brands-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-brands-400.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-brands-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-brands-400.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-brands-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-brands-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-brands-400.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-brands-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-regular-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-regular-400.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-regular-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-regular-400.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-regular-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-regular-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-regular-400.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-regular-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-solid-900.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-solid-900.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-solid-900.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-solid-900.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-solid-900.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-solid-900.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-solid-900.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-solid-900.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/fonts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-black-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-black-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-black-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-black-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-black-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-black-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-black-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-black-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-black-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-black-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-blackitalic-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-blackitalic-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-blackitalic-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-blackitalic-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-blackitalic-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-blackitalic-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-blackitalic-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-blackitalic-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-blackitalic-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-blackitalic-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-bold-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-bold-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-bold-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-bold-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-bold-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-bold-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-bold-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-bold-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-bold-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-bold-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-bolditalic-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-bolditalic-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-bolditalic-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-bolditalic-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-bolditalic-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-bolditalic-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-bolditalic-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-bolditalic-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-bolditalic-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-bolditalic-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-italic-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-italic-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-italic-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-italic-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-italic-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-italic-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-italic-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-italic-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-italic-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-italic-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-light-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-light-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-light-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-light-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-light-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-light-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-light-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-light-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-light-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-light-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-lightitalic-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-lightitalic-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-lightitalic-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-lightitalic-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-lightitalic-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-lightitalic-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-lightitalic-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-lightitalic-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-lightitalic-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-lightitalic-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-medium-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-medium-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-medium-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-medium-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-medium-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-medium-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-medium-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-medium-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-medium-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-medium-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-mediumitalic-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-mediumitalic-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-mediumitalic-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-mediumitalic-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-mediumitalic-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-mediumitalic-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-mediumitalic-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-mediumitalic-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-mediumitalic-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-mediumitalic-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-regular-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-regular-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-regular-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-regular-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-regular-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-regular-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-regular-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-regular-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-regular-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-regular-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-thin-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-thin-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-thin-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-thin-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-thin-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-thin-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-thin-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-thin-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-thin-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-thin-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-thinitalic-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-thinitalic-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-thinitalic-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-thinitalic-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-thinitalic-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-thinitalic-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-thinitalic-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-thinitalic-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/roboto-thinitalic-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/roboto-thinitalic-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-bold-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-bold-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-bold-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-bold-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-bold-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-bold-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-bold-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-bold-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-bold-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-bold-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-bolditalic-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-bolditalic-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-bolditalic-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-bolditalic-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-bolditalic-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-bolditalic-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-bolditalic-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-bolditalic-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-bolditalic-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-bolditalic-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-italic-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-italic-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-italic-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-italic-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-italic-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-italic-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-italic-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-italic-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-italic-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-italic-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-light-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-light-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-light-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-light-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-light-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-light-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-light-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-light-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-light-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-light-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-lightitalic-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-lightitalic-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-lightitalic-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-lightitalic-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-lightitalic-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-lightitalic-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-lightitalic-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-lightitalic-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-lightitalic-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-lightitalic-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-regular-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-regular-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-regular-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-regular-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-regular-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-regular-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-regular-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-regular-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-regular-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/robotocondensed-regular-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/charity-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/charity-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/charity.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/charity.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/flags.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/flags.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/founder_photo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/founder_photo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/logo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/partnership.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/partnership.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/port-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/port-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/port.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/port.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/products/barley.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/barley.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/products/beans.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/beans.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/products/chickpea.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/chickpea.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/products/coriander.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/coriander.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/products/corn.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/corn.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/products/linen.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/linen.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/products/lupine.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/lupine.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/products/millet.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/millet.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/products/mustard.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/mustard.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/products/oat.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/oat.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/products/potato.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/potato.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/products/rapeseed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/rapeseed.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/products/redLentils.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/redLentils.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/products/safflower.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/safflower.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/products/sorghum.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/sorghum.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/products/soybean.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/soybean.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/products/spelt.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/spelt.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/products/sunflower.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/sunflower.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/products/wheat-common.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/wheat-common.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/slider-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/slider-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/slider-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/slider-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/slider-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/slider-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/slider-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/slider-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/jquery.localizationTool.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/jquery.localizationTool.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/jquery.nice-select.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/jquery.nice-select.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/less/blocks/charity.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/blocks/charity.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/less/blocks/company.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/blocks/company.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/less/blocks/conformation.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/blocks/conformation.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/less/blocks/contacts.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/blocks/contacts.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/less/blocks/exclusive-order.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/blocks/exclusive-order.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/less/blocks/footer.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/blocks/footer.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/less/blocks/foundation.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/blocks/foundation.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/less/blocks/header.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/blocks/header.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/less/blocks/offers.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/blocks/offers.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/less/blocks/partnership.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/blocks/partnership.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/less/blocks/products.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/blocks/products.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/less/blocks/site-nav.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/blocks/site-nav.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/less/blocks/sliders.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/blocks/sliders.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/less/blocks/socials.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/blocks/socials.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/less/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/style.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/charity.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/charity.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/charityar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/charityar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/company.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/company.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/confirmation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/confirmation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/contacts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacts.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/exclusive.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/exclusive.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/founder.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/founder.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/slider.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/offers.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/offers.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partnership.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partnership.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,7 +271,44 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ExclusiveLot.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Requests/ExclusiveLot.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exclusive.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/exclusive.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dump.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dump.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="359" column="58" lean-forward="true" selection-start-line="359" selection-start-column="58" selection-end-line="359" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MainController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -101,7 +341,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2019_01_22_114714_create_lot_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_22_114624_create_delivery_table.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_22_124634_create_languages_table.php" />
@@ -137,21 +376,22 @@
         <option value="$PROJECT_DIR$/resources/views/products.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_22_124536_create_lot_table.php" />
         <option value="$PROJECT_DIR$/app/Lot.php" />
-        <option value="$PROJECT_DIR$/dump.sql" />
         <option value="$PROJECT_DIR$/resources/views/charityar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/offers.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/header.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/exclusive.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_22_114643_create_category_table.php" />
         <option value="$PROJECT_DIR$/database/seeds/CategoriesTableSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/LanguagesTableSeeder.php" />
         <option value="$PROJECT_DIR$/app/Category.php" />
         <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/MainController.php" />
         <option value="$PROJECT_DIR$/database/seeds/LotsTableSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/DescriptionsTableSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/ProductsTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/MainController.php" />
+        <option value="$PROJECT_DIR$/resources/views/exclusive.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/ExclusiveLot.php" />
+        <option value="$PROJECT_DIR$/dump.sql" />
       </list>
     </option>
   </component>
@@ -306,6 +546,13 @@
             <path>
               <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
               <item name="agromax" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agromax" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -324,19 +571,6 @@
               <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
               <item name="agromax" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="products" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
@@ -418,7 +652,7 @@
       <workItem from="1548410869988" duration="112000" />
       <workItem from="1548419758118" duration="466000" />
       <workItem from="1548751001763" duration="24264000" />
-      <workItem from="1548832732719" duration="17951000" />
+      <workItem from="1548832732719" duration="25678000" />
     </task>
     <task id="LOCAL-00001" summary="offers_done">
       <created>1548326886107</created>
@@ -462,14 +696,22 @@
       <option name="project" value="LOCAL" />
       <updated>1548771673287</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="commit_4">
+      <created>1548856771193</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1548856771193</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123498000" />
+    <option name="totallyTimeSpent" value="131225000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1030" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50160086" side_tool="true" weight="0.26057908" />
@@ -507,7 +749,8 @@
     <MESSAGE value="commit_1" />
     <MESSAGE value="commit_2" />
     <MESSAGE value="commit_3" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit_3" />
+    <MESSAGE value="commit_4" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit_4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -515,16 +758,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MainController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="14" selection-start-line="19" selection-start-column="26" selection-end-line="22" selection-end-column="14" />
-          <folding>
-            <element signature="e#40#57#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/DeliveriesTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -553,13 +786,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Order.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -571,13 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ExclusiveLot.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -637,13 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dump.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4071">
-          <caret line="357" column="24" selection-start-line="357" selection-start-column="24" selection-end-line="357" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/slider.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
@@ -698,13 +910,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/exclusive.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -777,13 +982,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://b90a904b-c787-44f1-b898-f4fe584e7dd1/schema/agromax/table/lots">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://b90a904b-c787-44f1-b898-f4fe584e7dd1/schema/agromax/table/products">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -802,16 +1000,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MainController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
-          <folding>
-            <element signature="e#40#57#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -840,6 +1028,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b90a904b-c787-44f1-b898-f4fe584e7dd1/schema/agromax/table/lots">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ExclusiveLot.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="17" column="65" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/ExclusiveLot.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MainController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/exclusive.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dump.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="359" column="58" lean-forward="true" selection-start-line="359" selection-start-column="58" selection-end-line="359" selection-end-column="58" />
         </state>
       </provider>
     </entry>

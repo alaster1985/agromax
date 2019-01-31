@@ -11,6 +11,15 @@
 |
 */
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('admin/dashboard', 'Admin\AdminController@dashboard')->name('dashboard');
+
+
 Route::get('/', 'MainController@index')->name('index');
 Route::get('/exclusive', 'MainController@exclusive')->name('exclusive');
 Route::get('/confirmation', 'MainController@confirmationById')->name('confirmationById');

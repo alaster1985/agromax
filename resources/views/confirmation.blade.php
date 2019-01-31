@@ -44,32 +44,27 @@
                     @csrf
                     <div class="conformation__item input-group">
                         <span class="input-group-addon"><i class="fas fa-user"></i></span>
-                        <input name="first_name" placeholder="First Name" class="form-control" type="text" required
-                               minlength="2">
+                        <input name="first_name" placeholder="First Name" class="form-control" type="text">
                     </div>
                     <div class="conformation__item input-group">
                         <span class="input-group-addon"><i class="fas fa-user"></i></span>
-                        <input name="last_name" placeholder="Last Name" class="form-control" type="text" required
-                               minlength="2">
+                        <input name="last_name" placeholder="Last Name" class="form-control" type="text">
                     </div>
 
                     <div class="conformation__item input-group">
                         <span class="input-group-addon"><i class="fab fa-linkedin"></i></span>
-                        <input name="linkedin" placeholder="Linkedin" class="form-control" type="text" required
-                               minlength="9">
+                        <input name="linkedin" placeholder="Linkedin" class="form-control" type="text">
                     </div>
 
                     <div class="conformation__item input-group">
                         <span class="input-group-addon"><i class="fas fa-envelope"></i></span>
-                        <input name="email" placeholder="E-Mail" class="form-control" type="text" required
-                               minlength="9">
+                        <input name="email" placeholder="E-Mail" class="form-control" type="text">
                     </div>
 
 
                     <div class="conformation__item input-group">
                         <span class="input-group-addon"><i class="fas fa-phone"></i></span>
-                        <input name="phone" placeholder="Telephone" class="form-control" type="text" required
-                               minlength="9">
+                        <input name="phone" placeholder="Telephone" class="form-control" type="text">
                     </div>
 
                     <div class="conformation__item input-group">

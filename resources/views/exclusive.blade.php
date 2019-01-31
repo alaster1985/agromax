@@ -34,16 +34,15 @@
 
                     <div class="exclusive__item input-group">
                         <span class="exclusive__title input-group-addon">Amount</span>
-                        <input class="form-control" name="amount" placeholder="Amount" type="text" required>
+                        <input class="form-control" name="amount" placeholder="Amount" type="text">
                     </div>
                     <div class="exclusive__item input-group">
                         <span class="exclusive__title input-group-addon">Optional price</span>
-                        <input class="form-control" name="optional" placeholder="Optional price" type="text"
-                               required>
+                        <input class="form-control" name="optional" placeholder="Optional price" type="text">
                     </div>
                     <div class="exclusive__item input-group">
                         <span class="exclusive__title input-group-addon">Max price</span>
-                        <input class="form-control" name="max" placeholder="Max price" type="text" required>
+                        <input class="form-control" name="max" placeholder="Max price" type="text">
                     </div>
                     <input class="exclusive__btn" type="submit" value="Make order">
                 </form>

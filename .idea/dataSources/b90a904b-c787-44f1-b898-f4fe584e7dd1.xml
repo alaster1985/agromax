@@ -1331,37 +1331,31 @@
     <column id="314" parent="250" name="first_name">
       <Position>10</Position>
       <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="315" parent="250" name="last_name">
       <Position>11</Position>
       <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="316" parent="250" name="email">
       <Position>12</Position>
       <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="317" parent="250" name="linkedin">
       <Position>13</Position>
       <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="318" parent="250" name="phone">
       <Position>14</Position>
       <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="319" parent="250" name="company">
       <Position>15</Position>
       <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="320" parent="250" name="exclusive">

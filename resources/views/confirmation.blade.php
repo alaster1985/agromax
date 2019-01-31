@@ -5,6 +5,9 @@
             {{ session()->get('message') }}
         </div>
     @endif
+    @if ($errors)
+        <div class="error">{{($errors->first())}}</div>
+    @endif
     <section class="container conformation ">
         @if ($errors)
             <div class="error">{{($errors->first())}}</div>
@@ -34,8 +37,10 @@
             </div>
             <div class="conformation__wr col-sm-7 col-sm-offset-1">
                 <h2 class="conformation__title">Fill the form</h2>
-{{--                <form class="conformation__form" action="{{Route('createOrder')}}" method="POST" enctype="multipart/form-data">--}}
-                <form class="conformation__form" action="{{ Request::root() . '/createOrder?' . Request::getQueryString()}}" method="POST" enctype="multipart/form-data">
+                {{--                <form class="conformation__form" action="{{Route('createOrder')}}" method="POST" enctype="multipart/form-data">--}}
+                <form class="conformation__form"
+                      action="{{ Request::root() . '/createOrder?' . Request::getQueryString()}}" method="POST"
+                      enctype="multipart/form-data">
                     @csrf
                     <div class="conformation__item input-group">
                         <span class="input-group-addon"><i class="fas fa-user"></i></span>
@@ -79,6 +84,7 @@
         </div>
     </section>
     <div class="modal-overlay"></div>
-    <div class="modal__confirm">Your order has been processed<span class="modal__confirm-close fa fa-times"></span></div>
+    <div class="modal__confirm">Your order has been processed<span class="modal__confirm-close fa fa-times"></span>
+    </div>
 </main>
 @include('layouts.footer')

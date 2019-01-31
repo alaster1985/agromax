@@ -1,6 +1,14 @@
 @include('layouts.header')
 <main>
+    @if(session()->has('message'))
+        <div class="alert alert-success">
+            {{ session()->get('message') }}
+        </div>
+    @endif
     <section class="container conformation ">
+        @if ($errors)
+            <div class="error">{{($errors->first())}}</div>
+        @endif
         <div class="row">
             <div class="offers__item offers__item--selected col-sm-4">
                 <a class="offer__img-wr" href="#">
@@ -26,17 +34,18 @@
             </div>
             <div class="conformation__wr col-sm-7 col-sm-offset-1">
                 <h2 class="conformation__title">Fill the form</h2>
-                <form class="conformation__form" method="post">
-
+{{--                <form class="conformation__form" action="{{Route('createOrder')}}" method="POST" enctype="multipart/form-data">--}}
+                <form class="conformation__form" action="{{ Request::root() . '/createOrder?' . Request::getQueryString()}}" method="POST" enctype="multipart/form-data">
+                    @csrf
                     <div class="conformation__item input-group">
                         <span class="input-group-addon"><i class="fas fa-user"></i></span>
-                        <input name="name" placeholder="First Name" class="form-control" type="text" required
-                               minlength="3">
+                        <input name="first_name" placeholder="First Name" class="form-control" type="text" required
+                               minlength="2">
                     </div>
                     <div class="conformation__item input-group">
                         <span class="input-group-addon"><i class="fas fa-user"></i></span>
-                        <input name="secondname" placeholder="Last Name" class="form-control" type="text" required
-                               minlength="3">
+                        <input name="last_name" placeholder="Last Name" class="form-control" type="text" required
+                               minlength="2">
                     </div>
 
                     <div class="conformation__item input-group">

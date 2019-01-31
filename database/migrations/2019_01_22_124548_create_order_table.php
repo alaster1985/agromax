@@ -16,8 +16,8 @@ class CreateOrderTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('product_id')->unsigned();
-            $table->integer('status_id')->unsigned();
-            $table->integer('stage_id')->unsigned();
+            $table->integer('status_id')->unsigned()->default(1);
+            $table->integer('stage_id')->unsigned()->default(1);
             $table->integer('delivery_id')->unsigned();
             $table->integer('manager')->default(0);
             $table->integer('tons');
@@ -30,7 +30,7 @@ class CreateOrderTable extends Migration
             $table->string('phone', 100);
             $table->string('company', 100);
             $table->boolean('exclusive');
-            $table->boolean('isdeleted');
+            $table->boolean('isdeleted')->default(0);
             $table->timestamps();
         });
     }

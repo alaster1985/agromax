@@ -33,6 +33,11 @@ class CategoriesTableSeeder extends Seeder
             '2corn' => 'corn',
             '2soybean' => 'soybean',
         ];
+        DB::table('categories')->insert([
+            'name' => 'ancillary_name',
+            'photo' => 'images/noimage.jpg',
+            'type' => 'ancillary_type',
+        ]);
         foreach ($categories as $key => $value) {
             DB::table('categories')->insert([
                 'name' => substr($key, 1),

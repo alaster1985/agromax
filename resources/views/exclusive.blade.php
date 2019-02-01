@@ -16,7 +16,7 @@
                             @foreach($products as $product)
                             <option value="{{$product->id}}">{{ucfirst($product->name)}}</option>
                             @endforeach
-                            <option value="Other">Other</option>
+                            <option value="1">Other</option>
                         </select>
                     </div>
                     <div class="exclusive__item exclusive__item-other-name input-group" id="other-name">

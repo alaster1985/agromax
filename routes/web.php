@@ -24,7 +24,7 @@ Route::get('/', 'MainController@index')->name('index');
 Route::get('/exclusive', 'MainController@exclusive')->name('exclusive');
 Route::get('/confirmation', 'MainController@confirmationById')->name('confirmationById');
 Route::get('/exConfirm', 'MainController@exConfirm')->name('exConfirm');
-Route::post('/createOrder', 'OrdersController@createOrder')->name('createOrder');
+Route::post('/createOrder', 'Admin\OrdersController@createOrder')->name('createOrder');
 Route::get('/products', 'MainController@index')->name('index');
 Route::get('/charity', 'MainController@charity')->name('charity');
 Route::get('/contacts', 'MainController@contacts')->name('contacts');

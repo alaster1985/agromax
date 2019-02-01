@@ -56,12 +56,18 @@ class ProductsTableSeeder extends Seeder
             'soybean',
         ];
 
+        DB::table('products')->insert([
+            'name' => 'other',
+            'photo' => 'images/noimage.jpg',
+            'category_id' => 1,
+        ]);
+
         for ($i = 0; $i < 19; $i++) {
             for ($j = 0; $j < 2; $j++) {
                 DB::table('products')->insert([
                     'name' => $categories[$i] . '_№_' . ($j + 1),
                     'photo' => 'images/products/' . $photos[$i] . '.jpg',
-                    'category_id' => $i + 1,
+                    'category_id' => $i + 2,
                 ]);
             }
 

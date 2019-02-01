@@ -27,13 +27,12 @@ class ExclusiveLotRequest extends FormRequest
     {
         $products = DB::table('products')->get(['id'])->pluck('id')->toArray();
         $deliveries = DB::table('deliveries')->get(['id'])->pluck('id')->toArray();
-        $products['Other'] = 'Other';
         return [
             'product' => [
                 'required',
                 Rule::in($products),
             ],
-            'otherName' => 'required_if:product,Other',
+            'otherName' => 'required_if:product,1',
             'delivery' => [
                 'required',
                 Rule::in($deliveries),

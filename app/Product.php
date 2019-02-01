@@ -15,7 +15,7 @@ class Product extends Model
 
     public static function getProducts()
     {
-        $products = DB::table('products')->orderBy('name')->get();
+        $products = DB::table('products')->where('id', '<>', 1)->orderBy('name')->get();
         return $products;
     }
 

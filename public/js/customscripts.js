@@ -6,12 +6,12 @@ $(document).ready(function(){
     $("select").niceSelect();//decorate selects via the plagin
 
 	exclusivenName.on("change",function(){//show extra  input for other culture
-		if(exclusivenName.val() === "Other"){
+		if(exclusivenName.val() == 1){
 			otherName.css("display" , "table");
-			otherName.find('.other').prop('required',true);
+			// otherName.find('.other').prop('required',true);
 		}else{
 			otherName.css("display" , "none");
-            otherName.find('.other').prop('required',false);
+            // otherName.find('.other').prop('required',false);
 		}
 	});
 

@@ -14,6 +14,7 @@ class Order extends Model
         'manager',
         'tons',
         'price',
+        'product_name',
         'port',
         'first_name',
         'last_name',
@@ -31,6 +32,7 @@ class Order extends Model
             $offer = $request->query()['offer'];
             $lotInfo = [
                 'product_id' => Lot::find($offer)->product->id,
+                'product_name' => Lot::find($offer)->product->name,
                 'delivery_id' => Lot::find($offer)->delivery->id,
                 'tons' => Lot::find($offer)->tons,
                 'price' => Lot::find($offer)->price,
@@ -41,6 +43,7 @@ class Order extends Model
         } else {
             $lotInfo = [
                 'product_id' => $request->query()['product'],
+                'product_name' => $request->query()['product'] == 1 ? $request->query()['otherName'] : Product::find($request->query()['product'])->name,
                 'delivery_id' => $request->query()['delivery'],
                 'tons' => $request->query()['amount'],
                 'price' => $request->query()['optional'] . '-' . $request->query()['max'],

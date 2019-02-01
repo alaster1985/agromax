@@ -21,7 +21,8 @@ class CreateOrderTable extends Migration
             $table->integer('delivery_id')->unsigned();
             $table->integer('manager')->default(0);
             $table->integer('tons');
-            $table->integer('price');
+            $table->string('price', 100);
+            $table->string('product_name', 100);
             $table->string('port', 100);
             $table->string('first_name', 100);
             $table->string('last_name', 100);

@@ -28,7 +28,7 @@ class LotsTableSeeder extends Seeder
             300,
         ];
 
-        for ($i = 1; $i <= 38; $i++) {
+        for ($i = 2; $i <= 39; $i++) {
             $ind1 = rand(1,6);
             for ($j = 1; $j <= $ind1; $j++) {
                 $indd = rand(1,3);
@@ -39,7 +39,7 @@ class LotsTableSeeder extends Seeder
                     'delivery_id' => $indd,
                     'tons' => $tons[$indt],
                     'price' => $prices[$indp],
-                    'port' => 'Some port № ' . ($i + $ind1 + $j +$indd + $indp + $indt),
+                    'port' => 'Some port № ' . ($i - 1 + $ind1 + $j +$indd + $indp + $indt),
                     'port_photo' => 'images/port.jpg',
                 ]);
             }

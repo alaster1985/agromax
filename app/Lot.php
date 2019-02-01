@@ -32,6 +32,12 @@ class Lot extends Model
         return $lots;
     }
 
+    public static function getAllLots()
+    {
+        $allLots = Lot::paginate(17);
+        return $allLots;
+    }
+
 //    public static function getSpecialLots()
 //    {
 //        $lots = DB::table('lots')

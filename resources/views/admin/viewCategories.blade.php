@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="main-title">
-                        <h1>LOTS</h1>
+                        <h1>CATEGORIES</h1>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -19,18 +19,12 @@
                     <div class="widget-area">
                         <div class="streaming-table">
                             <span id="found" class="label label-info"></span>
-                            {{$allLots->links()}}
                             <table id="stream_table" class='table table-striped table-bordered'>
                                 <thead>
                                 <tr>
-                                    <th>Product name</th>
-                                    <th>Product photo</th>
                                     <th>Category</th>
-                                    <th>Incoterms</th>
-                                    <th>Amount</th>
-                                    <th>Price</th>
-                                    <th>Port</th>
-                                    <th>Port photo</th>
+                                    <th>Photo</th>
+                                    <th>Type</th>
                                     <th>Created_at</th>
                                     <th>Updated_at</th>
                                     <th>Edit</th>
@@ -40,37 +34,22 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($allLots as $lot)
+                                @foreach($allCategories as $category)
                                     <tr id="trId">
                                         <td>
-                                            {{\App\Lot::find($lot->id)->product->name}}
+                                            {{$category->name}}
                                         </td>
                                         <td>
-                                            <img style="height: 33%" src="{{asset(\App\Lot::find($lot->id)->product->photo)}}">
+                                            <img style="height: 33%" src="{{asset($category->photo)}}">
                                         </td>
                                         <td>
-                                            {{\App\Product::find($lot->product_id)->category->name}}
+                                            {{$category->type}}
                                         </td>
                                         <td>
-                                            {{\App\Delivery::find($lot->delivery_id)->name}}
+                                            {{$category->created_at}}
                                         </td>
                                         <td>
-                                            {{$lot->tons}}
-                                        </td>
-                                        <td>
-                                            {{$lot->price}}
-                                        </td>
-                                        <td>
-                                            {{$lot->port}}
-                                        </td>
-                                        <td>
-                                            <img style="height: 10%" src="{{asset($lot->port_photo)}}">
-                                        </td>
-                                        <td>
-                                            {{$lot->created_at}}
-                                        </td>
-                                        <td>
-                                            {{$lot->updated_at}}
+                                            {{$category->updated_at}}
                                         </td>
                                         {{--@if($user->hasRole('admin|junior_admin|moderator'))--}}
                                         <td>
@@ -79,10 +58,10 @@
                                         {{--@endif--}}
                                         {{--@if($user->hasRole('admin'))--}}
                                         {{--<td>--}}
-                                        {{--{{ csrf_field()}}--}}
-                                        {{--<a href="--}}{{--{{route('deleteOrder',$value->id)}}--}}{{--"--}}
-                                        {{--onclick="return confirm('Are you sure you want to delete this Order?');">-</a>--}}
-                                        {{--{{ csrf_field()}}--}}
+                                            {{--{{ csrf_field()}}--}}
+                                            {{--<a href="--}}{{--{{route('deleteOrder',$value->id)}}--}}{{--"--}}
+                                               {{--onclick="return confirm('Are you sure you want to delete this Order?');">-</a>--}}
+                                            {{--{{ csrf_field()}}--}}
                                         {{--</td>--}}
                                         {{--@endif--}}
                                     </tr>
@@ -96,5 +75,4 @@
         </div><!-- Page Container -->
     </div><!-- main -->
 </div>
-
 @include('admin/layouts.footer')

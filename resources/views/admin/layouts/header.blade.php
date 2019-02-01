@@ -21,6 +21,8 @@
 <div class="main">
     <header class="header">
         <div class="logo">
+            <a href="{{ route('dashboard') }}" title=""><i class="fa fa-home"></i></a>
+            <a href="{{ route('index') }}" title=""><i class="fa fa-paper-plane-o"></i></a>
             <a title="" class="toggle-menu"><i class="fa fa-bars"></i></a>
         </div>
         <div class="dropdown profile">

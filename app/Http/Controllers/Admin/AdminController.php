@@ -11,4 +11,20 @@ class AdminController extends Controller
     {
         return view('admin/dashboard');
     }
+
+    public function viewUsers()
+    {
+        return view('admin/viewUsers');
+    }
+
+    public function editUsers()
+    {
+        return view('admin/editUsers');
+    }
+
+    public function createUser()
+    {
+        return view('admin/createUser');
+    }
+
 }

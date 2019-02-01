@@ -11,7 +11,8 @@ class Category extends Model
     {
         $categories = DB::table('categories')
             ->where('type', '=', 'upper')
-            ->orderBy('name')->get();
+            ->orderBy('name')
+            ->get();
         return $categories;
     }
 
@@ -19,19 +20,24 @@ class Category extends Model
     {
         $categories = DB::table('categories')
             ->where('type', '=', 'lower')
-            ->orderBy('name')->get();
+            ->orderBy('name')
+            ->get();
         return $categories;
     }
 
     public static function getCategories()
     {
-        $categories = DB::table('categories')->orderBy('name')->get();
+        $categories = Category::all()
+            ->where('id', '<>', 1)
+            ->sortBy('name');
         return $categories;
     }
 
     public static function getCategoryById($id)
     {
-        $categoryById = DB::table('categories')->where('categories.id', '=', $id)->get();
+        $categoryById = DB::table('categories')
+            ->where('categories.id', '=', $id)
+            ->get();
         return $categoryById;
     }
 

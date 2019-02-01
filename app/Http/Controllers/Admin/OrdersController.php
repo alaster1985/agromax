@@ -27,4 +27,15 @@ class OrdersController extends Controller
         $order->save();
         return redirect()->back()->with('message', 'DONE!');
     }
+
+    public function viewOrders()
+    {
+        $orders = Order::getAllOrders();
+        return view('admin/viewOrders', ['orders' => $orders]);
+    }
+
+    public function editOrders()
+    {
+        return view('admin/editOrders');
+    }
 }

@@ -19,6 +19,21 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('admin/dashboard', 'Admin\AdminController@dashboard')->name('dashboard');
 
+Route::get('admin/viewUsers', 'Admin\AdminController@viewUsers')->name('viewUsers');
+Route::get('admin/editUsers', 'Admin\AdminController@editUsers')->name('editUsers');
+Route::get('admin/createUser', 'Admin\AdminController@createUser')->name('createUser');
+
+Route::get('admin/viewOrders', 'Admin\OrdersController@viewOrders')->name('viewOrders');
+Route::get('admin/editOrders', 'Admin\OrdersController@editOrders')->name('editOrders');
+
+Route::get('admin/viewLots', 'Admin\LotsController@viewLots')->name('viewLots');
+Route::get('admin/editLots', 'Admin\LotsController@editLots')->name('editLots');
+Route::get('admin/createLot', 'Admin\LotsController@createLot')->name('createLot');
+
+Route::get('admin/viewCategories', 'Admin\CategoriesController@viewCategories')->name('viewCategories');
+Route::get('admin/editCategories', 'Admin\CategoriesController@editCategories')->name('editCategories');
+Route::get('admin/createCategory', 'Admin\CategoriesController@createCategory')->name('createCategory');
+
 
 Route::get('/', 'MainController@index')->name('index');
 Route::get('/exclusive', 'MainController@exclusive')->name('exclusive');

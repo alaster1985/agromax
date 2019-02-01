@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Order extends Model
 {
@@ -28,7 +29,7 @@ class Order extends Model
 
     public static function setOrderInfoForFirstStage($request)
     {
-        if (isset($request->query()['offer'])){
+        if (isset($request->query()['offer'])) {
             $offer = $request->query()['offer'];
             $lotInfo = [
                 'product_id' => Lot::find($offer)->product->id,
@@ -43,7 +44,9 @@ class Order extends Model
         } else {
             $lotInfo = [
                 'product_id' => $request->query()['product'],
-                'product_name' => $request->query()['product'] == 1 ? $request->query()['otherName'] : Product::find($request->query()['product'])->name,
+                'product_name' => $request->query()['product'] == 1
+                    ? $request->query()['otherName']
+                    : Product::find($request->query()['product'])->name,
                 'delivery_id' => $request->query()['delivery'],
                 'tons' => $request->query()['amount'],
                 'price' => $request->query()['optional'] . '-' . $request->query()['max'],
@@ -53,6 +56,14 @@ class Order extends Model
             ];
         }
         return $lotInfo;
+    }
+
+    public static function getAllOrders()
+    {
+        $allOrders = Order::all()
+            ->where('isdeleted', '=', 0)
+            ->sortByDesc('created_at');
+        return $allOrders;
     }
 
     public function status()

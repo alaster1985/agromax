@@ -41,7 +41,7 @@
                                     <th>Updated_at</th>
                                     <th>Edit</th>
                                     {{--@if($user->hasRole('admin'))--}}
-                                        <th>Delete</th>
+                                    <th>Delete</th>
                                     {{--@endif--}}
                                 </tr>
                                 </thead>
@@ -61,13 +61,13 @@
                                             {{$order->email}}
                                         </td>
                                         <td>
-                                        {{$order->linkedin}}
+                                            {{$order->linkedin}}
                                         </td>
                                         <td>
-                                        {{$order->phone}}
+                                            {{$order->phone}}
                                         </td>
                                         <td>
-                                        {{$order->company}}
+                                            {{$order->company}}
                                         </td>
                                         <td>
                                             {{$order->product_name}}
@@ -85,7 +85,7 @@
                                             {{\App\Delivery::find($order->delivery_id)->name}}
                                         </td>
                                         <td>
-                                        {{$order->exclusive ? 'YES' : 'NO'}}
+                                            {{$order->exclusive ? 'YES' : 'NO'}}
                                         </td>
                                         <td>
                                             {{\App\Status::find($order->status_id)->status}}
@@ -100,31 +100,32 @@
                                             {{$order->updated_at}}
                                         </td>
                                         {{--@if($user->hasRole('admin|junior_admin|moderator'))--}}
-                                            <td>
-                                                <a href="{{route('editOrders',$order->id)}}">+</a>
-                                            </td>
+                                        <td>
+                                            <a href="{{route('editOrders',$order->id)}}">+</a>
+                                        </td>
                                         {{--@endif--}}
                                         {{--@if($user->hasRole('admin'))--}}
-                                            <td>
-                                                {{--{{ csrf_field()}}--}}
-                                                <a href="{{--{{route('deleteOrder',$value->id)}}--}}"
-                                                   onclick="return confirm('Are you sure you want to delete this Order?');">-</a>
-                                                {{--{{ csrf_field()}}--}}
-                                            </td>
+                                        <td>
+                                            {{--{{ csrf_field()}}--}}
+                                            <a href="{{route('deleteOrder',$order->id)}}"
+                                               onclick="return confirm('Are you sure you want to delete this Order?');">-</a>
+                                            {{--{{ csrf_field()}}--}}
+                                        </td>
                                         {{--@endif--}}
                                     </tr>
                                 @endforeach
                                 </tbody>
                             </table>
-                            {{--<div id="summary">--}}
-                                {{--<div>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
                         </div>
                     </div>
                 </div>
             </div><!-- Content Sec -->
         </div><!-- Page Container -->
+        @if(session()->has('message'))
+            <div class="alert alert-success">
+                {{ session()->get('message') }}
+            </div>
+        @endif
     </div><!-- main -->
 </div>
 @include('admin/layouts.footer')

@@ -53,7 +53,7 @@
                                         </td>
                                         {{--@if($user->hasRole('admin|junior_admin|moderator'))--}}
                                         <td>
-                                            <a href="{{--{{route('editOrder',$value->id)}}--}}">+</a>
+                                            <a href="{{route('editCategories',$category->id)}}">+</a>
                                         </td>
                                         {{--@endif--}}
                                         {{--@if($user->hasRole('admin'))--}}

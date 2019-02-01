@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\OrderStoreRequest;
 use App\Order;
+use Illuminate\Http\Request;
 
 class OrdersController extends Controller
 {
@@ -34,8 +35,21 @@ class OrdersController extends Controller
         return view('admin/viewOrders', ['orders' => $orders]);
     }
 
-    public function editOrders()
+    public function editOrders($id)
     {
-        return view('admin/editOrders');
+        $orderForEdit = Order::getOrderById($id);
+        return view('admin/editOrders', ['order' => $orderForEdit]);
+    }
+
+    public function updateOrder(Request $request)
+    {
+        Order::updateOrder($request);
+        return redirect()->back()->with('message', 'DONE!');
+    }
+
+    public function deleteOrder($id)
+    {
+        Order::deleteOrder($id);
+        return redirect()->back()->with('message', 'DONE!');
     }
 }

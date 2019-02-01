@@ -24,14 +24,17 @@ Route::get('admin/editUsers', 'Admin\AdminController@editUsers')->name('editUser
 Route::get('admin/createUser', 'Admin\AdminController@createUser')->name('createUser');
 
 Route::get('admin/viewOrders', 'Admin\OrdersController@viewOrders')->name('viewOrders');
-Route::get('admin/editOrders', 'Admin\OrdersController@editOrders')->name('editOrders');
+Route::get('admin/editOrders/{id}', 'Admin\OrdersController@editOrders')->name('editOrders');
+Route::post('admin/updateOrder', 'Admin\OrdersController@updateOrder')->name('updateOrder');
+Route::get('admin/deleteOrder/{id}', 'Admin\OrdersController@deleteOrder')->name('deleteOrder');
 
 Route::get('admin/viewLots', 'Admin\LotsController@viewLots')->name('viewLots');
 Route::get('admin/editLots', 'Admin\LotsController@editLots')->name('editLots');
 Route::get('admin/createLot', 'Admin\LotsController@createLot')->name('createLot');
 
 Route::get('admin/viewCategories', 'Admin\CategoriesController@viewCategories')->name('viewCategories');
-Route::get('admin/editCategories', 'Admin\CategoriesController@editCategories')->name('editCategories');
+Route::get('admin/editCategories/{id}', 'Admin\CategoriesController@editCategories')->name('editCategories');
+Route::post('admin/updateCategory', 'Admin\CategoriesController@updateCategory')->name('updateCategory');
 Route::get('admin/createCategory', 'Admin\CategoriesController@createCategory')->name('createCategory');
 
 

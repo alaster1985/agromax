@@ -87,7 +87,7 @@ class MainController extends Controller
 
     public function offers(Request $request)
     {
-        $category = Category::getCategoryById($request->cat)[0]->name;
+        $category = Category::getCategoryById($request->cat)->name;
         $lots = Lot::getLotsByCategoryId($request->cat);
         return view('offers', ['lots' => $lots, 'category' => $category]);
     }

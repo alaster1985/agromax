@@ -7,6 +7,12 @@ use Illuminate\Support\Facades\DB;
 
 class Category extends Model
 {
+    protected $fillable = [
+        'name',
+        'photo',
+        'type',
+    ];
+
     public static function getUpperCategories()
     {
         $categories = DB::table('categories')
@@ -33,11 +39,17 @@ class Category extends Model
         return $categories;
     }
 
+    public static function updateCategory($request)
+    {
+        $categoryToUpdate = Category::find($request->category_id);
+        $categoryToUpdate->name = $request->name;
+        $categoryToUpdate->type = $request->type;
+        $categoryToUpdate->save();
+    }
+
     public static function getCategoryById($id)
     {
-        $categoryById = DB::table('categories')
-            ->where('categories.id', '=', $id)
-            ->get();
+        $categoryById = Category::find($id);
         return $categoryById;
     }
 

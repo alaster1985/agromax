@@ -66,6 +66,26 @@ class Order extends Model
         return $allOrders;
     }
 
+    public static function getOrderById($id)
+    {
+        $orderById = Order::find($id);
+        return $orderById;
+    }
+
+    public static function updateOrder($request)
+    {
+        $OrderToUpdate = Order::find($request->order_id);
+        $OrderToUpdate->status_id = $request->status_id;
+        $OrderToUpdate->save();
+    }
+
+    public static function deleteOrder($id)
+    {
+        $OrderToDelete = Order::find($id);
+        $OrderToDelete->isdeleted = 1;
+        $OrderToDelete->save();
+    }
+
     public function status()
     {
         return $this->belongsTo('App\Status');

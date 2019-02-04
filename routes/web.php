@@ -29,13 +29,16 @@ Route::post('admin/updateOrder', 'Admin\OrdersController@updateOrder')->name('up
 Route::get('admin/deleteOrder/{id}', 'Admin\OrdersController@deleteOrder')->name('deleteOrder');
 
 Route::get('admin/viewLots', 'Admin\LotsController@viewLots')->name('viewLots');
-Route::get('admin/editLots', 'Admin\LotsController@editLots')->name('editLots');
+Route::get('admin/editLots/{id}', 'Admin\LotsController@editLots')->name('editLots');
+Route::post('admin/updateLot', 'Admin\LotsController@updateLot')->name('updateLot');
 Route::get('admin/createLot', 'Admin\LotsController@createLot')->name('createLot');
+Route::post('admin/addLot', 'Admin\LotsController@addLot')->name('addLot');
 
 Route::get('admin/viewCategories', 'Admin\CategoriesController@viewCategories')->name('viewCategories');
 Route::get('admin/editCategories/{id}', 'Admin\CategoriesController@editCategories')->name('editCategories');
 Route::post('admin/updateCategory', 'Admin\CategoriesController@updateCategory')->name('updateCategory');
 Route::get('admin/createCategory', 'Admin\CategoriesController@createCategory')->name('createCategory');
+Route::post('admin/addCategory', 'Admin\CategoriesController@addCategory')->name('addCategory');
 
 
 Route::get('/', 'MainController@index')->name('index');

@@ -2,7 +2,9 @@
 
 namespace App;
 
+use App\Services\UploadPhotoService;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class Category extends Model
@@ -56,5 +58,21 @@ class Category extends Model
     public function product()
     {
         return $this->hasMany('App\Product');
+    }
+
+    public static function createCategory(Request $request)
+    {
+        if (!is_null($request->file())) {
+            $photo = new UploadPhotoService();
+            $photo->upload($request);
+            $photoName = $photo->newFileName;
+            $photoPath = 'images/categories/';
+        }
+
+        $newPhoto = $photoPath . $photoName;
+        $newCategory = new Category($request->input() + [
+            'photo' => $newPhoto,
+            ]);
+        $newCategory->save();
     }
 }

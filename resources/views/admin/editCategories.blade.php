@@ -40,11 +40,23 @@
                                         {{--<img style="height: 33%" src="{{asset($category->photo)}}">--}}
                                     {{--</div>--}}
                                 {{--</div>--}}
+                                {{--<div class="col-md-4">--}}
+                                    {{--<div class="inline-form">--}}
+                                        {{--<label class="c-label">Type</label>--}}
+                                        {{--<input class="input-style" --}}{{----}}{{--disabled="true"--}}{{----}}{{----}}
+                                               {{--name="type" value="{{$category->type}}"/>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
                                 <div class="col-md-4">
                                     <div class="inline-form">
                                         <label class="c-label">Type</label>
-                                        <input class="input-style" {{--disabled="true"--}}
-                                               name="type" value="{{$category->type}}"/>
+                                        <select name="type">
+                                            <option id="lower" value="lower" selected>lower</option>
+                                            <option id="upper" value="upper">upper</option>
+                                            @if($category->type === 'upper')
+                                                <script>document.getElementById('upper').selected = true</script>
+                                            @endif
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-md-4">

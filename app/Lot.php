@@ -2,7 +2,9 @@
 
 namespace App;
 
+//use http\Env\Request;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class Lot extends Model
@@ -53,7 +55,8 @@ class Lot extends Model
     public static function getLotById($id)
     {
         $lotById = DB::table('lots')->where('lots.id', '=', $id)
-            ->select('lots.id', 'products.name as product', 'port_photo', 'tons', 'price', 'deliveries.name as delivery')
+            ->select('lots.id', 'products.name as product', 'port_photo', 'tons', 'price', 'port', 'delivery_id',
+                'deliveries.name as delivery', 'special', 'product_id')
             ->join('products', 'product_id', '=', 'products.id')
             ->join('deliveries', 'delivery_id', '=', 'deliveries.id')
             ->get()[0];
@@ -74,5 +77,15 @@ class Lot extends Model
     public function product()
     {
         return $this->belongsTo('App\Product');
+    }
+
+    public static function createLot(Request $request)
+    {
+        dd($request);
+    }
+
+    public static function editLot()
+    {
+
     }
 }

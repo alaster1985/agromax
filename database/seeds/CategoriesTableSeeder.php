@@ -41,7 +41,7 @@ class CategoriesTableSeeder extends Seeder
         foreach ($categories as $key => $value) {
             DB::table('categories')->insert([
                 'name' => substr($key, 1),
-                'photo' => 'images/products/' . $value . '.jpg',
+                'photo' => 'images/categories/' . $value . '.jpg',
                 'type' => $key{0} == 1 ? 'upper' : 'lower',
             ]);
         }

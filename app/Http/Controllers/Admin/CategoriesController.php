@@ -30,4 +30,10 @@ class CategoriesController extends Controller
     {
         return view('admin/createCategory');
     }
+
+    public function addCategory(Request $request)
+    {
+        Category::createCategory($request);
+        return redirect()->back()->with('message', 'DONE!');
+    }
 }

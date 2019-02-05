@@ -21,14 +21,14 @@
             </div>
             <div class="row clearfix">
                 <div class="header__bottom col-sm-12">
-                    <div class="header__logo-wr"><a href="/"><img src="images/logo.jpg" alt="Agromax"></a></div>
+                    <div class="header__logo-wr"><a href="{{ Request::root() }}"><img src="{{asset('images/logo.jpg')}}" alt="Agromax"></a></div>
                     <div class="header__site-nav site-nav navbar navbar-default clearfix" role="navigation" >
                         <div class="navbar-header">
                             <button type="button" class="site-nav-btn navbar-toggle fa fa-bars" data-toggle="collapse" data-target=".navbar-collapse"></button>
                         </div>
                         <div class="header__site-nav-wrapper navbar-collapse collapse">
                             <ul class="header__site-nav site-nav__list site-nav__list--reverse">
-                                <li class="site-nav__item "><a class="site-nav__link" href="/">المنتجات الخاصة بنا</a></li>
+                                <li class="site-nav__item "><a class="site-nav__link" href="products">المنتجات الخاصة بنا</a></li>
                                 <li class="site-nav__item "><a class="site-nav__link" href="company">الشركة الخاصة بنا</a></li>
                                 <li class="site-nav__item "><a class="site-nav__link" href="founder">المؤسس</a></li>
                                 <li class="site-nav__item "><a class="site-nav__link" href="exclusive">عمل طلبية حصرية</a></li>

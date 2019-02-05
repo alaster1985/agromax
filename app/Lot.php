@@ -3,12 +3,23 @@
 namespace App;
 
 //use http\Env\Request;
+use App\Services\UploadPhotoService;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class Lot extends Model
 {
+    protected $fillable = [
+        'product_id',
+        'delivery_id',
+        'tons',
+        'price',
+        'port',
+        'port_photo',
+        'special',
+    ];
+
     public static function getLotsByCategoryId($id)
     {
         $lotsByCategiryId = DB::table('lots')
@@ -81,7 +92,41 @@ class Lot extends Model
 
     public static function createLot(Request $request)
     {
-        dd($request);
+//        dd($request);
+        DB::transaction(function () use ($request) {
+            $newLot = new Lot($request->input());
+            if ($request->productId === 'new') {
+                $newProduct = new Product();
+                $newProduct->name = $request->newProductName;
+                $newProduct->category_id = $request->category;
+                $productPhoto = new UploadPhotoService();
+                $productPhoto->upload($request);
+                $newProductPhotoName = $productPhoto->newFileName;
+                $newProductPhotoPath = 'images/products/';
+                $newProductPhoto = $newProductPhotoPath . $newProductPhotoName;
+                $newProduct->photo = $newProductPhoto;
+                $newProduct->save();
+
+                foreach ($request->description_id as $key => $value) {
+                    $newDescription = new Description();
+                    $newDescription->language_id = $key;
+                    $newDescription->product_id = $newProduct->id;
+                    $newDescription->description = $value;
+                    $newDescription->save();
+                }
+
+                $newLot->product_id = $newProduct->id;
+            } else {
+                $newLot->product_id = $request->productId;
+            }
+            $portPhoto = new UploadPhotoService();
+            $portPhoto->upload($request);
+            $newPortPhotoName = $portPhoto->newFileName;
+            $newPortPhotoPath = 'images/ports/';
+            $newPortPhoto = $newPortPhotoPath . $newPortPhotoName;
+            $newLot->port_photo = $newPortPhoto;
+            $newLot->save();
+        });
     }
 
     public static function editLot()

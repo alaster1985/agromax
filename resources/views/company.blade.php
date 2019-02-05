@@ -7,9 +7,9 @@
                     <img src="images/logo.jpg" alt="Agromax">
                 </div>
                 <div class="company__desc-wrapper col-md-8 ">
-                    <p class="company__desc">"AgroMax" - is trading company working at market of healthy foods (wholesales segment).</p>
+                    <p class="company__desc">"AgroMax" - is trading company working at market of health food (wholesales segment).</p>
                     <p class="company__desc">Our company headquartered in Sofia ( Bulgaria) and has its operational offices in Kharkov( Ukraine) and in Romania.</p>
-                    <p class="company__desc">Our market mission - to facilitate the trade of cereals , agro  products for healthy meals industry what were roasted in the farms from Black Sea region countries.</p>
+                    <p class="company__desc">Our market mission - to facilitate the trade with agricultures for health food industry from  Black Sea countries' farms.</p>
                 </div>
             </div>
         </div>

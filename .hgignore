@@ -17,3 +17,5 @@ yarn-error.log
 .gitattributes
 storage
 .DS_Store
+resources/views/company.blade.php.orig
+resources/views/company.blade.php.resolve

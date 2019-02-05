@@ -13,20 +13,41 @@ class UploadPhotoService extends Controller
 
     public function upload(Request $request)
     {
-        $image = $request->photo;
 
         if ($request->getRequestUri() === '/admin/addCategory') {
+
+            $image = $request->photo;
+            $image_resize = Image::make($image->getRealPath());
             $this->pathFile = public_path('images/categories/');
+            $image_resize->resize(275, 180);
+            $image_resize->save($this->pathFile . $this->newFileName);
         }
+
+        if ($request->getRequestUri() === '/admin/addLot') {
+
+            if ($request->productId === 'new') {
+
+                $image = $request->new_product_photo;
+                $image_resize = Image::make($image->getRealPath());
+                $this->pathFile = public_path('images/products/');
+                $image_resize->resize(275, 180);
+                $image_resize->save($this->pathFile . $this->newFileName);
+
+                $image = $request->port_photo;
+                $image_resize = Image::make($image->getRealPath());
+                $this->pathFile = public_path('images/ports/');
+                $image_resize->resize(1024, 683);
+                $image_resize->save($this->pathFile . $this->newFileName);
+            }
+
+        }
+
         $this->newFileName = self::getGUID()
             . '.' . $image->getClientOriginalExtension();
         if (!file_exists($this->pathFile)) {
             mkdir($this->pathFile, 0777, true);
         }
 
-        $image_resize = Image::make($image->getRealPath());
-        $image_resize->resize(275, 180);
-        $image_resize->save($this->pathFile . $this->newFileName);
     }
 
     public static function getGUID()

@@ -7,6 +7,12 @@ use Illuminate\Support\Facades\DB;
 
 class Product extends Model
 {
+    protected $fillable = [
+        'name',
+        'photo',
+        'category_id',
+    ];
+
     public static function getProductsByCategoryId($id)
     {
         $productsByCategoryId = DB::table('products')->where('category_id', '=', $id)->get();

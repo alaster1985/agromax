@@ -21,35 +21,35 @@
                                 <div class="col-md-4">
                                     <div class="inline-form">
                                         <label class="c-label">Product name</label>
-                                        <input class="input-style" disabled="true"
+                                        <input class="input-style" disabled
                                                name="product_name" value="{{\App\Lot::find($lot->id)->product->name}}"/>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="inline-form">
                                         <label class="c-label">Amount</label>
-                                        <input class="input-style" disabled="true"
+                                        <input class="input-style" disabled
                                                name="tons" value="{{$lot->tons}}"/>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="inline-form">
                                         <label class="c-label">Price</label>
-                                        <input class="input-style" disabled="true"
+                                        <input class="input-style" disabled
                                                name="price" value="{{$lot->price}}"/>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="inline-form">
                                         <label class="c-label">Port</label>
-                                        <input class="input-style" disabled="true"
+                                        <input class="input-style" disabled
                                                name="port" value="{{$lot->port}}"/>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="inline-form">
                                         <label class="c-label">Incoterms</label>
-                                        <input class="input-style" disabled="true"
+                                        <input class="input-style" disabled
                                                name="delivery"
                                                value="{{\App\Delivery::find($lot->delivery_id)->name}}"/>
                                     </div>
@@ -63,14 +63,14 @@
                                 <div class="col-md-4">
                                     <div class="inline-form">
                                         <label class="c-label">Port_photo</label>
-                                        <input class="input-style" disabled="true"
+                                        <input class="input-style" disabled
                                                name="first_name" value="{{$lot->port_photo}}"/>
                                     </div>
                                 </div>
                                 {{--<div class="col-md-4">--}}
                                 {{--<div class="inline-form">--}}
                                 {{--<label class="c-label">Special</label>--}}
-                                {{--<input class="input-style" disabled="true"--}}
+                                {{--<input class="input-style" disabled--}}
                                 {{--name="last_name" value="{{$lot->special}}"/>--}}
                                 {{--</div>--}}
                                 {{--</div>--}}
@@ -81,7 +81,7 @@
                                         <div class="inline-form">
                                             <label class="c-label">Description
                                                 for {{\App\Language::find($description->language_id)->name}}</label>
-                                            <textarea rows="4" class="input-style" disabled="true"
+                                            <textarea rows="4" class="input-style" disabled
                                                       name="linkedin" {{--value=""--}}>{{$description->description}}</textarea>
                                         </div>
                                     </div>
@@ -89,18 +89,18 @@
                                 @endforeach
 
                                 {{--<div class="col-md-4">--}}
-                                    {{--<div class="inline-form">--}}
-                                        {{--<label class="c-label">Phone</label>--}}
-                                        {{--<input class="input-style" disabled="true"--}}
-                                               {{--name="phone" value="--}}{{--{{$order->phone}}--}}{{--"/>--}}
-                                    {{--</div>--}}
+                                {{--<div class="inline-form">--}}
+                                {{--<label class="c-label">Phone</label>--}}
+                                {{--<input class="input-style" disabled--}}
+                                {{--name="phone" value="--}}{{--{{$order->phone}}--}}{{--"/>--}}
+                                {{--</div>--}}
                                 {{--</div>--}}
                                 {{--<div class="col-md-4">--}}
-                                    {{--<div class="inline-form">--}}
-                                        {{--<label class="c-label">Company</label>--}}
-                                        {{--<input class="input-style" disabled="true"--}}
-                                               {{--name="company" value="--}}{{--{{$order->company}}--}}{{--"/>--}}
-                                    {{--</div>--}}
+                                {{--<div class="inline-form">--}}
+                                {{--<label class="c-label">Company</label>--}}
+                                {{--<input class="input-style" disabled--}}
+                                {{--name="company" value="--}}{{--{{$order->company}}--}}{{--"/>--}}
+                                {{--</div>--}}
                                 {{--</div>--}}
                                 {{--<input type="hidden" name="order_id" value="--}}{{--{{$order->id}}--}}{{--">--}}
                                 {{--<div class="col-md-3">--}}
@@ -118,30 +118,30 @@
                                 {{--</div>--}}
                                 {{--</div>--}}
                                 {{--<div class="col-md-3">--}}
-                                    {{--<div class="inline-form">--}}
-                                        {{--<label class="c-label">Stage</label>--}}
-                                        {{--<input class="input-style" disabled="true"--}}
-                                               {{--name="stage"--}}
-                                               {{--value="--}}{{--{{\App\Stage::find($order->stage_id)->stage}}--}}{{--"/>--}}
-                                    {{--</div>--}}
+                                {{--<div class="inline-form">--}}
+                                {{--<label class="c-label">Stage</label>--}}
+                                {{--<input class="input-style" disabled--}}
+                                {{--name="stage"--}}
+                                {{--value="--}}{{--{{\App\Stage::find($order->stage_id)->stage}}--}}{{--"/>--}}
+                                {{--</div>--}}
                                 {{--</div>--}}
                                 <div class="col-md-3">
                                     <div class="inline-form">
                                         <label class="c-label">Created at</label>
-                                        <input class="input-style" disabled="true"
+                                        <input class="input-style" disabled
                                                name="created_at" value="{{$lot->created_at ?? ''}}"/>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="inline-form">
                                         <label class="c-label">Updated at</label>
-                                        <input class="input-style" disabled="true"
+                                        <input class="input-style" disabled
                                                name="updated_at" value="{{$lot->updated_at ?? ''}}"/>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="inline-form">
-                                        <button type="submit" class="btn btn-success">SAVE</button>
+                                        <button type="submit" disabled class="btn btn-success">SAVE</button>
                                     </div>
                                 </div>
                             </div>

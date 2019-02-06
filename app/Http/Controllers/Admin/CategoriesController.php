@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Category;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CategoryStoreRequest;
 use Illuminate\Http\Request;
 
 class CategoriesController extends Controller
@@ -22,6 +23,7 @@ class CategoriesController extends Controller
 
     public function updateCategory(Request $request)
     {
+        dd($request);
         Category::updateCategory($request);
         return redirect()->back()->with('message', 'DONE!');
     }
@@ -31,7 +33,7 @@ class CategoriesController extends Controller
         return view('admin/createCategory');
     }
 
-    public function addCategory(Request $request)
+    public function addCategory(CategoryStoreRequest $request)
     {
         Category::createCategory($request);
         return redirect()->back()->with('message', 'DONE!');

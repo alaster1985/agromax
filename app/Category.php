@@ -2,10 +2,13 @@
 
 namespace App;
 
+use App\Http\Requests\CategoryStoreRequest;
+use App\Http\Requests\PhotoUploadRequest;
 use App\Services\UploadPhotoService;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+
+//use Illuminate\Support\Facades\DB;
 
 class Category extends Model
 {
@@ -17,19 +20,13 @@ class Category extends Model
 
     public static function getUpperCategories()
     {
-        $categories = DB::table('categories')
-            ->where('type', '=', 'upper')
-            ->orderBy('name')
-            ->get();
+        $categories = Category::all()->where('type', '=', 'upper')->sortBy('name');
         return $categories;
     }
 
     public static function getLowerCategories()
     {
-        $categories = DB::table('categories')
-            ->where('type', '=', 'lower')
-            ->orderBy('name')
-            ->get();
+        $categories = Category::all()->where('type', '=', 'lower')->sortBy('name');
         return $categories;
     }
 
@@ -70,18 +67,15 @@ class Category extends Model
         return $this->hasMany('App\Product');
     }
 
-    public static function createCategory(Request $request)
+    public static function createCategory($request)
     {
-        if (!is_null($request->file())) {
-            $photo = new UploadPhotoService();
-            $photo->uploadProductPhoto($request);
-            $photoName = $photo->newFileName;
-            $photoPath = 'images/categories/';
-        }
-
+        $photo = new UploadPhotoService();
+        $photo->uploadProductPhoto($request);
+        $photoName = $photo->newFileName;
+        $photoPath = 'images/categories/';
         $newPhoto = $photoPath . $photoName;
         $newCategory = new Category($request->input() + [
-            'photo' => $newPhoto,
+                'photo' => $newPhoto,
             ]);
         $newCategory->save();
     }

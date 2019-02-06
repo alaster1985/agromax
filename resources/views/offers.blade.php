@@ -6,14 +6,15 @@
                 <h2 class="offers__title">{{$category}} is our major proposal</h2>
             @else
                 <h2 class="offers__title">Our major proposal</h2>
+                <h6 class="site-nav__link">{{$lots->links()}}</h6>
             @endif
                 @foreach($lots as $lot)
 
                     <div class="offers__item col-sm-4 col-md-3">
                         <a class="offer__img-wr" href="{{ Request::root() . '/confirmation/?' . Request::getQueryString() . '&offer=' . $lot->id}}">
-                            <img src="{{asset($lot->photo)}}" alt="Our offers">
+                            <img src="{{asset($lot->product->photo)}}" alt="Our offers">
                         </a>
-                        <h3 class="offers__title">{{$lot->name}}</h3>
+                        <h3 class="offers__title">{{$lot->product->name}}</h3>
                         <table class="offers__table">
                             <thead>
                             <tr>
@@ -24,7 +25,7 @@
                             </thead>
                             <tbody>
                             <tr>
-                                <td>{{$lot->delivery}}</td>
+                                <td>{{$lot->delivery->name}}</td>
                                 <td>{{$lot->tons}} tons</td>
                                 <td>{{$lot->price}}$</td>
                             </tr>

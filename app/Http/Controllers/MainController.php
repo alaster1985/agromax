@@ -11,8 +11,8 @@ use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
-    var $_dataRoutes = null;
-
+//    var $_dataRoutes = null;
+//
 //    public function __construct()
 //    {
 //        $this->_dataRoutes = array(
@@ -54,7 +54,12 @@ class MainController extends Controller
     public function confirmationById(Request $request)
     {
         $lot = Lot::getLotById($request->offer);
-        return view('confirmation', ['lot' => $lot]);
+        if (!is_null($lot)){
+            return view('confirmation', ['lot' => $lot]);
+        } else {
+            $lots = Lot::paginate(24);
+            return view('offers', ['lots' => $lots]);
+        }
     }
 
     public function exConfirm(ExclusiveLotRequest $request)
@@ -87,14 +92,13 @@ class MainController extends Controller
 
     public function offers(Request $request)
     {
-        $category = Category::getCategoryById($request->cat)->name;
-        $lots = Lot::getLotsByCategoryId($request->cat);
-        return view('offers', ['lots' => $lots, 'category' => $category]);
-    }
-
-    public function offersAll()
-    {
-        $lots = Lot::getLots();
-        return view('offers', ['lots' => $lots]);
+        $category = Category::getCategoryById($request->cat);
+        if (is_null($category)) {
+            $lots = Lot::paginate(24);
+            return view('offers', ['lots' => $lots]);
+        } else {
+            $lots = Lot::getLotsByCategoryId($request->cat);
+            return view('offers', ['lots' => $lots, 'category' => $category->name]);
+        }
     }
 }

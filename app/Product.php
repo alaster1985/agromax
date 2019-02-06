@@ -15,7 +15,7 @@ class Product extends Model
 
     public static function getProductsByCategoryId($id)
     {
-        $productsByCategoryId = DB::table('products')->where('category_id', '=', $id)->get();
+        $productsByCategoryId = Product::all()->where('category_id', '=', $id);
         return $productsByCategoryId;
     }
 

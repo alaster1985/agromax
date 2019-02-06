@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\PhotoUploadRequest;
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManagerStatic as Image;
 
@@ -11,7 +12,7 @@ class UploadPhotoService extends Controller
     public $pathFile;
     public $newFileName;
 
-    public function uploadProductPhoto(Request $request)
+    public function uploadProductPhoto(PhotoUploadRequest $request)
     {
         if ($request->getRequestUri() === '/admin/updateCategory') {
             $image = $request->photo;

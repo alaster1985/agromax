@@ -23,8 +23,7 @@
                                 <div class="col-md-4">
                                     <div class="inline-form">
                                         <label class="c-label">Category name</label>
-                                        <input class="input-style" {{--disabled--}}
-                                        name="name" value="{{$category->name}}"/>
+                                        <input class="input-style" name="name" value="{{$category->name}}"/>
                                     </div>
                                 </div>
                                 <div class="col-md-4">

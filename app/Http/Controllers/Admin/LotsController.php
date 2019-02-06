@@ -30,4 +30,10 @@ class LotsController extends Controller
         Lot::createLot($request);
         return redirect()->back()->with('message', 'DONE!');
     }
+
+    public function updateLot(Request $request)
+    {
+        Lot::updateLot($request);
+        return redirect()->back()->with('message', 'DONE!');
+    }
 }

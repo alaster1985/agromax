@@ -17,7 +17,7 @@
                 <a class="offer__img-wr" href="#">
                     <img src="{{asset($lot->port_photo)}}" alt="Our offers">
                 </a>
-                <h3 class="offers__title">{{$lot->product}}</h3>
+                <h3 class="offers__title">{{\App\Lot::find($lot->id)->product->name}}</h3>
                 <table class="offers__table">
                     <thead>
                     <tr>
@@ -28,7 +28,7 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td>{{$lot->delivery}}</td>
+                        <td>{{\App\Delivery::find($lot->delivery_id)->name}}</td>
                         <td>{{$lot->tons}} tons</td>
                         <td>{{$lot->price}} $</td>
                     </tr>

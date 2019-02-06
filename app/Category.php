@@ -46,6 +46,16 @@ class Category extends Model
         $categoryToUpdate = Category::find($request->category_id);
         $categoryToUpdate->name = $request->name;
         $categoryToUpdate->type = $request->type;
+
+        if (isset($request->photo)) {
+            $newCategoryPhoto = new UploadPhotoService();
+            $newCategoryPhoto->uploadProductPhoto($request);
+            $photoName = $newCategoryPhoto->newFileName;
+            $photoPath = 'images/categories/';
+            $newPhoto = $photoPath . $photoName;
+            $categoryToUpdate->photo = $newPhoto;
+        }
+
         $categoryToUpdate->save();
     }
 
@@ -64,7 +74,7 @@ class Category extends Model
     {
         if (!is_null($request->file())) {
             $photo = new UploadPhotoService();
-            $photo->upload($request);
+            $photo->uploadProductPhoto($request);
             $photoName = $photo->newFileName;
             $photoPath = 'images/categories/';
         }

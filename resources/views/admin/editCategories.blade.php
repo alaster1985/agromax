@@ -19,6 +19,9 @@
                         <div class="widget-area">
                             <div class="wizard-form-h">
                                 <h2 class="StepTitle">CATEGORY</h2>
+                                @if ($errors)
+                                    <div class="error" style="display: block">{{($errors->first())}}</div>
+                                @endif
                                 <input type="hidden" name="category_id" value="{{$category->id}}">
                                 <div class="col-md-4">
                                     <div class="inline-form">
@@ -83,7 +86,7 @@
             </form>
         </div>
         @if(session()->has('message'))
-            <div class="alert alert-success">
+            <div class="alert alert-success" align="center">
                 {{ session()->get('message') }}
             </div>
         @endif

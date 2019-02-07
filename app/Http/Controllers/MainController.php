@@ -71,6 +71,7 @@ class MainController extends Controller
 //        }) else {
 //
 //    };
+//        dd($request);
         $exclusiveLot = Lot::makeExclusiveLot($request);
         return view('confirmation', ['lot' => $exclusiveLot]);
     }

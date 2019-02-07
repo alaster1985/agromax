@@ -18,6 +18,10 @@
                     <div class="col-md-12">
                         <div class="widget-area">
                             <div class="wizard-form-h">
+                                <h2 class="StepTitle">LOT</h2>
+                                @if ($errors)
+                                    <div class="error" style="display: block">{{($errors->first())}}</div>
+                                @endif
                                 <div class="col-md-4">
                                     <div class="inline-form">
                                         <label class="c-label">Product name</label>
@@ -32,7 +36,7 @@
                                 <div class="col-md-4 newProduct" style="display: none">
                                     <div class="inline-form">
                                         <label class="c-label">New Product Name</label>
-                                        <input class="input-style" name="newProductName"/>
+                                        <input class="input-style" value="{{old('newProductName')}}" name="newProductName"/>
                                     </div>
                                 </div>
                                 <div class="col-md-4 newProduct" style="display: none">
@@ -54,19 +58,19 @@
                                 <div class="col-md-4">
                                     <div class="inline-form">
                                         <label class="c-label">Amount</label>
-                                        <input class="input-style" name="tons"/>
+                                        <input class="input-style" value="{{old('tons')}}" name="tons"/>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="inline-form">
                                         <label class="c-label">Price</label>
-                                        <input class="input-style" name="price"/>
+                                        <input class="input-style" value="{{old('price')}}" name="price"/>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="inline-form">
                                         <label class="c-label">Port</label>
-                                        <input class="input-style" name="port"/>
+                                        <input class="input-style" value="{{old('port')}}" name="port"/>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -100,12 +104,11 @@
 
                                     <div class="col-md-12 newProduct" style="display: none">
                                         <div class="inline-form">
-                                            <label class="c-label">Description
-                                                for {{$language->name}}</label>
+                                            <label class="c-label">Description for {{$language->name}}</label>
                                             <textarea rows="4" class="input-style"
                                                       name="description_id[{{$language->id}}]"
-                                            >Description for {{$language->name}}
-                                            </textarea>
+                                                      placeholder="Description for {{$language->name}}"
+                                            >{{old('description_id.' . $language->id)}}</textarea>
                                         </div>
                                     </div>
 
@@ -123,7 +126,7 @@
             </form>
         </div>
         @if(session()->has('message'))
-            <div class="alert alert-success">
+            <div class="alert alert-success" align="center">
                 {{ session()->get('message') }}
             </div>
         @endif

@@ -21,9 +21,8 @@ class CategoriesController extends Controller
         return view('admin/editCategories', ['category' => $categoryForEdit]);
     }
 
-    public function updateCategory(Request $request)
+    public function updateCategory(CategoryStoreRequest $request)
     {
-        dd($request);
         Category::updateCategory($request);
         return redirect()->back()->with('message', 'DONE!');
     }

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\LotStoreRequest;
 use App\Lot;
+use App\Product;
 use Illuminate\Http\Request;
 
 class LotsController extends Controller
@@ -25,8 +27,10 @@ class LotsController extends Controller
         return view('admin/editLots', ['lot' => $lot]);
     }
 
-    public function addLot(Request $request)
+//    public function addLot(Request $request)
+    public function addLot(LotStoreRequest $request)
     {
+//        dd($request);
         Lot::createLot($request);
         return redirect()->back()->with('message', 'DONE!');
     }

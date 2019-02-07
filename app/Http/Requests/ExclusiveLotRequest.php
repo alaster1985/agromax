@@ -32,7 +32,7 @@ class ExclusiveLotRequest extends FormRequest
                 'required',
                 Rule::in($products),
             ],
-            'otherName' => 'required_if:product,1',
+            'otherName' => 'nullable|required_if:product,1|min:3|max:25',
             'delivery' => [
                 'required',
                 Rule::in($deliveries),
@@ -48,7 +48,9 @@ class ExclusiveLotRequest extends FormRequest
         return [
             'product.required' => 'Please, select the product',
             'product.in' => 'Nice try BRO ;) But set product from this select',
-            'otherName.required_if' => 'Please, set Other name of product',
+            'otherName.required_if' => 'Please, set other name of product',
+            'otherName.min' => 'Very short other name of product. At least 3 characters',
+            'otherName.max' => 'Shorter please, max 25 characters',
             'delivery.required' => 'Please, select the Incoterms',
             'delivery.in' => 'Nice try BRO ;) But set Incoterms from this select',
             'amount.required' => 'Please, set amount',

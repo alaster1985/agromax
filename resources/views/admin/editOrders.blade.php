@@ -154,7 +154,7 @@
             </form>
         </div>
         @if(session()->has('message'))
-            <div class="alert alert-success">
+            <div class="alert alert-success" align="center">
                 {{ session()->get('message') }}
             </div>
         @endif

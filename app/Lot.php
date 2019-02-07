@@ -22,8 +22,8 @@ class Lot extends Model
 
     public static function getLotsByCategoryId($id)
     {
-        $productsById = Product::getProductsByCategoryId($id)->pluck('id')->all();
-        $lotsByCategoryId = Lot::all()->whereIn('product_id', $productsById);
+        $productsIdByCategoryId = Product::getProductsByCategoryId($id)->pluck('id')->all();
+        $lotsByCategoryId = Lot::all()->whereIn('product_id', $productsIdByCategoryId);
         return $lotsByCategoryId;
     }
 

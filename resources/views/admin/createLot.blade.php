@@ -33,28 +33,6 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-4 newProduct" style="display: none">
-                                    <div class="inline-form">
-                                        <label class="c-label">New Product Name</label>
-                                        <input class="input-style" value="{{old('newProductName')}}" name="newProductName"/>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 newProduct" style="display: none">
-                                    <div class="inline-form">
-                                        <label class="c-label">New Product Photo</label>
-                                        <input class="input-style" name="new_product_photo" type="file"/>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 newProduct" style="display: none">
-                                    <div class="inline-form">
-                                        <label class="c-label">Category</label>
-                                        <select name="category">
-                                            @foreach(\App\Category::all()->where('id', '<>', 1)->sortBy('name') as $category)
-                                                <option value="{{$category->id}}">{{$category->name}}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
                                 <div class="col-md-4">
                                     <div class="inline-form">
                                         <label class="c-label">Amount</label>
@@ -69,6 +47,16 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="inline-form">
+                                        <label class="c-label">Incoterms</label>
+                                        <select name="delivery_id">
+                                            @foreach(\App\Delivery::all() as $delivery)
+                                                <option value="{{$delivery->id}}">{{$delivery->name}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="inline-form">
                                         <label class="c-label">Port</label>
                                         <input class="input-style" value="{{old('port')}}" name="port"/>
                                     </div>
@@ -79,14 +67,27 @@
                                         <input class="input-style" name="port_photo" type="file"/>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 newProduct" style="display: none">
                                     <div class="inline-form">
-                                        <label class="c-label">Incoterms</label>
-                                        <select name="delivery_id">
-                                            @foreach(\App\Delivery::all() as $delivery)
-                                                <option value="{{$delivery->id}}">{{$delivery->name}}</option>
+                                        <label class="c-label">Category</label>
+                                        <select name="category">
+                                            @foreach(\App\Category::all()->where('id', '<>', 1)->sortBy('name') as $category)
+                                                <option value="{{$category->id}}">{{$category->name}}</option>
                                             @endforeach
                                         </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 newProduct" style="display: none">
+                                    <div class="inline-form">
+                                        <label class="c-label">New Product Name</label>
+                                        <input class="input-style" value="{{old('newProductName')}}" name="newProductName"/>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 newProduct" style="display: none">
+                                    <div class="inline-form">
+                                        <label class="c-label">New Product Photo</label>
+                                        <input class="input-style" name="new_product_photo" type="file"/>
                                     </div>
                                 </div>
 

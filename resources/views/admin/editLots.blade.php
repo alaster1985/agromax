@@ -19,6 +19,9 @@
                         <div class="widget-area">
                             <div class="wizard-form-h">
                                 <h2 class="StepTitle">LOT</h2>
+                                @if ($errors)
+                                    <div class="error" style="display: block">{{($errors->first())}}</div>
+                                @endif
                                 <input type="hidden" name="lot_id" value="{{$lot->id}}">
                                 <div class="col-md-4">
                                     <div class="inline-form">
@@ -98,7 +101,7 @@
                                             <label class="c-label">Description
                                                 for {{\App\Language::find($description->language_id)->name}}</label>
                                             <textarea rows="4" class="input-style"
-                                                      name="description[{{$description->id}}]">{{$description->description}}</textarea>
+                                                      name="description_id[{{$description->language_id}}]">{{$description->description}}</textarea>
                                         </div>
                                     </div>
 

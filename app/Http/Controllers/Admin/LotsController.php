@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Delivery;
+use App\Description;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\LotStoreRequest;
 use App\Lot;
@@ -27,15 +29,13 @@ class LotsController extends Controller
         return view('admin/editLots', ['lot' => $lot]);
     }
 
-//    public function addLot(Request $request)
     public function addLot(LotStoreRequest $request)
     {
-//        dd($request);
         Lot::createLot($request);
         return redirect()->back()->with('message', 'DONE!');
     }
 
-    public function updateLot(Request $request)
+    public function updateLot(LotStoreRequest $request)
     {
         Lot::updateLot($request);
         return redirect()->back()->with('message', 'DONE!');

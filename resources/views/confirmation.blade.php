@@ -59,7 +59,7 @@
 
                     <div class="conformation__item input-group">
                         <span class="input-group-addon"><i class="fas fa-envelope"></i></span>
-                        <input name="email" value="{{old('linkedin')}}" placeholder="E-Mail" class="form-control" type="text">
+                        <input name="email" value="{{old('email')}}" placeholder="E-Mail" class="form-control" type="text">
                     </div>
 
 

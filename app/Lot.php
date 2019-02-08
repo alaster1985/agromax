@@ -29,7 +29,7 @@ class Lot extends Model
 
     public static function getAllLots()
     {
-        $allLots = Lot::paginate(17);
+        $allLots = Lot::orderByDesc('created_at')->paginate(17);
         return $allLots;
     }
 
@@ -99,7 +99,7 @@ class Lot extends Model
         });
     }
 
-    public static function updateLot($request)
+    public static function updateLot(Request $request)
     {
         DB::transaction(function () use ($request) {
             $lotToUpdate = Lot::find($request->lot_id);
@@ -118,8 +118,10 @@ class Lot extends Model
                 $productForCurrentLot->photo = $newPhoto;
             }
             $productForCurrentLot->save();
-            foreach ($request->description as $key => $value) {
-                $descriptionForCurrentLot = Description::find($key);
+            foreach ($request->description_id as $key => $value) {
+                $descriptionForCurrentLot = Description::all()
+                    ->where('language_id', '=', $key)
+                    ->where('product_id', '=', Lot::find($request->lot_id)->product->id)->first();
                 $descriptionForCurrentLot->description = $value;
                 $descriptionForCurrentLot->save();
             }

@@ -33,18 +33,17 @@ class LotStoreRequest extends FormRequest
         $productsId['new'] = 'new';
         return [
             'productId' => [
-                'required',
+                'required_without:lot_id',
                 Rule::in($productsId),
             ],
             'tons' => 'required|integer|max:10000|min:10',
             'price' => 'required|integer|max:100000|min:10',
             'port' => 'required|max:100|min:3',
-            'port_photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'port_photo' => 'required_without:lot_id|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'delivery_id' => [
                 'required',
                 Rule::in($deliveriesId),
             ],
-//            'newProductName' => 'required_if:productId,new|max:100|min:3',
             'newProductName' => 'nullable|required_if:productId,new|max:25|min:3',
             'new_product_photo' => 'nullable|required_if:productId,new|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'category' => [
@@ -52,12 +51,12 @@ class LotStoreRequest extends FormRequest
                 'required_if:productId,new',
                 Rule::in($categoriesId),
             ],
-            'description_id.1' => 'nullable|required_if:productId,new|max:10000',
-            'description_id.2' => 'nullable|required_if:productId,new|max:10000',
-            'description_id.3' => 'nullable|required_if:productId,new|max:10000',
-            'description_id.4' => 'nullable|required_if:productId,new|max:10000',
-            'description_id.5' => 'nullable|required_if:productId,new|max:10000',
-            'description_id.6' => 'nullable|required_if:productId,new|max:10000',
+            'description_id.1' => 'nullable|required_if:productId,new|required_with:lot_id|max:10000',
+            'description_id.2' => 'nullable|required_if:productId,new|required_with:lot_id|max:10000',
+            'description_id.3' => 'nullable|required_if:productId,new|required_with:lot_id|max:10000',
+            'description_id.4' => 'nullable|required_if:productId,new|required_with:lot_id|max:10000',
+            'description_id.5' => 'nullable|required_if:productId,new|required_with:lot_id|max:10000',
+            'description_id.6' => 'nullable|required_if:productId,new|required_with:lot_id|max:10000',
         ];
     }
 
@@ -93,16 +92,22 @@ class LotStoreRequest extends FormRequest
             'category.required_if' => 'Please, select the category',
             'category.in' => 'Nice try BRO ;) But set category from this select',
             'description_id.1.required_if' => 'Please, set English description for this product',
+            'description_id.1.required_with' => 'Please, set English description for this product',
             'description_id.1.max' => 'Shorter please, max 10000 characters (English description)',
             'description_id.2.required_if' => 'Please, set Germany description for this product',
+            'description_id.2.required_with' => 'Please, set Germany description for this product',
             'description_id.2.max' => 'Shorter please, max 10000 characters (Germany description)',
             'description_id.3.required_if' => 'Please, set Turkey description for this product',
+            'description_id.3.required_with' => 'Please, set Turkey description for this product',
             'description_id.3.max' => 'Shorter please, max 10000 characters (Turkey description)',
             'description_id.4.required_if' => 'Please, set Italy description for this product',
+            'description_id.4.required_with' => 'Please, set Italy description for this product',
             'description_id.4.max' => 'Shorter please, max 10000 characters (Italy description)',
             'description_id.5.required_if' => 'Please, set France description for this product',
+            'description_id.5.required_with' => 'Please, set France description for this product',
             'description_id.5.max' => 'Shorter please, max 10000 characters (France description)',
             'description_id.6.required_if' => 'Please, set Arabian description for this product',
+            'description_id.6.required_with' => 'Please, set Arabian description for this product',
             'description_id.6.max' => 'Shorter please, max 10000 characters (Arabian description)',
         ];
     }

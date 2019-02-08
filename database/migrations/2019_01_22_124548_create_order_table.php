@@ -29,7 +29,7 @@ class CreateOrderTable extends Migration
             $table->string('email', 100);
             $table->string('linkedin', 100);
             $table->string('phone', 100);
-            $table->string('company', 100);
+            $table->string('company', 100)->nullable();
             $table->boolean('exclusive');
             $table->boolean('isdeleted')->default(0);
             $table->timestamps();

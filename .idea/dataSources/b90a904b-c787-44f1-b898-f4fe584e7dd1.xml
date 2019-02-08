@@ -1367,7 +1367,6 @@
     <column id="320" parent="250" name="company">
       <Position>16</Position>
       <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="321" parent="250" name="exclusive">

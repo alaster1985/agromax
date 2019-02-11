@@ -38,7 +38,7 @@
                             <li class="site-nav__item"><a class="site-nav__link" href="exclusive">Make exclusive order</a></li>
                             <li class="site-nav__item"><a class="site-nav__link" href="partnership">Partnership program</a></li>
                             <li class="site-nav__item"><a class="site-nav__link" href="charity">Charity</a></li>
-                            <li class="site-nav__item"><a class="site-nav__link" href="charityar">Charity ar</a></li>
+                            {{--<li class="site-nav__item"><a class="site-nav__link" href="charityar">Charity ar</a></li>--}}
                             <li class="site-nav__item"><a class="site-nav__link" href="contacts">Contacts</a></li>
                             <li class="site-nav__item site-nav__item--search">
                                 <div class="site-nav__search-icon fa fa-search">

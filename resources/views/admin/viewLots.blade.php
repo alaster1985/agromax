@@ -46,7 +46,7 @@
                                             {{\App\Lot::find($lot->id)->product->name}}
                                         </td>
                                         <td>
-                                            <img style="height: 33%" src="{{asset(\App\Lot::find($lot->id)->product->photo)}}">
+                                            <img style="height: 75px" src="{{asset(\App\Lot::find($lot->id)->product->photo)}}">
                                         </td>
                                         <td>
                                             {{\App\Product::find($lot->product_id)->category->name}}
@@ -64,7 +64,7 @@
                                             {{$lot->port}}
                                         </td>
                                         <td>
-                                            <img style="height: 10%" src="{{asset($lot->port_photo)}}">
+                                            <img style="height: 75px" src="{{asset($lot->port_photo)}}">
                                         </td>
                                         <td>
                                             {{$lot->created_at}}

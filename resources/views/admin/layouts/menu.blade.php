@@ -3,16 +3,16 @@
         <div class="menu-sec">
             <div id="menu-toogle" class="menus">
                 <div class="single-menu">
-                    {{--@unless ($user->hasRole('moderator|logistics|manager'))--}}
-                    <h2><a title=""><i class="fa fa-user"></i><span>Users</span></a></h2>
-                    <div class="sub-menu">
-                        <ul>
-                            <li><a href="{{route('viewUsers')}}" title="">All Users</a></li>
-                            <li><a href="{{route('createUser')}}" title="">Create User</a></li>
-                        </ul>
-                    </div>
+                    @if(\App\User::find(Auth::id())->role_id === 1)
+                        <h2><a title=""><i class="fa fa-user"></i><span>Users</span></a></h2>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="{{route('viewUsers')}}" title="">All Users</a></li>
+                                <li><a href="{{route('createUser')}}" title="">Create User</a></li>
+                            </ul>
+                        </div>
+                    @endif
                 </div>
-                {{--@endunless--}}
                 <div class="single-menu">
                     <h2><a title=""><i class="fa fa-desktop"></i><span>Orders</span></a></h2>
                     <div class="sub-menu">

@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Hash;
 
 class User extends Authenticatable
 {
@@ -16,7 +17,10 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name',
+        'email',
+        'password',
+        'role_id',
     ];
 
     /**
@@ -25,6 +29,51 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
+        'remember_token',
     ];
+
+    public function role()
+    {
+        return $this->belongsTo('App\Role');
+    }
+
+    public static function getUsers()
+    {
+        $users = User::all()->where('isdeleted', '=', 0);
+        return $users;
+    }
+
+    public static function getUserById($id)
+    {
+        $user = User::find($id);
+        return $user;
+    }
+
+    public static function updateUser($request)
+    {
+        $userForUpdate = User::find($request->user_id);
+        $userForUpdate->name = $request->name;
+        $userForUpdate->email = $request->email;
+        $userForUpdate->role_id = $request->role;
+        $userForUpdate->save();
+    }
+
+    public static function addUser($request)
+    {
+        $newUser = new User();
+        $newUser->name = $request->name;
+        $newUser->email = $request->email;
+        $newUser->role_id = $request->role;
+        $newUser->password = Hash::make($request->password);
+        $newUser->save();
+    }
+
+    public static function deleteUser($id)
+    {
+        $userForDelete = User::find($id);
+        $userForDelete->isdeleted = 1;
+        $userForDelete->password = Hash::make('default' . $userForDelete->name);
+        $userForDelete->save();
+    }
 }

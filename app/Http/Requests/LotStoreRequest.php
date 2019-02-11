@@ -83,7 +83,7 @@ class LotStoreRequest extends FormRequest
             'delivery_id.required' => 'Please, select the incoterms',
             'delivery_id.in' => 'Nice try BRO ;) But set incoterms from this select',
             'newProductName.required_if' => 'Please, set new product name',
-            'newProductName.max' => 'Shorter please, max 100 characters',
+            'newProductName.max' => 'Shorter please, max 25 characters',
             'newProductName.min' => 'Very short new product name. At least 3 characters',
             'new_product_photo.required_if' => 'Please, choose a photo for new product',
             'new_product_photo.image' => 'It was not an image',

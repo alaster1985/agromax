@@ -35,7 +35,7 @@
                     </div>
 
                 @endforeach
-
+                <h6 class="site-nav__link">{{$lots->links()}}</h6>
         </div>
     </section>
 </main>

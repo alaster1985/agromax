@@ -27,11 +27,11 @@
         </div>
         <div class="dropdown profile">
             <a title="">
-                <img src="" alt=""/>???????????{{--{{$user->name}}--}}<i class="caret"></i>
+                <img src="" alt=""/>{{\App\User::find(Auth::id())->name}}<i class="caret"></i>
             </a>
             <div class="profile drop-list">
                 <ul>
-                    <li><a href=""{{--{{ route('logout') }}--}} title=""><i class="fa fa-info"></i>LOGout</a></li>
+                    <li><a href="{{ route('logout') }}" title=""><i class="fa fa-info"></i>LOGout</a></li>
                 </ul>
             </div>
         </div>

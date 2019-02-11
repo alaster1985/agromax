@@ -66,6 +66,7 @@ class OrderStoreRequest extends FormRequest
             'linkedin.active_url' => 'Please, set your current existing linkedIn personal page',
             'email.required' => 'Please, set your email',
             'email.regex' => 'Please, follow to the format email',
+            'email.max' => 'Shorter please, max 100 characters',
             'phone.required' => 'Please, set your phone number',
             'phone.min' => 'Very short phone number',
             'phone.max' => 'It is too much numbers for phone',

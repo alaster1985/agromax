@@ -13,9 +13,17 @@ class DeliveriesTableSeeder extends Seeder
     public function run()
     {
         $deliveries = [
+            'DDP',
+            'DAP',
+            'DAT',
+            'CIP',
+            'CPT',
             'CIF',
+            'CFR',
             'FOB',
-            'CCP',
+            'FAS',
+            'FCA',
+            'EXW',
         ];
         foreach ($deliveries as $value) {
             DB::table('deliveries')->insert([

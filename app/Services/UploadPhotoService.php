@@ -13,7 +13,10 @@ class UploadPhotoService extends Controller
 
     public function uploadProductPhoto($request)
     {
-        if ($request->getRequestUri() === '/admin/updateCategory') {
+//        $a = '/admin/'.substr(strrchr($request->getRequestUri(), "/"), 1);
+        $uri = basename($request->getRequestUri());
+//        if ($request->getRequestUri() === '/admin/updateCategory') {
+        if ($uri === 'updateCategory') {
             $image = $request->photo;
             if (file_exists(public_path('images/categories/') . $image->getClientOriginalName())) {
                 $this->newFileName = $image->getClientOriginalName();
@@ -25,14 +28,14 @@ class UploadPhotoService extends Controller
             }
         }
 
-        if ($request->getRequestUri() === '/admin/addCategory') {
+        if ($uri === 'addCategory') {
             $image = $request->photo;
             $image_resize = Image::make($image->getRealPath());
             $this->pathFile = public_path('images/categories/');
             $image_resize->resize(275, 180);
         }
 
-        if ($request->getRequestUri() === '/admin/updateLot') {
+        if ($uri === 'updateLot') {
             $image = $request->new_product_photo;
             if (file_exists(public_path('images/products/') . $image->getClientOriginalName())) {
                 $this->newFileName = $image->getClientOriginalName();
@@ -44,7 +47,7 @@ class UploadPhotoService extends Controller
             }
         }
 
-        if ($request->getRequestUri() === '/admin/addLot') {
+        if ($uri === 'addLot') {
             $image = $request->new_product_photo;
             $image_resize = Image::make($image->getRealPath());
             $this->pathFile = public_path('images/products/');

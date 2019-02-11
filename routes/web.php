@@ -16,30 +16,35 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::middleware('auth')->group(function () {
 
-Route::get('admin/dashboard', 'Admin\AdminController@dashboard')->name('dashboard');
+    Route::get('admin/dashboard', 'Admin\AdminController@dashboard')->name('dashboard');
+    Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
-Route::get('admin/viewUsers', 'Admin\AdminController@viewUsers')->name('viewUsers');
-Route::get('admin/editUsers', 'Admin\AdminController@editUsers')->name('editUsers');
-Route::get('admin/createUser', 'Admin\AdminController@createUser')->name('createUser');
+    Route::get('admin/viewUsers', 'Admin\AdminController@viewUsers')->name('viewUsers');
+    Route::get('admin/editUsers/{id}', 'Admin\AdminController@editUsers')->name('editUsers');
+    Route::post('admin/updateUsers', 'Admin\AdminController@updateUsers')->name('updateUsers');
+    Route::get('admin/createUser', 'Admin\AdminController@createUser')->name('createUser');
+    Route::post('admin/addUser', 'Admin\AdminController@addUser')->name('addUser');
+    Route::get('admin/deleteUser/{id}', 'Admin\AdminController@deleteUser')->name('deleteUser');
 
-Route::get('admin/viewOrders', 'Admin\OrdersController@viewOrders')->name('viewOrders');
-Route::get('admin/editOrders/{id}', 'Admin\OrdersController@editOrders')->name('editOrders');
-Route::post('admin/updateOrder', 'Admin\OrdersController@updateOrder')->name('updateOrder');
-Route::get('admin/deleteOrder/{id}', 'Admin\OrdersController@deleteOrder')->name('deleteOrder');
+    Route::get('admin/viewOrders', 'Admin\OrdersController@viewOrders')->name('viewOrders');
+    Route::get('admin/editOrders/{id}', 'Admin\OrdersController@editOrders')->name('editOrders');
+    Route::post('admin/updateOrder', 'Admin\OrdersController@updateOrder')->name('updateOrder');
+    Route::get('admin/deleteOrder/{id}', 'Admin\OrdersController@deleteOrder')->name('deleteOrder');
 
-Route::get('admin/viewLots', 'Admin\LotsController@viewLots')->name('viewLots');
-Route::get('admin/editLots/{id}', 'Admin\LotsController@editLots')->name('editLots');
-Route::post('admin/updateLot', 'Admin\LotsController@updateLot')->name('updateLot');
-Route::get('admin/createLot', 'Admin\LotsController@createLot')->name('createLot');
-Route::post('admin/addLot', 'Admin\LotsController@addLot')->name('addLot');
+    Route::get('admin/viewLots', 'Admin\LotsController@viewLots')->name('viewLots');
+    Route::get('admin/editLots/{id}', 'Admin\LotsController@editLots')->name('editLots');
+    Route::post('admin/updateLot', 'Admin\LotsController@updateLot')->name('updateLot');
+    Route::get('admin/createLot', 'Admin\LotsController@createLot')->name('createLot');
+    Route::post('admin/addLot', 'Admin\LotsController@addLot')->name('addLot');
 
-Route::get('admin/viewCategories', 'Admin\CategoriesController@viewCategories')->name('viewCategories');
-Route::get('admin/editCategories/{id}', 'Admin\CategoriesController@editCategories')->name('editCategories');
-Route::post('admin/updateCategory', 'Admin\CategoriesController@updateCategory')->name('updateCategory');
-Route::get('admin/createCategory', 'Admin\CategoriesController@createCategory')->name('createCategory');
-Route::post('admin/addCategory', 'Admin\CategoriesController@addCategory')->name('addCategory');
-
+    Route::get('admin/viewCategories', 'Admin\CategoriesController@viewCategories')->name('viewCategories');
+    Route::get('admin/editCategories/{id}', 'Admin\CategoriesController@editCategories')->name('editCategories');
+    Route::post('admin/updateCategory', 'Admin\CategoriesController@updateCategory')->name('updateCategory');
+    Route::get('admin/createCategory', 'Admin\CategoriesController@createCategory')->name('createCategory');
+    Route::post('admin/addCategory', 'Admin\CategoriesController@addCategory')->name('addCategory');
+});
 
 Route::get('/', 'MainController@index')->name('index');
 Route::get('/exclusive', 'MainController@exclusive')->name('exclusive');

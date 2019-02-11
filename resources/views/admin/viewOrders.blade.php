@@ -28,15 +28,15 @@
                                     <th>Email</th>
                                     <th>linkedIn</th>
                                     <th>Phone</th>
-                                    <th>Company</th>
+                                    {{--<th>Company</th>--}}
                                     <th>Product name</th>
                                     <th>Amount</th>
                                     <th>Price</th>
-                                    <th>Port</th>
+                                    {{--<th>Port</th>--}}
                                     <th>Incoterms</th>
                                     <th>Exclusive</th>
                                     <th>Status</th>
-                                    <th>Stage</th>
+                                    {{--<th>Stage</th>--}}
                                     <th>Created_at</th>
                                     <th>Updated_at</th>
                                     <th>Edit</th>
@@ -66,9 +66,9 @@
                                         <td>
                                             {{$order->phone}}
                                         </td>
-                                        <td>
-                                            {{$order->company}}
-                                        </td>
+                                        {{--<td>--}}
+                                            {{--{{$order->company}}--}}
+                                        {{--</td>--}}
                                         <td>
                                             {{$order->product_name}}
                                         </td>
@@ -78,9 +78,9 @@
                                         <td>
                                             {{$order->price}}
                                         </td>
-                                        <td>
-                                            {{$order->port}}
-                                        </td>
+                                        {{--<td>--}}
+                                            {{--{{$order->port}}--}}
+                                        {{--</td>--}}
                                         <td>
                                             {{\App\Delivery::find($order->delivery_id)->name}}
                                         </td>
@@ -90,9 +90,9 @@
                                         <td>
                                             {{\App\Status::find($order->status_id)->status}}
                                         </td>
-                                        <td>
-                                            {{\App\Stage::find($order->stage_id)->stage}}
-                                        </td>
+                                        {{--<td>--}}
+                                            {{--{{\App\Stage::find($order->stage_id)->stage}}--}}
+                                        {{--</td>--}}
                                         <td>
                                             {{$order->created_at}}
                                         </td>

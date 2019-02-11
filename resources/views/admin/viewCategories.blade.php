@@ -27,10 +27,10 @@
                                     <th>Type</th>
                                     <th>Created_at</th>
                                     <th>Updated_at</th>
-                                    <th>Edit</th>
-                                    {{--@if($user->hasRole('admin'))--}}
-                                    {{--<th>Delete</th>--}}
-                                    {{--@endif--}}
+                                    @if(\App\User::find(Auth::id())->role_id === 3)
+                                    @else
+                                        <th>Edit</th>
+                                    @endif
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -40,7 +40,7 @@
                                             {{$category->name}}
                                         </td>
                                         <td>
-                                            <img style="height: 33%" src="{{asset($category->photo)}}">
+                                            <img style="height: 75px" src="{{asset($category->photo)}}">
                                         </td>
                                         <td>
                                             {{$category->type}}
@@ -51,19 +51,13 @@
                                         <td>
                                             {{$category->updated_at}}
                                         </td>
-                                        {{--@if($user->hasRole('admin|junior_admin|moderator'))--}}
+                                        @if(\App\User::find(Auth::id())->role_id === 3)
+                                        @else
                                         <td>
-                                            <a href="{{route('editCategories',$category->id)}}">+</a>
+                                            {{--<a href="{{route('editCategories',$category->id)}}">+</a>--}}
+                                            <a href="editCategories?category={{$category->id}}">+</a>
                                         </td>
-                                        {{--@endif--}}
-                                        {{--@if($user->hasRole('admin'))--}}
-                                        {{--<td>--}}
-                                            {{--{{ csrf_field()}}--}}
-                                            {{--<a href="--}}{{--{{route('deleteOrder',$value->id)}}--}}{{--"--}}
-                                               {{--onclick="return confirm('Are you sure you want to delete this Order?');">-</a>--}}
-                                            {{--{{ csrf_field()}}--}}
-                                        {{--</td>--}}
-                                        {{--@endif--}}
+                                        @endif
                                     </tr>
                                 @endforeach
                                 </tbody>

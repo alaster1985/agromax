@@ -33,10 +33,10 @@
                                     <th>Port photo</th>
                                     <th>Created_at</th>
                                     <th>Updated_at</th>
+                                    @if(\App\User::find(Auth::id())->role_id === 3)
+                                    @else
                                     <th>Edit</th>
-                                    {{--@if($user->hasRole('admin'))--}}
-                                    {{--<th>Delete</th>--}}
-                                    {{--@endif--}}
+                                    @endif
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -72,19 +72,13 @@
                                         <td>
                                             {{$lot->updated_at}}
                                         </td>
-                                        {{--@if($user->hasRole('admin|junior_admin|moderator'))--}}
+                                        @if(\App\User::find(Auth::id())->role_id === 3)
+                                        @else
                                         <td>
-                                            <a href="{{route('editLots',$lot->id)}}">+</a>
+                                            {{--<a href="{{route('editLots',$lot->id)}}">+</a>--}}
+                                            <a href="editLots?lot={{$lot->id}}">+</a>
                                         </td>
-                                        {{--@endif--}}
-                                        {{--@if($user->hasRole('admin'))--}}
-                                        {{--<td>--}}
-                                        {{--{{ csrf_field()}}--}}
-                                        {{--<a href="--}}{{--{{route('deleteOrder',$value->id)}}--}}{{--"--}}
-                                        {{--onclick="return confirm('Are you sure you want to delete this Order?');">-</a>--}}
-                                        {{--{{ csrf_field()}}--}}
-                                        {{--</td>--}}
-                                        {{--@endif--}}
+                                        @endif
                                     </tr>
                                 @endforeach
                                 </tbody>

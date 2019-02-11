@@ -23,10 +23,14 @@ class LotsController extends Controller
         return view('admin/createLot');
     }
 
-    public function editLots($id)
+    public function editLots(Request $request)
     {
-        $lot = Lot::getLotById($id);
-        return view('admin/editLots', ['lot' => $lot]);
+        $lot = Lot::getLotById($request->lot);
+        if (is_null($lot)) {
+            return redirect()->back();
+        } else {
+            return view('admin/editLots', ['lot' => $lot]);
+        }
     }
 
     public function addLot(LotStoreRequest $request)

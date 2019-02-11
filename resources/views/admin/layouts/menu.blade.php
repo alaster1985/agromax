@@ -27,9 +27,12 @@
                         <ul>
                             <li><a href="{{route('viewCategories')}}" title="">All Categories</a></li>
                         </ul>
-                        <ul>
-                            <li><a href="{{route('createCategory')}}" title="">Create Category</a></li>
-                        </ul>
+                        @if(\App\User::find(Auth::id())->role_id === 3)
+                        @else
+                            <ul>
+                                <li><a href="{{route('createCategory')}}" title="">Create Category</a></li>
+                            </ul>
+                        @endif
                     </div>
                 </div>
                 <div class="single-menu">
@@ -38,9 +41,12 @@
                         <ul>
                             <li><a href="{{route('viewLots')}}" title="">All Lots</a></li>
                         </ul>
+                        @if(\App\User::find(Auth::id())->role_id === 3)
+                        @else
                         <ul>
                             <li><a href="{{route('createLot')}}" title="">Create Lot</a></li>
                         </ul>
+                        @endif
                     </div>
                 </div>
             </div>

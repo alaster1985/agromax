@@ -40,9 +40,10 @@
                                     <th>Created_at</th>
                                     <th>Updated_at</th>
                                     <th>Edit</th>
-                                    {{--@if($user->hasRole('admin'))--}}
-                                    <th>Delete</th>
-                                    {{--@endif--}}
+                                    @if(\App\User::find(Auth::id())->role_id === 3)
+                                    @else
+                                        <th>Delete</th>
+                                    @endif
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -99,19 +100,19 @@
                                         <td>
                                             {{$order->updated_at}}
                                         </td>
-                                        {{--@if($user->hasRole('admin|junior_admin|moderator'))--}}
                                         <td>
-                                            <a href="{{route('editOrders',$order->id)}}">+</a>
+                                            {{--<a href="{{route('editOrders',$order->id)}}">+</a>--}}
+                                            <a href="editOrders?order={{$order->id}}">+</a>
                                         </td>
-                                        {{--@endif--}}
-                                        {{--@if($user->hasRole('admin'))--}}
-                                        <td>
-                                            {{--{{ csrf_field()}}--}}
-                                            <a href="{{route('deleteOrder',$order->id)}}"
-                                               onclick="return confirm('Are you sure you want to delete this Order?');">-</a>
-                                            {{--{{ csrf_field()}}--}}
-                                        </td>
-                                        {{--@endif--}}
+                                        @if(\App\User::find(Auth::id())->role_id === 3)
+                                        @else
+                                            <td>
+                                                {{ csrf_field()}}
+                                                <a href="{{route('deleteOrder',$order->id)}}"
+                                                   onclick="return confirm('Are you sure you want to delete this Order?');">-</a>
+                                                {{ csrf_field()}}
+                                            </td>
+                                        @endif
                                     </tr>
                                 @endforeach
                                 </tbody>

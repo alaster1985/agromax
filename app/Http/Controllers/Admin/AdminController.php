@@ -20,10 +20,14 @@ class AdminController extends Controller
         return view('admin/viewUsers', ['users' => $users]);
     }
 
-    public function editUsers($id)
+    public function editUsers(Request $request)
     {
-        $user = User::getUserById($id);
-        return view('admin/editUsers', ['user' => $user]);
+        $user = User::getUserById($request->user);
+        if (is_null($user)){
+            return redirect()->back();
+        } else {
+            return view('admin/editUsers', ['user' => $user]);
+        }
     }
 
     public function createUser()

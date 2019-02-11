@@ -15,10 +15,14 @@ class CategoriesController extends Controller
         return view('admin/viewCategories', ['allCategories' => $allCategories]);
     }
 
-    public function editCategories($id)
+    public function editCategories(Request $request)
     {
-        $categoryForEdit = Category::getCategoryById($id);
-        return view('admin/editCategories', ['category' => $categoryForEdit]);
+        $categoryForEdit = Category::getCategoryById($request->category);
+        if (is_null($categoryForEdit)) {
+            return redirect()->back();
+        } else {
+            return view('admin/editCategories', ['category' => $categoryForEdit]);
+        }
     }
 
     public function updateCategory(CategoryStoreRequest $request)

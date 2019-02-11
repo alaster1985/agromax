@@ -54,7 +54,8 @@
                                         @if(\App\User::find(Auth::id())->role_id === 1)
                                             @if($user->name != 'admin')
                                                 <td>
-                                                    <a href="{{route('editUsers',$user->id)}}">+</a>
+                                                    {{--<a href="{{route('editUsers',$user->id)}}">+</a>--}}
+                                                    <a href="editUsers?user={{$user->id}}">+</a>
                                                 </td>
                                                 <td>
                                                     {{ csrf_field()}}

@@ -35,10 +35,14 @@ class OrdersController extends Controller
         return view('admin/viewOrders', ['orders' => $orders]);
     }
 
-    public function editOrders($id)
+    public function editOrders(Request $request)
     {
-        $orderForEdit = Order::getOrderById($id);
-        return view('admin/editOrders', ['order' => $orderForEdit]);
+        $orderForEdit = Order::getOrderById($request->order);
+        if (is_null($orderForEdit)){
+            return redirect()->back();
+        } else {
+            return view('admin/editOrders', ['order' => $orderForEdit]);
+        }
     }
 
     public function updateOrder(Request $request)

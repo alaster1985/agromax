@@ -43,7 +43,7 @@ $(document).ready(function () {
 
     $('.products__btn , .products__img-wr').click(function () {
         var href = $(this).attr('href');
-        $(this).attr('href', href + '&lang=' + languageCode);
+        $(this).attr('href', href + '&lang=' + languageCode + '&');
     });
 
     var modalOverlay = $(".modal-overlay");

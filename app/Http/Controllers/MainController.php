@@ -97,9 +97,9 @@ class MainController extends Controller
     {
         $language = Language::getLanguageByCode($request->lang)->pluck('id');
         $category = Category::getCategoryById($request->cat);
-        if (is_null($category) || is_null($language)) {
+        if (is_null($category) || !isset($language->all()[0])) {
             $lots = Lot::paginate(24);
-            return view('offers', ['lots' => $lots]);
+            return view('offers', ['lots' => $lots, 'language' => 1]);
         } else {
             $lots = Lot::getLotsByCategoryId($request->cat);
             return view('offers', ['lots' => $lots, 'category' => $category->name, 'language' => $language[0]]);

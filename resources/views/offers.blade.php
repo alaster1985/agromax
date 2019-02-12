@@ -16,6 +16,9 @@
                         <img src="{{asset($lot->product->photo)}}" alt="Our offers">
                     </a>
                     <h3 class="offers__title">{{$lot->product->name}}</h3>
+                    <p class="products__desc">{{\App\Product::find($lot->product_id)
+                    ->description->where('language_id', '=', $language)
+                    ->pluck('description')[0]}}</p>
                     <table class="offers__table">
                         <thead>
                         <tr>

@@ -30,7 +30,7 @@ CREATE TABLE `categories` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -56,7 +56,7 @@ CREATE TABLE `deliveries` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -65,7 +65,7 @@ CREATE TABLE `deliveries` (
 
 LOCK TABLES `deliveries` WRITE;
 /*!40000 ALTER TABLE `deliveries` DISABLE KEYS */;
-INSERT INTO `deliveries` VALUES (1,'CIF',NULL,NULL),(2,'FOB',NULL,NULL),(3,'CCP',NULL,NULL);
+INSERT INTO `deliveries` VALUES (1,'DDP',NULL,NULL),(2,'DAP',NULL,NULL),(3,'DAT',NULL,NULL),(4,'CIP',NULL,NULL),(5,'CPT',NULL,NULL),(6,'CIF',NULL,NULL),(7,'CFR',NULL,NULL),(8,'FOB',NULL,NULL),(9,'FAS',NULL,NULL),(10,'FCA',NULL,NULL),(11,'EXW',NULL,NULL);
 /*!40000 ALTER TABLE `deliveries` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -152,7 +152,7 @@ CREATE TABLE `lots` (
   KEY `lots_delivery_id_foreign` (`delivery_id`),
   CONSTRAINT `lots_delivery_id_foreign` FOREIGN KEY (`delivery_id`) REFERENCES `deliveries` (`id`),
   CONSTRAINT `lots_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=127 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=141 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -161,7 +161,7 @@ CREATE TABLE `lots` (
 
 LOCK TABLES `lots` WRITE;
 /*!40000 ALTER TABLE `lots` DISABLE KEYS */;
-INSERT INTO `lots` VALUES (1,2,1,200,650,'Some port № 10','images/port.jpg',0,NULL,NULL),(2,3,3,250,550,'Some port № 16','images/port.jpg',0,NULL,NULL),(3,3,2,300,450,'Some port № 15','images/port.jpg',0,NULL,NULL),(4,3,1,250,550,'Some port № 16','images/port.jpg',0,NULL,NULL),(5,3,2,300,550,'Some port № 19','images/port.jpg',0,NULL,NULL),(6,3,2,300,450,'Some port № 18','images/port.jpg',0,NULL,NULL),(7,4,1,150,600,'Some port № 15','images/port.jpg',0,NULL,NULL),(8,4,1,100,600,'Some port № 15','images/port.jpg',0,NULL,NULL),(9,4,2,300,550,'Some port № 20','images/port.jpg',0,NULL,NULL),(10,4,2,100,600,'Some port № 18','images/port.jpg',0,NULL,NULL),(11,4,1,250,600,'Some port № 21','images/port.jpg',0,NULL,NULL),(12,4,2,250,650,'Some port № 24','images/port.jpg',0,NULL,NULL),(13,5,3,100,500,'Some port № 10','images/port.jpg',0,NULL,NULL),(14,6,2,200,500,'Some port № 12','images/port.jpg',0,NULL,NULL),(15,7,3,250,550,'Some port № 16','images/port.jpg',0,NULL,NULL),(16,8,2,200,450,'Some port № 17','images/port.jpg',0,NULL,NULL),(17,8,3,150,500,'Some port № 19','images/port.jpg',0,NULL,NULL),(18,8,2,300,550,'Some port № 23','images/port.jpg',0,NULL,NULL),(19,8,1,100,500,'Some port № 18','images/port.jpg',0,NULL,NULL),(20,8,2,300,600,'Some port № 26','images/port.jpg',0,NULL,NULL),(21,9,2,250,500,'Some port № 16','images/port.jpg',0,NULL,NULL),(22,10,2,250,450,'Some port № 20','images/port.jpg',0,NULL,NULL),(23,10,2,200,650,'Some port № 24','images/port.jpg',0,NULL,NULL),(24,10,3,100,600,'Some port № 23','images/port.jpg',0,NULL,NULL),(25,10,2,100,550,'Some port № 22','images/port.jpg',0,NULL,NULL),(26,10,3,100,500,'Some port № 23','images/port.jpg',0,NULL,NULL),(27,11,2,200,650,'Some port № 25','images/port.jpg',0,NULL,NULL),(28,11,2,250,600,'Some port № 26','images/port.jpg',0,NULL,NULL),(29,11,2,200,450,'Some port № 23','images/port.jpg',0,NULL,NULL),(30,11,1,100,600,'Some port № 24','images/port.jpg',0,NULL,NULL),(31,11,3,100,450,'Some port № 24','images/port.jpg',0,NULL,NULL),(32,11,1,100,450,'Some port № 23','images/port.jpg',0,NULL,NULL),(33,12,2,300,450,'Some port № 22','images/port.jpg',0,NULL,NULL),(34,12,2,200,650,'Some port № 25','images/port.jpg',0,NULL,NULL),(35,12,3,300,500,'Some port № 26','images/port.jpg',0,NULL,NULL),(36,12,2,200,450,'Some port № 23','images/port.jpg',0,NULL,NULL),(37,13,3,200,450,'Some port № 24','images/port.jpg',0,NULL,NULL),(38,13,1,150,550,'Some port № 24','images/port.jpg',0,NULL,NULL),(39,13,2,250,550,'Some port № 28','images/port.jpg',0,NULL,NULL),(40,13,2,150,550,'Some port № 27','images/port.jpg',0,NULL,NULL),(41,13,3,150,450,'Some port № 27','images/port.jpg',0,NULL,NULL),(42,13,3,150,550,'Some port № 30','images/port.jpg',0,NULL,NULL),(43,14,3,100,500,'Some port № 22','images/port.jpg',0,NULL,NULL),(44,14,2,250,650,'Some port № 28','images/port.jpg',0,NULL,NULL),(45,14,3,300,600,'Some port № 30','images/port.jpg',0,NULL,NULL),(46,14,1,300,450,'Some port № 26','images/port.jpg',0,NULL,NULL),(47,15,1,200,500,'Some port № 22','images/port.jpg',0,NULL,NULL),(48,15,1,250,650,'Some port № 27','images/port.jpg',0,NULL,NULL),(49,15,3,250,600,'Some port № 29','images/port.jpg',0,NULL,NULL),(50,16,2,100,450,'Some port № 21','images/port.jpg',0,NULL,NULL),(51,16,2,250,600,'Some port № 28','images/port.jpg',0,NULL,NULL),(52,16,3,150,650,'Some port № 29','images/port.jpg',0,NULL,NULL),(53,17,1,250,450,'Some port № 23','images/port.jpg',0,NULL,NULL),(54,17,1,150,650,'Some port № 26','images/port.jpg',0,NULL,NULL),(55,18,3,100,600,'Some port № 28','images/port.jpg',0,NULL,NULL),(56,18,1,150,550,'Some port № 27','images/port.jpg',0,NULL,NULL),(57,18,3,150,550,'Some port № 30','images/port.jpg',0,NULL,NULL),(58,18,2,100,450,'Some port № 27','images/port.jpg',0,NULL,NULL),(59,19,3,250,600,'Some port № 33','images/port.jpg',0,NULL,NULL),(60,19,2,200,600,'Some port № 32','images/port.jpg',0,NULL,NULL),(61,19,3,150,500,'Some port № 31','images/port.jpg',0,NULL,NULL),(62,19,1,150,550,'Some port № 31','images/port.jpg',0,NULL,NULL),(63,19,2,150,600,'Some port № 34','images/port.jpg',0,NULL,NULL),(64,20,3,200,500,'Some port № 28','images/port.jpg',0,NULL,NULL),(65,20,3,200,500,'Some port № 29','images/port.jpg',0,NULL,NULL),(66,21,3,300,450,'Some port № 29','images/port.jpg',0,NULL,NULL),(67,22,3,300,500,'Some port № 33','images/port.jpg',0,NULL,NULL),(68,22,1,150,500,'Some port № 29','images/port.jpg',0,NULL,NULL),(69,22,1,150,650,'Some port № 33','images/port.jpg',0,NULL,NULL),(70,23,1,250,600,'Some port № 31','images/port.jpg',0,NULL,NULL),(71,24,3,100,650,'Some port № 35','images/port.jpg',0,NULL,NULL),(72,24,3,100,450,'Some port № 32','images/port.jpg',0,NULL,NULL),(73,24,2,100,550,'Some port № 34','images/port.jpg',0,NULL,NULL),(74,24,2,200,650,'Some port № 39','images/port.jpg',0,NULL,NULL),(75,25,3,200,500,'Some port № 34','images/port.jpg',0,NULL,NULL),(76,25,2,100,600,'Some port № 34','images/port.jpg',0,NULL,NULL),(77,25,1,150,600,'Some port № 35','images/port.jpg',0,NULL,NULL),(78,26,3,250,450,'Some port № 35','images/port.jpg',0,NULL,NULL),(79,26,1,300,550,'Some port № 37','images/port.jpg',0,NULL,NULL),(80,26,1,300,650,'Some port № 40','images/port.jpg',0,NULL,NULL),(81,27,1,300,450,'Some port № 33','images/port.jpg',0,NULL,NULL),(82,28,2,300,550,'Some port № 41','images/port.jpg',0,NULL,NULL),(83,28,2,200,600,'Some port № 41','images/port.jpg',0,NULL,NULL),(84,28,2,150,500,'Some port № 39','images/port.jpg',0,NULL,NULL),(85,28,3,300,650,'Some port № 47','images/port.jpg',0,NULL,NULL),(86,28,3,200,500,'Some port № 43','images/port.jpg',0,NULL,NULL),(87,29,2,100,550,'Some port № 39','images/port.jpg',0,NULL,NULL),(88,29,2,150,550,'Some port № 41','images/port.jpg',0,NULL,NULL),(89,29,2,100,500,'Some port № 40','images/port.jpg',0,NULL,NULL),(90,29,1,100,650,'Some port № 43','images/port.jpg',0,NULL,NULL),(91,29,1,250,500,'Some port № 44','images/port.jpg',0,NULL,NULL),(92,29,1,100,600,'Some port № 44','images/port.jpg',0,NULL,NULL),(93,30,1,200,650,'Some port № 39','images/port.jpg',0,NULL,NULL),(94,30,3,150,450,'Some port № 37','images/port.jpg',0,NULL,NULL),(95,31,3,300,600,'Some port № 43','images/port.jpg',0,NULL,NULL),(96,31,1,250,600,'Some port № 41','images/port.jpg',0,NULL,NULL),(97,32,2,300,650,'Some port № 47','images/port.jpg',0,NULL,NULL),(98,32,3,200,650,'Some port № 47','images/port.jpg',0,NULL,NULL),(99,32,3,100,450,'Some port № 42','images/port.jpg',0,NULL,NULL),(100,32,1,100,550,'Some port № 43','images/port.jpg',0,NULL,NULL),(101,32,1,200,450,'Some port № 44','images/port.jpg',0,NULL,NULL),(102,33,1,300,550,'Some port № 41','images/port.jpg',0,NULL,NULL),(103,34,3,200,550,'Some port № 47','images/port.jpg',0,NULL,NULL),(104,34,3,300,550,'Some port № 50','images/port.jpg',0,NULL,NULL),(105,34,3,250,550,'Some port № 50','images/port.jpg',0,NULL,NULL),(106,34,2,250,500,'Some port № 49','images/port.jpg',0,NULL,NULL),(107,34,1,200,600,'Some port № 50','images/port.jpg',0,NULL,NULL),(108,34,3,200,600,'Some port № 53','images/port.jpg',0,NULL,NULL),(109,35,2,300,550,'Some port № 47','images/port.jpg',0,NULL,NULL),(110,35,2,150,650,'Some port № 47','images/port.jpg',0,NULL,NULL),(111,35,1,300,550,'Some port № 48','images/port.jpg',0,NULL,NULL),(112,35,2,200,450,'Some port № 46','images/port.jpg',0,NULL,NULL),(113,36,2,250,500,'Some port № 43','images/port.jpg',0,NULL,NULL),(114,37,1,250,450,'Some port № 46','images/port.jpg',0,NULL,NULL),(115,37,1,200,650,'Some port № 50','images/port.jpg',0,NULL,NULL),(116,37,2,300,550,'Some port № 52','images/port.jpg',0,NULL,NULL),(117,37,3,100,650,'Some port № 52','images/port.jpg',0,NULL,NULL),(118,37,2,150,600,'Some port № 52','images/port.jpg',0,NULL,NULL),(119,38,2,250,450,'Some port № 49','images/port.jpg',0,NULL,NULL),(120,38,2,200,650,'Some port № 53','images/port.jpg',0,NULL,NULL),(121,38,3,100,600,'Some port № 52','images/port.jpg',0,NULL,NULL),(122,38,2,250,650,'Some port № 56','images/port.jpg',0,NULL,NULL),(123,38,2,300,650,'Some port № 58','images/port.jpg',0,NULL,NULL),(124,38,2,300,550,'Some port № 57','images/port.jpg',0,NULL,NULL),(125,39,2,250,650,'Some port № 50','images/port.jpg',0,NULL,NULL),(126,39,1,300,500,'Some port № 48','images/port.jpg',0,NULL,NULL);
+INSERT INTO `lots` VALUES (1,2,7,250,500,'Some port № 18','images/port.jpg',0,NULL,NULL),(2,2,2,300,550,'Some port № 16','images/port.jpg',0,NULL,NULL),(3,2,2,150,500,'Some port № 13','images/port.jpg',0,NULL,NULL),(4,2,2,100,650,'Some port № 16','images/port.jpg',0,NULL,NULL),(5,2,4,200,550,'Some port № 19','images/port.jpg',0,NULL,NULL),(6,3,7,150,550,'Some port № 16','images/port.jpg',0,NULL,NULL),(7,3,5,100,450,'Some port № 12','images/port.jpg',0,NULL,NULL),(8,3,6,100,600,'Some port № 17','images/port.jpg',0,NULL,NULL),(9,4,4,150,600,'Some port № 16','images/port.jpg',0,NULL,NULL),(10,4,5,300,650,'Some port № 22','images/port.jpg',0,NULL,NULL),(11,4,11,150,500,'Some port № 23','images/port.jpg',0,NULL,NULL),(12,4,7,100,550,'Some port № 20','images/port.jpg',0,NULL,NULL),(13,5,4,150,500,'Some port № 16','images/port.jpg',0,NULL,NULL),(14,5,4,200,650,'Some port № 21','images/port.jpg',0,NULL,NULL),(15,5,3,200,500,'Some port № 18','images/port.jpg',0,NULL,NULL),(16,5,10,100,600,'Some port № 26','images/port.jpg',0,NULL,NULL),(17,5,5,150,600,'Some port № 23','images/port.jpg',0,NULL,NULL),(18,6,3,150,600,'Some port № 19','images/port.jpg',0,NULL,NULL),(19,6,4,200,500,'Some port № 20','images/port.jpg',0,NULL,NULL),(20,6,9,100,650,'Some port № 27','images/port.jpg',0,NULL,NULL),(21,6,8,200,500,'Some port № 26','images/port.jpg',0,NULL,NULL),(22,6,2,300,650,'Some port № 26','images/port.jpg',0,NULL,NULL),(23,6,5,200,450,'Some port № 24','images/port.jpg',0,NULL,NULL),(24,7,11,250,500,'Some port № 28','images/port.jpg',0,NULL,NULL),(25,7,3,200,550,'Some port № 21','images/port.jpg',0,NULL,NULL),(26,7,3,250,550,'Some port № 23','images/port.jpg',0,NULL,NULL),(27,7,9,200,550,'Some port № 29','images/port.jpg',0,NULL,NULL),(28,7,3,250,450,'Some port № 23','images/port.jpg',0,NULL,NULL),(29,7,10,150,450,'Some port № 29','images/port.jpg',0,NULL,NULL),(30,8,2,150,450,'Some port № 12','images/port.jpg',0,NULL,NULL),(31,9,11,200,450,'Some port № 23','images/port.jpg',0,NULL,NULL),(32,10,9,100,550,'Some port № 22','images/port.jpg',0,NULL,NULL),(33,11,6,200,500,'Some port № 25','images/port.jpg',0,NULL,NULL),(34,11,10,100,450,'Some port № 27','images/port.jpg',0,NULL,NULL),(35,11,2,250,600,'Some port № 26','images/port.jpg',0,NULL,NULL),(36,11,1,100,500,'Some port № 21','images/port.jpg',0,NULL,NULL),(37,11,1,200,650,'Some port № 27','images/port.jpg',0,NULL,NULL),(38,12,3,200,500,'Some port № 19','images/port.jpg',0,NULL,NULL),(39,13,1,300,550,'Some port № 26','images/port.jpg',0,NULL,NULL),(40,13,9,150,600,'Some port № 33','images/port.jpg',0,NULL,NULL),(41,13,11,250,500,'Some port № 36','images/port.jpg',0,NULL,NULL),(42,13,1,300,450,'Some port № 27','images/port.jpg',0,NULL,NULL),(43,13,4,150,550,'Some port № 30','images/port.jpg',0,NULL,NULL),(44,13,6,300,450,'Some port № 34','images/port.jpg',0,NULL,NULL),(45,14,5,200,450,'Some port № 24','images/port.jpg',0,NULL,NULL),(46,14,11,250,550,'Some port № 34','images/port.jpg',0,NULL,NULL),(47,14,10,300,600,'Some port № 36','images/port.jpg',0,NULL,NULL),(48,15,2,150,650,'Some port № 27','images/port.jpg',0,NULL,NULL),(49,15,1,100,550,'Some port № 24','images/port.jpg',0,NULL,NULL),(50,15,3,150,600,'Some port № 29','images/port.jpg',0,NULL,NULL),(51,15,5,200,600,'Some port № 33','images/port.jpg',0,NULL,NULL),(52,15,9,300,650,'Some port № 41','images/port.jpg',0,NULL,NULL),(53,16,11,100,600,'Some port № 32','images/port.jpg',0,NULL,NULL),(54,16,5,150,500,'Some port № 26','images/port.jpg',0,NULL,NULL),(55,17,2,200,650,'Some port № 26','images/port.jpg',0,NULL,NULL),(56,18,6,250,550,'Some port № 34','images/port.jpg',0,NULL,NULL),(57,18,8,150,450,'Some port № 33','images/port.jpg',0,NULL,NULL),(58,18,7,100,650,'Some port № 36','images/port.jpg',0,NULL,NULL),(59,18,10,250,650,'Some port № 43','images/port.jpg',0,NULL,NULL),(60,18,10,300,650,'Some port № 45','images/port.jpg',0,NULL,NULL),(61,19,11,250,650,'Some port № 41','images/port.jpg',0,NULL,NULL),(62,19,9,300,600,'Some port № 40','images/port.jpg',0,NULL,NULL),(63,19,10,300,500,'Some port № 40','images/port.jpg',0,NULL,NULL),(64,19,10,150,550,'Some port № 39','images/port.jpg',0,NULL,NULL),(65,20,10,300,450,'Some port № 40','images/port.jpg',0,NULL,NULL),(66,20,5,150,650,'Some port № 37','images/port.jpg',0,NULL,NULL),(67,20,8,200,500,'Some port № 39','images/port.jpg',0,NULL,NULL),(68,20,8,150,550,'Some port № 40','images/port.jpg',0,NULL,NULL),(69,20,11,200,500,'Some port № 44','images/port.jpg',0,NULL,NULL),(70,20,11,250,550,'Some port № 47','images/port.jpg',0,NULL,NULL),(71,21,4,150,550,'Some port № 33','images/port.jpg',0,NULL,NULL),(72,21,8,200,550,'Some port № 39','images/port.jpg',0,NULL,NULL),(73,21,1,200,450,'Some port № 31','images/port.jpg',0,NULL,NULL),(74,21,2,250,550,'Some port № 36','images/port.jpg',0,NULL,NULL),(75,21,3,300,550,'Some port № 39','images/port.jpg',0,NULL,NULL),(76,22,6,100,600,'Some port № 32','images/port.jpg',0,NULL,NULL),(77,23,11,100,550,'Some port № 40','images/port.jpg',0,NULL,NULL),(78,23,8,300,650,'Some port № 44','images/port.jpg',0,NULL,NULL),(79,23,5,250,600,'Some port № 40','images/port.jpg',0,NULL,NULL),(80,23,10,150,550,'Some port № 43','images/port.jpg',0,NULL,NULL),(81,24,5,300,450,'Some port № 34','images/port.jpg',0,NULL,NULL),(82,25,1,200,550,'Some port № 33','images/port.jpg',0,NULL,NULL),(83,25,5,300,650,'Some port № 42','images/port.jpg',0,NULL,NULL),(84,25,11,100,550,'Some port № 43','images/port.jpg',0,NULL,NULL),(85,26,11,150,450,'Some port № 42','images/port.jpg',0,NULL,NULL),(86,26,8,250,600,'Some port № 45','images/port.jpg',0,NULL,NULL),(87,26,9,200,650,'Some port № 47','images/port.jpg',0,NULL,NULL),(88,26,8,300,450,'Some port № 45','images/port.jpg',0,NULL,NULL),(89,27,2,300,650,'Some port № 38','images/port.jpg',0,NULL,NULL),(90,28,1,200,450,'Some port № 34','images/port.jpg',0,NULL,NULL),(91,28,3,100,600,'Some port № 38','images/port.jpg',0,NULL,NULL),(92,28,4,250,500,'Some port № 41','images/port.jpg',0,NULL,NULL),(93,29,11,200,500,'Some port № 49','images/port.jpg',0,NULL,NULL),(94,29,6,250,650,'Some port № 49','images/port.jpg',0,NULL,NULL),(95,29,2,150,650,'Some port № 44','images/port.jpg',0,NULL,NULL),(96,29,8,300,650,'Some port № 54','images/port.jpg',0,NULL,NULL),(97,29,5,300,600,'Some port № 51','images/port.jpg',0,NULL,NULL),(98,29,7,100,450,'Some port № 47','images/port.jpg',0,NULL,NULL),(99,30,1,100,600,'Some port № 39','images/port.jpg',0,NULL,NULL),(100,30,4,300,500,'Some port № 45','images/port.jpg',0,NULL,NULL),(101,30,6,150,600,'Some port № 47','images/port.jpg',0,NULL,NULL),(102,30,2,100,650,'Some port № 44','images/port.jpg',0,NULL,NULL),(103,30,7,150,550,'Some port № 49','images/port.jpg',0,NULL,NULL),(104,31,2,300,500,'Some port № 42','images/port.jpg',0,NULL,NULL),(105,31,10,250,650,'Some port № 53','images/port.jpg',0,NULL,NULL),(106,31,6,250,450,'Some port № 46','images/port.jpg',0,NULL,NULL),(107,31,8,100,500,'Some port № 47','images/port.jpg',0,NULL,NULL),(108,32,7,100,600,'Some port № 47','images/port.jpg',0,NULL,NULL),(109,32,6,150,500,'Some port № 46','images/port.jpg',0,NULL,NULL),(110,32,8,100,450,'Some port № 47','images/port.jpg',0,NULL,NULL),(111,32,2,250,500,'Some port № 46','images/port.jpg',0,NULL,NULL),(112,32,4,200,600,'Some port № 50','images/port.jpg',0,NULL,NULL),(113,33,7,300,450,'Some port № 49','images/port.jpg',0,NULL,NULL),(114,33,6,100,500,'Some port № 46','images/port.jpg',0,NULL,NULL),(115,33,2,200,550,'Some port № 46','images/port.jpg',0,NULL,NULL),(116,33,6,100,500,'Some port № 48','images/port.jpg',0,NULL,NULL),(117,33,2,250,550,'Some port № 49','images/port.jpg',0,NULL,NULL),(118,34,10,150,650,'Some port № 51','images/port.jpg',0,NULL,NULL),(119,34,6,200,650,'Some port № 49','images/port.jpg',0,NULL,NULL),(120,35,4,200,550,'Some port № 46','images/port.jpg',0,NULL,NULL),(121,35,3,300,450,'Some port № 46','images/port.jpg',0,NULL,NULL),(122,35,2,100,650,'Some port № 46','images/port.jpg',0,NULL,NULL),(123,36,11,300,650,'Some port № 60','images/port.jpg',0,NULL,NULL),(124,36,9,300,550,'Some port № 57','images/port.jpg',0,NULL,NULL),(125,36,6,250,600,'Some port № 55','images/port.jpg',0,NULL,NULL),(126,36,10,300,450,'Some port № 58','images/port.jpg',0,NULL,NULL),(127,36,2,300,550,'Some port № 53','images/port.jpg',0,NULL,NULL),(128,37,2,200,550,'Some port № 47','images/port.jpg',0,NULL,NULL),(129,37,11,150,600,'Some port № 57','images/port.jpg',0,NULL,NULL),(130,37,9,200,500,'Some port № 55','images/port.jpg',0,NULL,NULL),(131,37,2,200,600,'Some port № 51','images/port.jpg',0,NULL,NULL),(132,38,9,150,550,'Some port № 56','images/port.jpg',0,NULL,NULL),(133,38,4,300,450,'Some port № 53','images/port.jpg',0,NULL,NULL),(134,38,9,250,550,'Some port № 60','images/port.jpg',0,NULL,NULL),(135,38,1,300,450,'Some port № 52','images/port.jpg',0,NULL,NULL),(136,38,2,250,450,'Some port № 53','images/port.jpg',0,NULL,NULL),(137,38,9,300,600,'Some port № 65','images/port.jpg',0,NULL,NULL),(138,39,7,200,550,'Some port № 53','images/port.jpg',0,NULL,NULL),(139,39,8,250,550,'Some port № 56','images/port.jpg',0,NULL,NULL),(140,39,4,150,450,'Some port № 49','images/port.jpg',0,NULL,NULL);
 /*!40000 ALTER TABLE `lots` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -177,7 +177,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -186,7 +186,7 @@ CREATE TABLE `migrations` (
 
 LOCK TABLES `migrations` WRITE;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
-INSERT INTO `migrations` VALUES (1,'2014_10_12_000000_create_users_table',1),(2,'2014_10_12_100000_create_password_resets_table',1),(3,'2019_01_22_114624_create_delivery_table',1),(4,'2019_01_22_114643_create_category_table',1),(5,'2019_01_22_124444_create_product_table',1),(6,'2019_01_22_124536_create_lot_table',1),(7,'2019_01_22_124548_create_order_table',1),(8,'2019_01_22_124634_create_languages_table',1),(9,'2019_01_23_080526_create_descriptions_table',1),(10,'2019_01_23_080700_create_statuses_table',1),(11,'2019_01_23_080711_create_stages_table',1),(12,'2020_01_23_080853_create_foreign_key_relationships_table',1);
+INSERT INTO `migrations` VALUES (1,'2014_10_12_000000_create_users_table',1),(2,'2014_10_12_100000_create_password_resets_table',1),(3,'2019_01_22_114624_create_delivery_table',1),(4,'2019_01_22_114643_create_category_table',1),(5,'2019_01_22_124444_create_product_table',1),(6,'2019_01_22_124536_create_lot_table',1),(7,'2019_01_22_124548_create_order_table',1),(8,'2019_01_22_124634_create_languages_table',1),(9,'2019_01_23_080526_create_descriptions_table',1),(10,'2019_01_23_080700_create_statuses_table',1),(11,'2019_01_23_080711_create_stages_table',1),(12,'2019_02_11_075220_create_role_table',1),(13,'2020_01_23_080853_create_foreign_key_relationships_table',1);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -213,7 +213,7 @@ CREATE TABLE `orders` (
   `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `linkedin` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `phone` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `company` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `company` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `exclusive` tinyint(1) NOT NULL,
   `isdeleted` tinyint(1) NOT NULL DEFAULT '0',
   `created_at` timestamp NULL DEFAULT NULL,
@@ -227,7 +227,7 @@ CREATE TABLE `orders` (
   CONSTRAINT `orders_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
   CONSTRAINT `orders_stage_id_foreign` FOREIGN KEY (`stage_id`) REFERENCES `stages` (`id`),
   CONSTRAINT `orders_status_id_foreign` FOREIGN KEY (`status_id`) REFERENCES `statuses` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -236,7 +236,6 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-INSERT INTO `orders` VALUES (1,3,1,1,1,0,250,'550','sorghum_№_2','Some port № 16','first','last','asd@asd.asd','linkedIn123','1231231231','companyNmae',0,0,'2019-02-06 13:25:40','2019-02-06 13:25:40');
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -292,6 +291,33 @@ LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
 INSERT INTO `products` VALUES (1,'other','images/noimage.jpg',1,NULL,NULL),(2,'sorghum_№_1','images/products/sorghum.jpg',2,NULL,NULL),(3,'sorghum_№_2','images/products/sorghum.jpg',2,NULL,NULL),(4,'beans_№_1','images/products/beans.jpg',3,NULL,NULL),(5,'beans_№_2','images/products/beans.jpg',3,NULL,NULL),(6,'mustard_№_1','images/products/mustard.jpg',4,NULL,NULL),(7,'mustard_№_2','images/products/mustard.jpg',4,NULL,NULL),(8,'chickpea_№_1','images/products/chickpea.jpg',5,NULL,NULL),(9,'chickpea_№_2','images/products/chickpea.jpg',5,NULL,NULL),(10,'linen(grain)_№_1','images/products/linen.jpg',6,NULL,NULL),(11,'linen(grain)_№_2','images/products/linen.jpg',6,NULL,NULL),(12,'red & green lentils_№_1','images/products/redLentils.jpg',7,NULL,NULL),(13,'red & green lentils_№_2','images/products/redLentils.jpg',7,NULL,NULL),(14,'coriander_№_1','images/products/coriander.jpg',8,NULL,NULL),(15,'coriander_№_2','images/products/coriander.jpg',8,NULL,NULL),(16,'millet_№_1','images/products/millet.jpg',9,NULL,NULL),(17,'millet_№_2','images/products/millet.jpg',9,NULL,NULL),(18,'lupine_№_1','images/products/lupine.jpg',10,NULL,NULL),(19,'lupine_№_2','images/products/lupine.jpg',10,NULL,NULL),(20,'spelt_№_1','images/products/spelt.jpg',11,NULL,NULL),(21,'spelt_№_2','images/products/spelt.jpg',11,NULL,NULL),(22,'safflower_№_1','images/products/safflower.jpg',12,NULL,NULL),(23,'safflower_№_2','images/products/safflower.jpg',12,NULL,NULL),(24,'wheat common_№_1','images/products/wheat-common.jpg',13,NULL,NULL),(25,'wheat common_№_2','images/products/wheat-common.jpg',13,NULL,NULL),(26,'oat_№_1','images/products/oat.jpg',14,NULL,NULL),(27,'oat_№_2','images/products/oat.jpg',14,NULL,NULL),(28,'potato_№_1','images/products/potato.jpg',15,NULL,NULL),(29,'potato_№_2','images/products/potato.jpg',15,NULL,NULL),(30,'rapeseed_№_1','images/products/rapeseed.jpg',16,NULL,NULL),(31,'rapeseed_№_2','images/products/rapeseed.jpg',16,NULL,NULL),(32,'sunflower_№_1','images/products/sunflower.jpg',17,NULL,NULL),(33,'sunflower_№_2','images/products/sunflower.jpg',17,NULL,NULL),(34,'barley_№_1','images/products/barley.jpg',18,NULL,NULL),(35,'barley_№_2','images/products/barley.jpg',18,NULL,NULL),(36,'corn_№_1','images/products/corn.jpg',19,NULL,NULL),(37,'corn_№_2','images/products/corn.jpg',19,NULL,NULL),(38,'soybean_№_1','images/products/soybean.jpg',20,NULL,NULL),(39,'soybean_№_2','images/products/soybean.jpg',20,NULL,NULL);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `roles`
+--
+
+DROP TABLE IF EXISTS `roles`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `roles` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `role` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `roles`
+--
+
+LOCK TABLES `roles` WRITE;
+/*!40000 ALTER TABLE `roles` DISABLE KEYS */;
+INSERT INTO `roles` VALUES (1,'admin','CRUD lots, orders, categories, users',NULL,NULL),(2,'moderator','CRUD lots, orders, categories',NULL,NULL),(3,'manager','RU orders, R lots, categories',NULL,NULL);
+/*!40000 ALTER TABLE `roles` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -359,12 +385,16 @@ CREATE TABLE `users` (
   `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `role_id` int(10) unsigned NOT NULL,
+  `isdeleted` tinyint(1) NOT NULL DEFAULT '0',
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  UNIQUE KEY `users_email_unique` (`email`),
+  KEY `users_role_id_foreign` (`role_id`),
+  CONSTRAINT `users_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -373,6 +403,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'admin','admin@gmail.com',NULL,'$2y$10$RZ0V8OC9PJRYSZsnRFT31ePKL70hRrQA/iIn1yz8EeH7R1EHohvka',1,0,NULL,NULL,NULL),(2,'moderator','moderator@gmail.com',NULL,'$2y$10$DEUel0tLicmF0LXbTfjfZuOYFuaMfIZxwJ.BijOvyTyDwuBoef5tu',2,0,NULL,NULL,NULL),(3,'manager1','manager1@gmail.com',NULL,'$2y$10$qjmnn95DKstmqf7iZgFevOWaeeypTYPoDbW//aS2ShKINBa9EdKP.',3,0,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -385,4 +416,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-02-07 13:09:03
+-- Dump completed on 2019-02-12 16:16:58

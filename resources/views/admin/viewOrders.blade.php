@@ -31,7 +31,7 @@
                                     {{--<th>Company</th>--}}
                                     <th>Product name</th>
                                     <th>Amount</th>
-                                    <th>Price</th>
+                                    <th>Price per ton</th>
                                     {{--<th>Port</th>--}}
                                     <th>Incoterms</th>
                                     <th>Exclusive</th>

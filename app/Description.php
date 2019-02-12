@@ -21,4 +21,12 @@ class Description extends Model
     {
         return $this->belongsTo('App\Product');
     }
+
+    public static function getDescriptionsByCategoryId($id)
+    {
+        $productsIds = Product::getProductsByCategoryId($id)->pluck('id')->all();
+        $descriptions = Description::all()->whereIn('product_id', $productsIds);
+        return $descriptions;
+    }
+
 }

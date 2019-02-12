@@ -10,4 +10,10 @@ class Language extends Model
     {
         return $this->hasMany('App\Description');
     }
+
+    public static function getLanguageByCode($code)
+    {
+        $language = Language::all()->where('code', '=', $code);
+        return $language;
+    }
 }

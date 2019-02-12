@@ -28,7 +28,7 @@
                                     <th>Category</th>
                                     <th>Incoterms</th>
                                     <th>Amount</th>
-                                    <th>Price</th>
+                                    <th>Price  per ton</th>
                                     <th>Port</th>
                                     <th>Port photo</th>
                                     <th>Created_at</th>

@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Delivery;
+use App\Description;
 use App\Http\Requests\ExclusiveLotRequest;
+use App\Language;
 use App\Lot;
 use App\Product;
 use Illuminate\Http\Request;
@@ -93,13 +95,14 @@ class MainController extends Controller
 
     public function offers(Request $request)
     {
+        $language = Language::getLanguageByCode($request->lang)->pluck('id');
         $category = Category::getCategoryById($request->cat);
-        if (is_null($category)) {
+        if (is_null($category) || is_null($language)) {
             $lots = Lot::paginate(24);
             return view('offers', ['lots' => $lots]);
         } else {
             $lots = Lot::getLotsByCategoryId($request->cat);
-            return view('offers', ['lots' => $lots, 'category' => $category->name]);
+            return view('offers', ['lots' => $lots, 'category' => $category->name, 'language' => $language[0]]);
         }
     }
 }

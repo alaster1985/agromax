@@ -41,7 +41,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="inline-form">
-                                        <label class="c-label">Price</label>
+                                        <label class="c-label">Price per ton</label>
                                         <input class="input-style" value="{{old('price')}}" name="price"/>
                                     </div>
                                 </div>

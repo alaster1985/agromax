@@ -9,6 +9,7 @@ use App\Http\Requests\ExclusiveLotRequest;
 use App\Language;
 use App\Lot;
 use App\Product;
+use App\Services\GetExcelDataService;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -56,7 +57,7 @@ class MainController extends Controller
     public function confirmationById(Request $request)
     {
         $lot = Lot::getLotById($request->offer);
-        if (!is_null($lot)){
+        if (!is_null($lot)) {
             return view('confirmation', ['lot' => $lot]);
         } else {
             $lots = Lot::paginate(24);
@@ -73,7 +74,6 @@ class MainController extends Controller
 //        }) else {
 //
 //    };
-//        dd($request);
         $exclusiveLot = Lot::makeExclusiveLot($request);
         return view('confirmation', ['lot' => $exclusiveLot]);
     }
@@ -95,14 +95,26 @@ class MainController extends Controller
 
     public function offers(Request $request)
     {
-        $language = Language::getLanguageByCode($request->lang)->pluck('id');
-        $category = Category::getCategoryById($request->cat);
-        if (is_null($category) || !isset($language->all()[0])) {
+        $language = $request->lang;
+        $categoryId = $request->cat;
+        $categoryName = GetExcelDataService::getCategoryNameByLangAndId($language, $categoryId);
+        if (is_null($categoryName)) {
             $lots = Lot::paginate(24);
-            return view('offers', ['lots' => $lots, 'language' => 1]);
+            return view('offers', ['lots' => $lots]);
         } else {
-            $lots = Lot::getLotsByCategoryId($request->cat);
-            return view('offers', ['lots' => $lots, 'category' => $category->name, 'language' => $language[0]]);
+            $lotsDefault = Lot::getLotsByCategoryId($request->cat);
+            $lots = GetExcelDataService::setProductNameAndDescriptionByLangAndId($lotsDefault, $language);
+            return view('offers', ['lots' => $lots, 'category' => $categoryName]);
         }
+
+//        $language = Language::getLanguageByCode($request->lang)->pluck('id');
+//        $category = Category::getCategoryById($request->cat);
+//        if (is_null($category) || !isset($language->all()[0])) {
+//            $lots = Lot::paginate(24);
+//            return view('offers', ['lots' => $lots, 'language' => 1]);
+//        } else {
+//            $lots = Lot::getLotsByCategoryId($request->cat);
+//            return view('offers', ['lots' => $lots, 'category' => $category->name, 'language' => $language[0]]);
+//        }
     }
 }

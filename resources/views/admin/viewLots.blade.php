@@ -23,6 +23,7 @@
                             <table id="stream_table" class='table table-striped table-bordered'>
                                 <thead>
                                 <tr>
+                                    <th>Product ID</th>
                                     <th>Product name</th>
                                     <th>Product photo</th>
                                     <th>Category</th>
@@ -42,6 +43,9 @@
                                 <tbody>
                                 @foreach($allLots as $lot)
                                     <tr id="trId">
+                                        <td>
+                                            {{\App\Lot::find($lot->id)->product->id}}
+                                        </td>
                                         <td>
                                             {{\App\Lot::find($lot->id)->product->name}}
                                         </td>

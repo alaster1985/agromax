@@ -18,7 +18,7 @@
                     <div class="col-md-12">
                         <div class="widget-area">
                             <div class="wizard-form-h">
-                                <h2 class="StepTitle">CATEGORY</h2>
+                                <h2 class="StepTitle">CATEGORY ID {{$category->id}}</h2>
                                 @if ($errors)
                                     <div class="error" style="display: block">{{($errors->first())}}</div>
                                 @endif

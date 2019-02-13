@@ -22,6 +22,7 @@
                             <table id="stream_table" class='table table-striped table-bordered'>
                                 <thead>
                                 <tr>
+                                    <th>Category ID</th>
                                     <th>Category</th>
                                     <th>Photo</th>
                                     <th>Type</th>
@@ -36,6 +37,9 @@
                                 <tbody>
                                 @foreach($allCategories as $category)
                                     <tr id="trId">
+                                        <td>
+                                            {{$category->id}}
+                                        </td>
                                         <td>
                                             {{$category->name}}
                                         </td>

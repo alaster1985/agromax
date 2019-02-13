@@ -9,6 +9,7 @@ class Product extends Model
 {
     protected $fillable = [
         'name',
+        'description',
         'photo',
         'category_id',
     ];
@@ -36,10 +37,10 @@ class Product extends Model
         return $this->belongsTo('App\Category');
     }
 
-    public function description()
-    {
-        return $this->hasMany('App\Description');
-    }
+//    public function description()
+//    {
+//        return $this->hasMany('App\Description');
+//    }
 
     public function lot()
     {

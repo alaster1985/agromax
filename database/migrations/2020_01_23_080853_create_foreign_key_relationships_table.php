@@ -16,10 +16,10 @@ class CreateForeignKeyRelationshipsTable extends Migration
         Schema::table('products', function (Blueprint $table) {
             $table->foreign('category_id')->references('id')->on('categories');
         });
-        Schema::table('descriptions', function (Blueprint $table) {
-            $table->foreign('product_id')->references('id')->on('products');
-            $table->foreign('language_id')->references('id')->on('languages');
-        });
+//        Schema::table('descriptions', function (Blueprint $table) {
+//            $table->foreign('product_id')->references('id')->on('products');
+//            $table->foreign('language_id')->references('id')->on('languages');
+//        });
         Schema::table('lots', function (Blueprint $table) {
             $table->foreign('product_id')->references('id')->on('products');
             $table->foreign('delivery_id')->references('id')->on('deliveries');

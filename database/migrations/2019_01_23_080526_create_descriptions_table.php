@@ -13,13 +13,13 @@ class CreateDescriptionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('descriptions', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('language_id')->unsigned();
-            $table->integer('product_id')->unsigned();
-            $table->text('description');
-            $table->timestamps();
-        });
+//        Schema::create('descriptions', function (Blueprint $table) {
+//            $table->increments('id');
+//            $table->integer('language_id')->unsigned();
+//            $table->integer('product_id')->unsigned();
+//            $table->text('description');
+//            $table->timestamps();
+//        });
     }
 
     /**

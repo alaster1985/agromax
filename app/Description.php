@@ -12,21 +12,21 @@ class Description extends Model
         'description',
     ];
 
-    public function language()
-    {
-        return $this->belongsTo('App\Language');
-    }
+//    public function language()
+//    {
+//        return $this->belongsTo('App\Language');
+//    }
+//
+//    public function product()
+//    {
+//        return $this->belongsTo('App\Product');
+//    }
 
-    public function product()
-    {
-        return $this->belongsTo('App\Product');
-    }
-
-    public static function getDescriptionsByCategoryId($id)
-    {
-        $productsIds = Product::getProductsByCategoryId($id)->pluck('id')->all();
-        $descriptions = Description::all()->whereIn('product_id', $productsIds);
-        return $descriptions;
-    }
+//    public static function getDescriptionsByCategoryId($id)
+//    {
+//        $productsIds = Product::getProductsByCategoryId($id)->pluck('id')->all();
+//        $descriptions = Description::all()->whereIn('product_id', $productsIds);
+//        return $descriptions;
+//    }
 
 }

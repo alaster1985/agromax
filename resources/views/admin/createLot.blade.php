@@ -101,19 +101,29 @@
                                 {{--</div>--}}
                                 {{--</div>--}}
 
-                                @foreach(\App\Language::all() as $language)
+                                {{--@foreach(\App\Language::all() as $language)--}}
 
-                                    <div class="col-md-12 newProduct" style="display: none">
-                                        <div class="inline-form">
-                                            <label class="c-label">Description for {{$language->name}}</label>
-                                            <textarea rows="4" class="input-style"
-                                                      name="description_id[{{$language->id}}]"
-                                                      placeholder="Description for {{$language->name}}"
-                                            >{{old('description_id.' . $language->id)}}</textarea>
-                                        </div>
+                                    {{--<div class="col-md-12 newProduct" style="display: none">--}}
+                                        {{--<div class="inline-form">--}}
+                                            {{--<label class="c-label">Description for {{$language->name}}</label>--}}
+                                            {{--<textarea rows="4" class="input-style"--}}
+                                                      {{--name="description_id[{{$language->id}}]"--}}
+                                                      {{--placeholder="Description for {{$language->name}}"--}}
+                                            {{-->{{old('description_id.' . $language->id)}}</textarea>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+
+                                {{--@endforeach--}}
+
+                                <div class="col-md-12 newProduct" style="display: none">
+                                    <div class="inline-form">
+                                        <label class="c-label">Default Description</label>
+                                        <textarea rows="4" class="input-style"
+                                                  name="description"
+                                                  placeholder="Default Description"
+                                        >{{old('description')}}</textarea>
                                     </div>
-
-                                @endforeach
+                                </div>
 
                                 <div class="col-md-3">
                                     <div class="inline-form">

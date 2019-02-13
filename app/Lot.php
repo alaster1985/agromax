@@ -2,7 +2,6 @@
 
 namespace App;
 
-//use http\Env\Request;
 use App\Services\UploadPhotoService;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
@@ -75,15 +74,16 @@ class Lot extends Model
                 $newProductPhotoPath = 'images/products/';
                 $newProductPhoto = $newProductPhotoPath . $newProductPhotoName;
                 $newProduct->photo = $newProductPhoto;
+                $newProduct->description = $request->description;
                 $newProduct->save();
 
-                foreach ($request->description_id as $key => $value) {
-                    $newDescription = new Description();
-                    $newDescription->language_id = $key;
-                    $newDescription->product_id = $newProduct->id;
-                    $newDescription->description = $value;
-                    $newDescription->save();
-                }
+//                foreach ($request->description_id as $key => $value) {
+//                    $newDescription = new Description();
+//                    $newDescription->language_id = $key;
+//                    $newDescription->product_id = $newProduct->id;
+//                    $newDescription->description = $value;
+//                    $newDescription->save();
+//                }
 
                 $newLot->product_id = $newProduct->id;
             } else {
@@ -109,6 +109,9 @@ class Lot extends Model
             $lotToUpdate->port = $request->port;
             $productForCurrentLot = Product::find(Lot::find($request->lot_id)->product->id);
             $productForCurrentLot->name = $request->product_name;
+            $productForCurrentLot->category_id = $request->category;
+            $productForCurrentLot->description = $request->description;
+
             if (isset($request->new_product_photo)) {
                 $newProductPhotoForCurrentLot = new UploadPhotoService();
                 $newProductPhotoForCurrentLot->uploadProductPhoto($request);
@@ -117,14 +120,17 @@ class Lot extends Model
                 $newPhoto = $photoPath . $photoName;
                 $productForCurrentLot->photo = $newPhoto;
             }
+
             $productForCurrentLot->save();
-            foreach ($request->description_id as $key => $value) {
-                $descriptionForCurrentLot = Description::all()
-                    ->where('language_id', '=', $key)
-                    ->where('product_id', '=', Lot::find($request->lot_id)->product->id)->first();
-                $descriptionForCurrentLot->description = $value;
-                $descriptionForCurrentLot->save();
-            }
+
+//            foreach ($request->description_id as $key => $value) {
+//                $descriptionForCurrentLot = Description::all()
+//                    ->where('language_id', '=', $key)
+//                    ->where('product_id', '=', Lot::find($request->lot_id)->product->id)->first();
+//                $descriptionForCurrentLot->description = $value;
+//                $descriptionForCurrentLot->save();
+//            }
+
             if (isset($request->port_photo)) {
                 $newPortPhotoForCurrentLot = new UploadPhotoService();
                 $newPortPhotoForCurrentLot->uploadPortPhoto($request);
@@ -133,6 +139,7 @@ class Lot extends Model
                 $newPhoto = $photoPath . $photoName;
                 $lotToUpdate->port_photo = $newPhoto;
             }
+
             $lotToUpdate->save();
         });
     }

@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Language extends Model
 {
-    public function description()
-    {
-        return $this->hasMany('App\Description');
-    }
+//    public function description()
+//    {
+//        return $this->hasMany('App\Description');
+//    }
 
     public static function getLanguageByCode($code)
     {

@@ -48,6 +48,10 @@ Route::middleware('auth')->group(function () {
     Route::post('admin/updateCategory', 'Admin\CategoriesController@updateCategory')->name('updateCategory');
     Route::get('admin/createCategory', 'Admin\CategoriesController@createCategory')->name('createCategory');
     Route::post('admin/addCategory', 'Admin\CategoriesController@addCategory')->name('addCategory');
+
+    Route::get('admin/viewLanguages', 'Admin\LanguagesController@viewLanguages')->name('viewLanguages');
+    Route::get('admin/editLanguages', 'Admin\LanguagesController@editLanguages')->name('editLanguages');
+    Route::post('admin/updateLanguage', 'Admin\LanguagesController@updateLanguage')->name('updateLanguage');
 });
 
 Route::get('/', 'MainController@index')->name('index');
@@ -61,5 +65,6 @@ Route::get('/founder', 'MainController@founder')->name('founder');
 Route::get('/offers', 'MainController@offers')->name('offers');
 Route::get('/company', 'MainController@company')->name('company');
 Route::get('/partnership', 'MainController@partnership')->name('partnership');
+Route::post('/getLanguagesForSelect', 'Admin\LanguagesController@getLanguagesForSelect')->name('getLanguagesForSelect');
 Route::post('/createOrder', 'Admin\OrdersController@createOrder')->name('createOrder');
 Route::get('/charityar', function () {return view('charityar');});

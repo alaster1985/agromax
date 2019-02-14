@@ -49,6 +49,14 @@
                         @endif
                     </div>
                 </div>
+                <div class="single-menu">
+                    <h2><a title=""><i class="fa fa-desktop"></i><span>Languages</span></a></h2>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="{{route('viewLanguages')}}" title="">All Languages</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </aside>

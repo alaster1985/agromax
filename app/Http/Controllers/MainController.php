@@ -97,15 +97,27 @@ class MainController extends Controller
     {
         $language = $request->lang;
         $categoryId = $request->cat;
-        $categoryName = GetExcelDataService::getCategoryNameByLangAndId($language, $categoryId);
-        if (is_null($categoryName)) {
+        $cat = Category::checkCategoryExist($categoryId);
+        $lang = Language::checkLanguageSet($language);
+
+        if ($cat && $lang) {
+            $categoryName = GetExcelDataService::getCategoryNameByLangAndId($language, $categoryId);
+            $lotsLotsByCategoryId = Lot::getLotsByCategoryId($categoryId);
+            $lots = GetExcelDataService::setProductNameAndDescriptionByLangAndId($lotsLotsByCategoryId, $language);
+            return view('offers', ['lots' => $lots, 'category' => $categoryName]);
+        } elseif ($lang) {
+            $lotsDefault = Lot::paginate(24);
+            $lots = GetExcelDataService::setProductNameAndDescriptionByLangAndId($lotsDefault, $language);
+            return view('offers', ['lots' => $lots]);
+        } elseif ($cat) {
+            $category = Category::getCategoryById($categoryId);
+            $lots = Lot::getLotsByCategoryId($categoryId);
+            return view('offers', ['category' => $category->name, 'lots' => $lots]);
+        } else {
             $lots = Lot::paginate(24);
             return view('offers', ['lots' => $lots]);
-        } else {
-            $lotsDefault = Lot::getLotsByCategoryId($request->cat);
-            $lots = GetExcelDataService::setProductNameAndDescriptionByLangAndId($lotsDefault, $language);
-            return view('offers', ['lots' => $lots, 'category' => $categoryName]);
         }
+
 
 //        $language = Language::getLanguageByCode($request->lang)->pluck('id');
 //        $category = Category::getCategoryById($request->cat);

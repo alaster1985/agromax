@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Delivery;
-use App\Description;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\LotStoreRequest;
 use App\Lot;
-use App\Product;
 use Illuminate\Http\Request;
 
 class LotsController extends Controller

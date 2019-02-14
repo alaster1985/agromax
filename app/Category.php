@@ -79,4 +79,9 @@ class Category extends Model
             ]);
         $newCategory->save();
     }
+
+    public static function checkCategoryExist($id)
+    {
+        return !is_null(Category::find($id));
+    }
 }

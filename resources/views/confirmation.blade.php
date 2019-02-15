@@ -39,7 +39,7 @@
                     <div class="error" style="color: #ff0000;" align="center">{{($errors->first())}}</div>
                 @endif
                 {{--                <form class="conformation__form" action="{{Route('createOrder')}}" method="POST" enctype="multipart/form-data">--}}
-                <form class="conformation__form"
+                <form class="conformation__form" id="confirmationForm"
                       action="{{ Request::root() . '/createOrder?' . Request::getQueryString()}}" method="POST"
                       enctype="multipart/form-data">
                     @csrf

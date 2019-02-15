@@ -102,6 +102,7 @@ class MainController extends Controller
 
         if ($cat && $lang) {
             $categoryName = GetExcelDataService::getCategoryNameByLangAndId($language, $categoryId);
+            $categoryName = $categoryName ?? Category::find($categoryId)->name;
             $lotsLotsByCategoryId = Lot::getLotsByCategoryId($categoryId);
             $lots = GetExcelDataService::setProductNameAndDescriptionByLangAndId($lotsLotsByCategoryId, $language);
             return view('offers', ['lots' => $lots, 'category' => $categoryName]);

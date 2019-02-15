@@ -8,7 +8,7 @@
                 @if ($errors)
                     <div class="error" style="color: #ff0000;" align="center">{{($errors->first())}}</div>
                 @endif
-                <form action="{{Route('exConfirm')}}" method="GET" enctype="multipart/form-data">
+                <form action="{{Route('exConfirm')}}" id="exclusiveForm" method="GET" enctype="multipart/form-data">
                     @csrf
                     <div class="exclusive__item input-group">
                         <span class="exclusive__title input-group-addon">Name</span>

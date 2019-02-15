@@ -18,7 +18,7 @@ class CreateLanguagesTable extends Migration
             $table->string('name', 100);
             $table->string('code', 10);
             $table->string('code_page', 100);
-            $table->boolean('disable')->default(1);
+            $table->boolean('disable')->default(0);
             $table->timestamps();
         });
     }

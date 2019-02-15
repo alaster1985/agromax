@@ -29,7 +29,7 @@ class LanguageStoreRequest extends FormRequest
         return [
             'name' => 'required|max:100|min:3',
             'code' => [
-                'required',
+//                'required',
                 Rule::in($languageCodes),
             ],
             'disable' => 'required|boolean',

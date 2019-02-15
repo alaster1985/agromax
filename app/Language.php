@@ -26,7 +26,7 @@ class Language extends Model
 
     public static function getLanguages()
     {
-        $languages = Language::all()->where('disable', '=', 1);
+        $languages = Language::all()->where('disable', '=', 0);
         return $languages;
     }
 
@@ -40,7 +40,7 @@ class Language extends Model
     {
         $languageToUpdate = Language::find($request->language_id);
         $languageToUpdate->name = $request->name;
-        $languageToUpdate->code = $request->code;
+//        $languageToUpdate->code = $request->code;
         $languageToUpdate->disable = $request->disable;
 //        $languageToUpdate->code_page = $request->code_page;
         $languageToUpdate->code_page = 'for' . $request->name;
@@ -50,7 +50,7 @@ class Language extends Model
     public static function checkLanguageSet($code)
     {
         return boolval(Language::all()
-            ->where('disable', '=', 1)
+            ->where('disable', '=', 0)
             ->where('code', '=', $code)
             ->count() * GetExcelDataService::checkSheetExist($code));
     }

@@ -39,8 +39,8 @@
                                     <div class="inline-form">
                                         <label class="c-label">Language Disable</label>
                                         <select name="disable">
-                                            <option id="yes" value="0" selected>YES</option>
-                                            <option id="no" value="1">NO</option>
+                                            <option id="yes" value="0" selected>NO</option>
+                                            <option id="no" value="1">YES</option>
                                             @if($language->disable === 1)
                                                 <script>document.getElementById('no').selected = true</script>
                                             @endif

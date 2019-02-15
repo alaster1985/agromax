@@ -6,7 +6,7 @@
                 <h2 class="offers__title">{{$category}} is our major proposal</h2>
             @else
                 <h2 class="offers__title">Our major proposal</h2>
-                <h6 class="site-nav__link">{{$lots->links()}}</h6>
+                <h6 class="site-nav__link">{{--{{$lots->links()}}--}}</h6>
             @endif
             @foreach($lots as $lot)
                 <div class="offers__item col-sm-4 col-md-3">
@@ -39,7 +39,7 @@
 
             @endforeach
             @if(!isset($category))
-                <h6 class="site-nav__link">{{$lots->links()}}</h6>
+                <h6 class="site-nav__link">{{--{{$lots->links()}}--}}</h6>
             @endif
         </div>
     </section>

@@ -121,13 +121,13 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="inline-form">
-                                        <label class="c-label">Stage</label>
-                                        <input class="input-style" disabled="true"
-                                               name="stage" value="{{\App\Stage::find($order->stage_id)->stage}}"/>
-                                    </div>
-                                </div>
+                                {{--<div class="col-md-3">--}}
+                                    {{--<div class="inline-form">--}}
+                                        {{--<label class="c-label">Stage</label>--}}
+                                        {{--<input class="input-style" disabled="true"--}}
+                                               {{--name="stage" value="{{\App\Stage::find($order->stage_id)->stage}}"/>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
                                 <div class="col-md-3">
                                     <div class="inline-form">
                                         <label class="c-label">Created at</label>

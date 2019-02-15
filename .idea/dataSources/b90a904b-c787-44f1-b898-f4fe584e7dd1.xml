@@ -1090,7 +1090,7 @@
       <Position>5</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
-      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="273" parent="246" name="created_at">

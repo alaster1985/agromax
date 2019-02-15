@@ -18,6 +18,11 @@ class LanguagesController extends Controller
     public function viewLanguages()
     {
         $allLanguages = Language::all();
+        $allLanguages = $allLanguages->sortBy(function($allLanguages) {
+            return sprintf('%-12s%s', $allLanguages->disable, $allLanguages->name);
+        });
+
+
         return view('admin/viewLanguages', ['allLanguages' => $allLanguages]);
     }
 
@@ -34,6 +39,6 @@ class LanguagesController extends Controller
     public function updateLanguage(LanguageStoreRequest $request)
     {
         Language::updateLanguage($request);
-        return redirect()->back()->with('message', 'DONE!');
+        return redirect()->route('viewLanguages')->with('message', 'DONE!');
     }
 }

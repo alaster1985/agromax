@@ -85,5 +85,138 @@ $(document).ready(function () {
         modalConfirm.removeClass("active");
     });
 
+    $("#confirmationForm").validate({
+        rules:{
+            first_name:{
+                required: true,
+                minlength: 2,
+                maxlength: 100,
+            },
+            last_name:{
+                required: true,
+                minlength: 2,
+                maxlength: 100,
+            },
+            linkedin:{
+                required: true,
+                regexp: '^https?://((www|\\w\\w)\\.)?linkedin.com/((in/[^/]+/?)|(pub/[^/]+/((\\w|\\d)+/?){3}))$',
+            },
+            email:{
+                required: true,
+                email: true,
+                maxlength: 100,
+            },
+            phone:{
+                required: true,
+                regexp: '^(\\+)*[0-9]*$',
+                minlength: 6,
+                maxlength: 20,
+            },
+            company:{
+                minlength: 3,
+                maxlength: 100,
+            },
+        },
+
+        messages:{
+            first_name:{
+                required: 'Please, set your first name',
+                minlength: 'Shorter please, max 100 characters',
+                maxlength: 'Very short name. At least 2 characters',
+            },
+            last_name:{
+                required: 'Please, set your last name',
+                minlength: 'Shorter please, max 100 characters',
+                maxlength: 'Very short name. At least 2 characters',
+            },
+            linkedin:{
+                required: 'Please, set your linkedIn personal page',
+                regexp: 'Please, set your current existing linkedIn personal page',
+            },
+            email:{
+                required: 'Please, set your email',
+                email: 'Please, follow to the format email',
+                maxlength: 'Shorter please, max 100 characters',
+            },
+            phone:{
+                required: 'Please, set your phone number',
+                regexp: 'Please, use only numbers fot phone',
+                minlength: 'Very short phone number',
+                maxlength: 'It is too much numbers for phone',
+            },
+            company:{
+                minlength: 'Very short company name',
+                maxlength: 'Shorter please, max 100 characters',
+            },
+        }
+    });
+
+    $("#exclusiveForm").validate({
+        rules:{
+            product:{
+                required: true,
+            },
+            delivery:{
+                required: true,
+            },
+            amount:{
+                required: true,
+                digits: true,
+                max: 10000,
+                min: 10,
+            },
+            optional:{
+                required: true,
+                digits: true,
+                max: 100000,
+                min: 100,
+            },
+            max:{
+                required: true,
+                digits: true,
+                max: 1000000,
+                min: 100,
+            },
+            otherName:{
+                required: function() {
+                    return $("#exclusive-name").val() == 1;
+                },
+                minlength: 3,
+                maxlength: 25,
+            },
+        },
+
+        messages:{
+            product:{
+                required: 'Please, select the product',
+            },
+            delivery:{
+                required: 'Please, select the Incoterms',
+            },
+            amount:{
+                required: 'Please, set amount',
+                digits: 'Please, use only numbers for amount',
+                max: 'Seriously, over 10000 tons?',
+                min: 'It\'s not enough, set at least 10 tons',
+            },
+            optional:{
+                required: 'Please, set optional price',
+                digits: 'Please, use only numbers for optional price',
+                max: 'Seriously, over 100000 $$?',
+                min: 'It\'s not enough, set at least 100 $$ for this product',
+            },
+            max:{
+                required: 'Please, set max price',
+                digits: 'Please, use only numbers max price',
+                max: 'Seriously, over 1000000 $$?',
+                min: 'It\'s not enough, set at least 100 $$ for this product',
+            },
+            otherName:{
+                minlength: 'Very short other name of product. At least 3 characters',
+                maxlength: 'Shorter please, max 25 characters',
+            },
+        }
+    });
+
 });
 

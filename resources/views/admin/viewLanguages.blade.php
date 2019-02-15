@@ -18,6 +18,11 @@
                 <div class="col-md-12">
                     <div class="widget-area">
                         <div class="streaming-table">
+                            @if(session()->has('message'))
+                                <div class="alert alert-success" align="center">
+                                    {{ session()->get('message') }}
+                                </div>
+                            @endif
                             <span id="found" class="label label-info"></span>
                             <table id="stream_table" class='table table-striped table-bordered'>
                                 <thead>
@@ -45,7 +50,7 @@
                                             {{$language->code}}
                                         </td>
                                         <td>
-                                            {{$language->disable ? 'NO' : 'YES'}}
+                                            {{$language->disable ? 'YES' : 'NO'}}
                                         </td>
                                         {{--<td>--}}
                                             {{--{{$language->code_page}}--}}

@@ -210,6 +210,14 @@ $(document).ready(function () {
                 minlength: 3,
                 maxlength: 25,
             },
+            port: {
+                required: true,
+                minlength: 5,
+                maxlength: 100,
+            },
+            condition: {
+                required: true,
+            },
         },
 
         messages: {
@@ -240,6 +248,14 @@ $(document).ready(function () {
             otherName: {
                 minlength: 'Very short other name of product. At least 3 characters',
                 maxlength: 'Shorter please, max 25 characters',
+            },
+            port: {
+                required: 'Please, set port',
+                minlength: 'Shorter please, max 100 characters',
+                maxlength: 'Very short port name. At least 5 characters',
+            },
+            condition: {
+                required: 'Please, select the Condition',
             },
         }
     });

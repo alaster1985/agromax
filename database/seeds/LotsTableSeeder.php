@@ -29,7 +29,7 @@ class LotsTableSeeder extends Seeder
         ];
 
         for ($i = 2; $i <= 39; $i++) {
-            $ind1 = rand(1,6);
+            $ind1 = rand(1,3);
             for ($j = 1; $j <= $ind1; $j++) {
                 $indd = rand(1,11);
                 $indp = rand(0,4);

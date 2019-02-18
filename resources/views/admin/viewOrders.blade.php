@@ -34,6 +34,7 @@
                                     <th>Price per ton</th>
                                     {{--<th>Port</th>--}}
                                     <th>Incoterms</th>
+                                    <th>Conditions</th>
                                     <th>Exclusive</th>
                                     <th>Status</th>
                                     {{--<th>Stage</th>--}}
@@ -84,6 +85,9 @@
                                         {{--</td>--}}
                                         <td>
                                             {{\App\Delivery::find($order->delivery_id)->name}}
+                                        </td>
+                                        <td>
+                                            {{\App\Condition::find($order->condition_id)->id === 1 ? '' : \App\Condition::find($order->condition_id)->condition}}
                                         </td>
                                         <td>
                                             {{$order->exclusive ? 'YES' : 'NO'}}

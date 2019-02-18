@@ -52,6 +52,7 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/viewLanguages', 'Admin\LanguagesController@viewLanguages')->name('viewLanguages');
     Route::get('admin/editLanguages', 'Admin\LanguagesController@editLanguages')->name('editLanguages');
     Route::post('admin/updateLanguage', 'Admin\LanguagesController@updateLanguage')->name('updateLanguage');
+    Route::post('admin/uploadTranslationFile', 'Admin\LanguagesController@uploadTranslationFile')->name('uploadTranslationFile');
 });
 
 Route::get('/', 'MainController@index')->name('index');
@@ -67,4 +68,4 @@ Route::get('/company', 'MainController@company')->name('company');
 Route::get('/partnership', 'MainController@partnership')->name('partnership');
 Route::post('/getLanguagesForSelect', 'Admin\LanguagesController@getLanguagesForSelect')->name('getLanguagesForSelect');
 Route::post('/createOrder', 'Admin\OrdersController@createOrder')->name('createOrder');
-Route::get('/charityar', function () {return view('charityar');});
+//Route::get('/charityar', function () {return view('charityar');});

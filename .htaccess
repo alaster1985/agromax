@@ -1,0 +1,8 @@
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /demo/oleg-agromax/public
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^(.*)$ /demo/oleg-agromax/public/$1 [R=301,L]
+</IfModule>

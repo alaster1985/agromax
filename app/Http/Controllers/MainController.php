@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Condition;
 use App\Delivery;
 use App\Http\Requests\ExclusiveLotRequest;
 use App\Language;
@@ -82,10 +83,11 @@ class MainController extends Controller
     {
         $lang = $request->lang;
         $deliveries = Delivery::getDeliveries();
+        $conditions = Condition::getConditions();
         $productsDef = Product::getProducts();
         $products = GetExcelDataService::setProductsNameAndDescriptionByIdAndLang($productsDef, $lang);
         $headerNavListName = GetExcelDataService::getHeaderSiteNavListByLang($lang);
-        return view('exclusive', ['products' => $products, 'deliveries' => $deliveries, 'newNavNames' => $headerNavListName]);
+        return view('exclusive', ['conditions' => $conditions, 'products' => $products, 'deliveries' => $deliveries, 'newNavNames' => $headerNavListName]);
     }
 
     public function confirmationById(Request $request)
@@ -149,7 +151,7 @@ class MainController extends Controller
         $categoryId = $request->cat;
         $cat = Category::checkCategoryExist($categoryId);
         $lang = Language::checkLanguageSet($language);
-        $headerNavListName = GetExcelDataService::getHeaderSiteNavListByLang($lang);
+        $headerNavListName = GetExcelDataService::getHeaderSiteNavListByLang($language);
 
         if ($cat && $lang) {
             $categoryName = GetExcelDataService::getCategoryNameByLangAndId($language, $categoryId);

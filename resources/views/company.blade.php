@@ -12,6 +12,9 @@
                     <p class="company__desc">{{$companyInfo[2] ?? 'Our market mission - to facilitate the trade with agricultures for health food industry from  Black Sea countries\' farms.'}}</p>
                 </div>
             </div>
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <iframe class="founder__presentation" src="{{asset('presentation.pdf')}}" scrolling="no"></iframe>
+            </div>
         </div>
     </section>
 </main>

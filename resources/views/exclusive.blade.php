@@ -34,6 +34,19 @@
                     </div>
 
                     <div class="exclusive__item input-group">
+                        <span class="exclusive__title input-group-addon">Conditions</span>
+                        <select class="exclusive__select-incoterms" name="condition">
+                            @foreach($conditions as $condition)
+                                <option value="{{$condition->id}}">{{$condition->condition}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="exclusive__item input-group">
+                        <span class="exclusive__title input-group-addon">Port</span>
+                        <input class="form-control" name="port" value="{{old('port')}}" placeholder="Amount" type="text">
+                    </div>
+
+                    <div class="exclusive__item input-group">
                         <span class="exclusive__title input-group-addon">Amount</span>
                         <input class="form-control" name="amount" value="{{old('amount')}}" placeholder="Amount" type="text">
                     </div>

@@ -8,7 +8,7 @@
                         <li class="socials-nw__item"><a class="socials-nw__link fab fa-skype" href="skype:+380919861009?call"><span class="visually-hidden">Skype</span></a></li>
                         <li class="socials-nw__item"><a class="socials-nw__link fab fa-viber" href="viber://chat?number=+380919861009"><span class="visually-hidden">Viber</span></a></li>
                         <li class="socials-nw__item"><a class="socials-nw__link fab fa-whatsapp" href="whatsapp://chat?phone=+380919861009"><span class="visually-hidden">Whatsapp</span></a></li>
-                        <li class="socials-nw__item"><a class="socials-nw__link fab fa-telegram" href="telegram://chat?phone=+380919861009"><span class="visually-hidden">Telegram</span></a></li>
+                        <li class="socials-nw__item"><a class="socials-nw__link fab fa-telegram" href="{{--telegram://chat?phone=+380919861009--}}telegram://chat?phone=@tuufiagro"><span class="visually-hidden">Telegram</span></a></li>
                     </ul>
                 </div>
                 <div class="socials-nw-wr  col-sm-4">

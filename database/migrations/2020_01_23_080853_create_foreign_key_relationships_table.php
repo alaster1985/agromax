@@ -27,6 +27,7 @@ class CreateForeignKeyRelationshipsTable extends Migration
         Schema::table('orders', function (Blueprint $table) {
             $table->foreign('product_id')->references('id')->on('products');
             $table->foreign('delivery_id')->references('id')->on('deliveries');
+            $table->foreign('condition_id')->references('id')->on('conditions');
             $table->foreign('status_id')->references('id')->on('statuses');
             $table->foreign('stage_id')->references('id')->on('stages');
         });

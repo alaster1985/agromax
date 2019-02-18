@@ -57,6 +57,14 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="inline-form">
+                                        <label class="c-label">Conditions</label>
+                                        <input class="input-style" disabled="true"
+                                               name="condition"
+                                               value="{{\App\Condition::find($order->condition_id)->id === 1 ? '' : \App\Condition::find($order->condition_id)->condition}}"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="inline-form">
                                         <label class="c-label">Exclusive</label>
                                         <input class="input-style" disabled="true"
                                                name="exclusive" value="{{$order->exclusive ? 'YES' : 'NO'}}"/>

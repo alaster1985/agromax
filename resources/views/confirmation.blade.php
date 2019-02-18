@@ -7,7 +7,6 @@
     @endif
     <section class="container conformation ">
         <div class="row">
-{{--{{dd($lot)}}--}}
             <div class="offers__item offers__item--selected col-sm-4">
                 <a class="offer__img-wr" href="#">
                     <img src="{{asset($lot->port_photo)}}" alt="Our offers">
@@ -34,6 +33,7 @@
                     </tbody>
                 </table>
             </div>
+            {{--{{dd(Request::getQueryString())}}--}}
             <div class="conformation__wr col-sm-7 col-sm-offset-1">
                 <h2 class="conformation__title">Fill the form</h2>
                 @if ($errors)

@@ -27,6 +27,7 @@ class ExclusiveLotRequest extends FormRequest
     {
         $products = DB::table('products')->get(['id'])->pluck('id')->toArray();
         $deliveries = DB::table('deliveries')->get(['id'])->pluck('id')->toArray();
+        $conditions = DB::table('conditions')->where('id', '<>', 1)->get(['id'])->pluck('id')->toArray();
         return [
             'product' => [
                 'required',
@@ -37,6 +38,11 @@ class ExclusiveLotRequest extends FormRequest
                 'required',
                 Rule::in($deliveries),
             ],
+            'condition' => [
+                'required',
+                Rule::in($conditions),
+            ],
+            'port' => 'required|max:100|min:5',
             'amount' => 'required|integer|max:10000|min:10',
             'optional' => 'required|integer|max:100000|min:100',
             'max' => 'required|integer|max:1000000|min:100',
@@ -53,6 +59,11 @@ class ExclusiveLotRequest extends FormRequest
             'otherName.max' => 'Shorter please, max 25 characters',
             'delivery.required' => 'Please, select the Incoterms',
             'delivery.in' => 'Nice try BRO ;) But set Incoterms from this select',
+            'condition.required' => 'Please, select the Condition',
+            'condition.in' => 'Nice try BRO ;) But set Condition from this select',
+            'port.required' => 'Please, set port',
+            'port.max' => 'Shorter please, max 100 characters',
+            'port.min' => 'Very short port name. At least 5 characters',
             'amount.required' => 'Please, set amount',
             'amount.integer' => 'Please, use only numbers for amount',
             'amount.max' => 'Seriously, over 10000 tons?',

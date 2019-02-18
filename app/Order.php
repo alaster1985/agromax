@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class Order extends Model
 {
@@ -12,6 +13,7 @@ class Order extends Model
         'status_id',
         'stage_id',
         'delivery_id',
+        'condition_id',
         'manager',
         'tons',
         'price',
@@ -22,6 +24,7 @@ class Order extends Model
         'email',
         'linkedin',
         'phone',
+        'session_id',
         'company',
         'exclusive',
         'isdeleted',
@@ -48,13 +51,15 @@ class Order extends Model
                     ? $request->query()['otherName']
                     : Product::find($request->query()['product'])->name,
                 'delivery_id' => $request->query()['delivery'],
+                'condition_id' => $request->query()['condition'],
                 'tons' => $request->query()['amount'],
                 'price' => $request->query()['optional'] . '-' . $request->query()['max'],
-//                'port' => $request->query()['port'],
-                'port' => 'some random port',
+                'port' => $request->query()['port'],
                 'exclusive' => 1,
             ];
         }
+//        array_push($lotInfo, ['session_id' => Session::getId()]);
+        $lotInfo['session_id'] = Session::getId();
         return $lotInfo;
     }
 
@@ -104,5 +109,10 @@ class Order extends Model
     public function product()
     {
         return $this->belongsTo('App\Product');
+    }
+
+    public function condition()
+    {
+        return $this->belongsTo('App\Condition');
     }
 }

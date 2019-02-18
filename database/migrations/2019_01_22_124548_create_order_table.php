@@ -19,6 +19,7 @@ class CreateOrderTable extends Migration
             $table->integer('status_id')->unsigned()->default(1);
             $table->integer('stage_id')->unsigned()->default(1);
             $table->integer('delivery_id')->unsigned();
+            $table->integer('condition_id')->unsigned()->default(1);
             $table->integer('manager')->default(0);
             $table->integer('tons');
             $table->string('price', 100);
@@ -29,6 +30,7 @@ class CreateOrderTable extends Migration
             $table->string('email', 100);
             $table->string('linkedin', 100);
             $table->string('phone', 100);
+            $table->string('session_id', 100);
             $table->string('company', 100)->nullable();
             $table->boolean('exclusive');
             $table->boolean('isdeleted')->default(0);

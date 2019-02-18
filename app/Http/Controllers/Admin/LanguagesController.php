@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\LanguageStoreRequest;
+use App\Http\Requests\UploadTranslationFileRequest;
 use App\Language;
+use App\Services\UploadTranslationFileService;
 use Illuminate\Http\Request;
 
 class LanguagesController extends Controller
@@ -40,5 +42,13 @@ class LanguagesController extends Controller
     {
         Language::updateLanguage($request);
         return redirect()->route('viewLanguages')->with('message', 'DONE!');
+    }
+
+//    public function uploadTranslationFile(UploadTranslationFileRequest $request)
+    public function uploadTranslationFile(Request $request)
+    {
+        $file = new UploadTranslationFileService();
+        $file->uploadTranslationFile($request);
+        return redirect()->back()->with('message', 'DONE!');
     }
 }

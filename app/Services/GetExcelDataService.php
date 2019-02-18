@@ -9,7 +9,7 @@ use PhpOffice\PhpSpreadsheet\IOFactory;
 class GetExcelDataService extends Controller
 {
     public static $inputFileType = 'Xlsx';
-    public static $inputFileName = 'translate.xlsx';
+    public static $inputFileName = 'translation/translate.xlsx';
 
     public static function getDirect()
     {

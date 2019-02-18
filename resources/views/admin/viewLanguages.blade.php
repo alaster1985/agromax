@@ -17,11 +17,31 @@
             <div class="masonary-grids">
                 <div class="col-md-12">
                     <div class="widget-area">
+                        @if ($errors)
+                            <div class="error" style="display: block">{{($errors->first())}}</div>
+                        @endif
                         <div class="streaming-table">
                             @if(session()->has('message'))
                                 <div class="alert alert-success" align="center">
                                     {{ session()->get('message') }}
                                 </div>
+                            @endif
+                            @if(\App\User::find(Auth::id())->role_id === 3)
+                            @else
+                                <form action="{{Route('uploadTranslationFile')}}" method="POST" enctype="multipart/form-data">
+                                    {{csrf_field()}}
+                                    <div class="col-md-4">
+                                        <div class="inline-form">
+                                            <label class="c-label">New Translation File</label>
+                                            <input class="input-style" name="translation" type="file"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="inline-form">
+                                            <button type="submit" {{--disabled--}} class="btn btn-success">SAVE</button>
+                                        </div>
+                                    </div>
+                                </form>
                             @endif
                             <span id="found" class="label label-info"></span>
                             <table id="stream_table" class='table table-striped table-bordered'>
@@ -53,13 +73,13 @@
                                             {{$language->disable ? 'YES' : 'NO'}}
                                         </td>
                                         {{--<td>--}}
-                                            {{--{{$language->code_page}}--}}
+                                        {{--{{$language->code_page}}--}}
                                         {{--</td>--}}
                                         {{--<td>--}}
-                                            {{--{{$language->created_at}}--}}
+                                        {{--{{$language->created_at}}--}}
                                         {{--</td>--}}
                                         {{--<td>--}}
-                                            {{--{{$language->updated_at}}--}}
+                                        {{--{{$language->updated_at}}--}}
                                         {{--</td>--}}
                                         @if(\App\User::find(Auth::id())->role_id === 3)
                                         @else
@@ -67,7 +87,7 @@
                                                 <a href="editLanguages?lang={{$language->id}}">+</a>
                                             </td>
                                             {{--<td>--}}
-                                                {{--<a href="removeLanguages?lang={{$language->id}}">+</a>--}}
+                                            {{--<a href="removeLanguages?lang={{$language->id}}">+</a>--}}
                                             {{--</td>--}}
                                         @endif
                                     </tr>

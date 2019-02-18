@@ -9,7 +9,7 @@
                 {{--<h3 class="visually-hidden products__main-title  col-sm-12">AgroMax makes focus at trade with products for health food but can offer to buyers wholesale supplies of ...</h3>--}}
                 @foreach($categoriesUp as $category)
                     <div class="products__item col-sm-4 col-md-3">
-                        <a class="products__img-wr" href="offers/?cat={{$category->id}}">
+                        <a class="products__img-wr" href="offers/?lang=en_GB&cat={{$category->id}}">
                             <img src="{{asset($category->photo)}}" alt="{{$category->name}}">
                         </a>
                         <h3 class="products__title">{{$category->name}}</h3>
@@ -18,7 +18,7 @@
                             ullamcorper, suscipit erat ac, pharetra magna. Donec vitae pharetra neque, at pulvinar mauris.
                             Ut
                             malesuada ante vitae metus maximus, quis maximus nisl mollis.</p>
-                        <a class="products__btn" href="offers/?cat={{$category->id}}">Our offers</a>
+                        <a class="products__btn" href="offers/?lang=en_GB&cat={{$category->id}}">Our offers</a>
                     </div>
                 @endforeach
             </div>
@@ -28,7 +28,7 @@
 
                     @foreach($categoriesLow as $category)
                         <div class="products__item col-sm-4 col-md-3">
-                            <a class="products__img-wr" href="offers/?cat={{$category->id}}">
+                            <a class="products__img-wr" href="offers/?lang=en_GB&cat={{$category->id}}">
                                 <img src="{{asset($category->photo)}}" alt="{{$category->name}}">
                             </a>
                             <h3 class="products__title">{{$category->name}}</h3>
@@ -37,7 +37,7 @@
                                 ullamcorper, suscipit erat ac, pharetra magna. Donec vitae pharetra neque, at pulvinar mauris.
                                 Ut
                                 malesuada ante vitae metus maximus, quis maximus nisl mollis.</p>
-                            <a class="products__btn" href="offers/?cat={{$category->id}}">Our offers</a>
+                            <a class="products__btn" href="offers/?lang=en_GB&cat={{$category->id}}">Our offers</a>
                         </div>
                     @endforeach
 

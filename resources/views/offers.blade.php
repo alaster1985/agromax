@@ -6,12 +6,12 @@
                 <h2 class="offers__title">{{$category}} is our major proposal</h2>
             @else
                 <h2 class="offers__title">Our major proposal</h2>
-                <h6 class="site-nav__link">{{--{{$lots->links()}}--}}</h6>
+                <h6 class="site-nav__link">{{$lots->links()}}</h6>
             @endif
             @foreach($lots as $lot)
                 <div class="offers__item col-sm-4 col-md-3">
                     <a class="offer__img-wr"
-                       href="{{ Request::root() . '/confirmation/?' . Request::getQueryString() . '&offer=' . $lot->id}}">
+                       href="{{ Request::root() . '/confirmation/?lang=' . Request::all()['lang'] . '&offer=' . $lot->id}}">
                         <img src="{{asset($lot->product->photo)}}" alt="Our offers">
                     </a>
                     <h3 class="offers__title">{{$lot->product_name ?? $lot->product->name}}</h3>
@@ -39,7 +39,7 @@
 
             @endforeach
             @if(!isset($category))
-                <h6 class="site-nav__link">{{--{{$lots->links()}}--}}</h6>
+                <h6 class="site-nav__link">{{$lots->links()}}</h6>
             @endif
         </div>
     </section>

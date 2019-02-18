@@ -2,7 +2,12 @@ $(document).ready(function () {
     var exclusivenName = $("#exclusive-name");
     var otherName = $("#other-name");
     var navigation = $(".site-nav__list");
-    var languageCode = 'en_GB';
+    var languageCode;
+    if (window.location.href.split('lang=').pop() === window.location.href) {
+        languageCode = 'en_GB';
+    } else {
+        languageCode = window.location.href.split('lang=').pop().substr(0, 5);
+    }
     var languages = {};
 
 
@@ -14,7 +19,7 @@ $(document).ready(function () {
         $.each(response, function (key, val) {
             languages[val.code] = val.name;
         });
-        fillLanguageSelect()
+        fillLanguageDropDown()
     });
 
     exclusivenName.on("change", function () {//show extra  input for other culture
@@ -33,9 +38,9 @@ $(document).ready(function () {
     // languages.it_IT = 'Italy';
     // languages.fr_FR = 'France';
 
-    function fillLanguageSelect() {
+    function fillLanguageDropDown() {
         $('#selectLanguageDropdown').localizationTool({//generete languages via the plagin
-            'defaultLanguage': 'en_GB',
+            'defaultLanguage': languageCode,
             'showFlag': true,
             'showCountry': false,
             'showLanguage': true,
@@ -51,20 +56,41 @@ $(document).ready(function () {
                 // }
             },
             onLanguageSelected: function (e) {
+                let asd = window.location.href;
+                asd = asd.replace('?lang=' + languageCode, 'uuuuu');
                 languageCode = e;
-                if (e === "ar_TN") {
-                    navigation.addClass("site-nav__list--reverse");
+                // if (e === "ar_TN") {
+                //     navigation.addClass("site-nav__list--reverse");
+                // } else {
+                //     navigation.removeClass("site-nav__list--reverse");
+                // }
+                if (asd === window.location.href) {
+                    asd += '?lang=' + languageCode;
                 } else {
-                    navigation.removeClass("site-nav__list--reverse");
+                    asd = asd.replace('uuuuu', '?lang=' + languageCode);
                 }
+                window.location.replace(asd);
             }
         });
     }
 
+
     $('.products__btn , .products__img-wr').click(function () {
-        var href = $(this).attr('href');
-        $(this).attr('href', href + '&lang=' + languageCode + '&');
+        let href = $(this).attr('href');
+        href = href.replace('?lang=en_GB', '?lang=' + languageCode)
+        $(this).attr('href', href);
     });
+
+    $('.site-nav__link').click(function () {
+        let href = $(this).attr('href');
+        // if (href === 'exclusive') {
+        //     $(this).attr('href', href + '?lang=en_GB');
+        // } else {
+        //     $(this).attr('href', href + '?lang=' + languageCode);
+        // }
+        $(this).attr('href', href + '?lang=' + languageCode);
+    });
+
 
     var modalOverlay = $(".modal-overlay");
     var modalConfirm = $(".modal__confirm");
@@ -86,65 +112,65 @@ $(document).ready(function () {
     });
 
     $("#confirmationForm").validate({
-        rules:{
-            first_name:{
+        rules: {
+            first_name: {
                 required: true,
                 minlength: 2,
                 maxlength: 100,
             },
-            last_name:{
+            last_name: {
                 required: true,
                 minlength: 2,
                 maxlength: 100,
             },
-            linkedin:{
+            linkedin: {
                 required: true,
                 regexp: '^https?://((www|\\w\\w)\\.)?linkedin.com/((in/[^/]+/?)|(pub/[^/]+/((\\w|\\d)+/?){3}))$',
             },
-            email:{
+            email: {
                 required: true,
                 email: true,
                 maxlength: 100,
             },
-            phone:{
+            phone: {
                 required: true,
                 regexp: '^(\\+)*[0-9]*$',
                 minlength: 6,
                 maxlength: 20,
             },
-            company:{
+            company: {
                 minlength: 3,
                 maxlength: 100,
             },
         },
 
-        messages:{
-            first_name:{
+        messages: {
+            first_name: {
                 required: 'Please, set your first name',
                 minlength: 'Shorter please, max 100 characters',
                 maxlength: 'Very short name. At least 2 characters',
             },
-            last_name:{
+            last_name: {
                 required: 'Please, set your last name',
                 minlength: 'Shorter please, max 100 characters',
                 maxlength: 'Very short name. At least 2 characters',
             },
-            linkedin:{
+            linkedin: {
                 required: 'Please, set your linkedIn personal page',
                 regexp: 'Please, set your current existing linkedIn personal page',
             },
-            email:{
+            email: {
                 required: 'Please, set your email',
                 email: 'Please, follow to the format email',
                 maxlength: 'Shorter please, max 100 characters',
             },
-            phone:{
+            phone: {
                 required: 'Please, set your phone number',
                 regexp: 'Please, use only numbers fot phone',
                 minlength: 'Very short phone number',
                 maxlength: 'It is too much numbers for phone',
             },
-            company:{
+            company: {
                 minlength: 'Very short company name',
                 maxlength: 'Shorter please, max 100 characters',
             },
@@ -152,33 +178,33 @@ $(document).ready(function () {
     });
 
     $("#exclusiveForm").validate({
-        rules:{
-            product:{
+        rules: {
+            product: {
                 required: true,
             },
-            delivery:{
+            delivery: {
                 required: true,
             },
-            amount:{
+            amount: {
                 required: true,
                 digits: true,
                 max: 10000,
                 min: 10,
             },
-            optional:{
+            optional: {
                 required: true,
                 digits: true,
                 max: 100000,
                 min: 100,
             },
-            max:{
+            max: {
                 required: true,
                 digits: true,
                 max: 1000000,
                 min: 100,
             },
-            otherName:{
-                required: function() {
+            otherName: {
+                required: function () {
                     return $("#exclusive-name").val() == 1;
                 },
                 minlength: 3,
@@ -186,32 +212,32 @@ $(document).ready(function () {
             },
         },
 
-        messages:{
-            product:{
+        messages: {
+            product: {
                 required: 'Please, select the product',
             },
-            delivery:{
+            delivery: {
                 required: 'Please, select the Incoterms',
             },
-            amount:{
+            amount: {
                 required: 'Please, set amount',
                 digits: 'Please, use only numbers for amount',
                 max: 'Seriously, over 10000 tons?',
                 min: 'It\'s not enough, set at least 10 tons',
             },
-            optional:{
+            optional: {
                 required: 'Please, set optional price',
                 digits: 'Please, use only numbers for optional price',
                 max: 'Seriously, over 100000 $$?',
                 min: 'It\'s not enough, set at least 100 $$ for this product',
             },
-            max:{
+            max: {
                 required: 'Please, set max price',
                 digits: 'Please, use only numbers max price',
                 max: 'Seriously, over 1000000 $$?',
                 min: 'It\'s not enough, set at least 100 $$ for this product',
             },
-            otherName:{
+            otherName: {
                 minlength: 'Very short other name of product. At least 3 characters',
                 maxlength: 'Shorter please, max 25 characters',
             },

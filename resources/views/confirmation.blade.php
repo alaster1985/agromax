@@ -7,6 +7,7 @@
     @endif
     <section class="container conformation ">
         <div class="row">
+{{--{{dd($lot)}}--}}
             <div class="offers__item offers__item--selected col-sm-4">
                 <a class="offer__img-wr" href="#">
                     <img src="{{asset($lot->port_photo)}}" alt="Our offers">
@@ -14,7 +15,7 @@
                 @if($lot->product_id == 1)
                     <h3 class="offers__title">{{$lot->product_name}}</h3>
                 @else
-                    <h3 class="offers__title">{{\App\Product::find($lot->product_id)->name}}</h3>
+                    <h3 class="offers__title">{{$lot->product_new_name ?? \App\Product::find($lot->product_id)->name}}</h3>
                 @endif
                 <table class="offers__table">
                     <thead>

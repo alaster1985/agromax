@@ -58,7 +58,7 @@ Route::get('/', 'MainController@index')->name('index');
 Route::get('/exclusive', 'MainController@exclusive')->name('exclusive');
 Route::get('/confirmation', 'MainController@confirmationById')->name('confirmationById');
 Route::get('/exConfirm', 'MainController@exConfirm')->name('exConfirm');
-Route::get('/products', 'MainController@index')->name('index');
+Route::get('/products', 'MainController@products')->name('products');
 Route::get('/charity', 'MainController@charity')->name('charity');
 Route::get('/contacts', 'MainController@contacts')->name('contacts');
 Route::get('/founder', 'MainController@founder')->name('founder');

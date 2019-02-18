@@ -9,12 +9,13 @@
                     <div class="error" style="color: #ff0000;" align="center">{{($errors->first())}}</div>
                 @endif
                 <form action="{{Route('exConfirm')}}" id="exclusiveForm" method="GET" enctype="multipart/form-data">
+                    <input type="hidden" name="lang" value="{{Request::all()['lang']}}">
                     @csrf
                     <div class="exclusive__item input-group">
                         <span class="exclusive__title input-group-addon">Name</span>
                         <select class="exclusive__select-name" id="exclusive-name" name="product">
                             @foreach($products as $product)
-                            <option value="{{$product->id}}">{{ucfirst($product->name)}}</option>
+                            <option value="{{$product->id}}">{{ucfirst($product->product_new_name) ?? ucfirst($product->name)}}</option>
                             @endforeach
                             <option value="1">Other</option>
                         </select>

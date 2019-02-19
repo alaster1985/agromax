@@ -1,10 +1,10 @@
 @include('layouts.header')
 <main>
-    @if(session()->has('message'))
-        <div class="alert alert-success" align="center">
-            {{ session()->get('message') }}
-        </div>
-    @endif
+    {{--@if(session()->has('message'))--}}
+        {{--<div class="alert alert-success" align="center">--}}
+            {{--{{ session()->get('message') }}--}}
+        {{--</div>--}}
+    {{--@endif--}}
     <section class="container conformation ">
         <div class="row">
             <div class="offers__item offers__item--selected col-sm-4">
@@ -33,7 +33,6 @@
                     </tbody>
                 </table>
             </div>
-            {{--{{dd(Request::getQueryString())}}--}}
             <div class="conformation__wr col-sm-7 col-sm-offset-1">
                 <h2 class="conformation__title">Fill the form</h2>
                 @if ($errors)
@@ -80,8 +79,9 @@
             </div>
         </div>
     </section>
-    <div class="modal-overlay"></div>
-    <div class="modal__confirm">Your order has been processed<span class="modal__confirm-close fa fa-times"></span>
+    <div @if (session()->has('message')) class="modal-overlay active" @else class="modal-overlay" @endif></div>
+    <div @if (session()->has('message')) class="modal__confirm active" @else class="modal__confirm" @endif>Your order has been processed<span class="modal__confirm-close fa fa-times"></span>
+    {{--<div class="modal__confirm">Your order has been processed<span class="modal__confirm-close fa fa-times"></span>--}}
     </div>
 </main>
 @include('layouts.footer')

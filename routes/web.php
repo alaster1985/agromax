@@ -52,7 +52,10 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/viewLanguages', 'Admin\LanguagesController@viewLanguages')->name('viewLanguages');
     Route::get('admin/editLanguages', 'Admin\LanguagesController@editLanguages')->name('editLanguages');
     Route::post('admin/updateLanguage', 'Admin\LanguagesController@updateLanguage')->name('updateLanguage');
+
     Route::post('admin/uploadTranslationFile', 'Admin\LanguagesController@uploadTranslationFile')->name('uploadTranslationFile');
+    Route::get('admin/downloadTranslationFile', 'Admin\LanguagesController@downloadTranslationFile')->name('downloadTranslationFile');
+    Route::get('admin/downloadBasicTranslationFile', 'Admin\LanguagesController@downloadBasicTranslationFile')->name('downloadBasicTranslationFile');
 });
 
 Route::get('/', 'MainController@index')->name('index');

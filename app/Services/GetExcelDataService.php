@@ -56,15 +56,20 @@ class GetExcelDataService extends Controller
 
     public static function getCategoryNameByLangAndId($language, $categoryId)
     {
-        $category_row = $categoryId + 1;
-        $reader = IOFactory::createReader(self::$inputFileType);
-        $reader->setReadDataOnly(true);
-        $spreadsheet = $reader->load(self::$inputFileName);
-        $translatedCategoryName = $spreadsheet
-            ->getSheetByName($language)
-            ->getCell('B' . $category_row)
-            ->getValue();
-        return $translatedCategoryName;
+        if (self::checkSheetExist($language)){
+            $category_row = $categoryId + 1;
+            $reader = IOFactory::createReader(self::$inputFileType);
+            $reader->setReadDataOnly(true);
+            $spreadsheet = $reader->load(self::$inputFileName);
+            $translatedCategoryName = $spreadsheet
+                ->getSheetByName($language)
+                ->getCell('B' . $category_row)
+                ->getValue();
+            return $translatedCategoryName;
+        } else {
+            return null;
+        }
+
     }
 
     public static function setProductsNameAndDescriptionForLotByIdAndLang($lots, $language)
@@ -139,98 +144,122 @@ class GetExcelDataService extends Controller
 
     public static function getCompanyInfoByLang($lang)
     {
-        $reader = IOFactory::createReader(self::$inputFileType);
-        $reader->setReadDataOnly(true);
-        $spreadsheet = $reader->load(self::$inputFileName);
-        $translatedCompanyInfo = [];
-        for ($i = 2; $i <= 4; $i++) {
-            $translatedParagraph = $spreadsheet
-                ->getSheetByName($lang)
-                ->getCell('M' . $i)
-                ->getValue();
-            array_push($translatedCompanyInfo, $translatedParagraph);
+        if (self::checkSheetExist($lang)) {
+            $reader = IOFactory::createReader(self::$inputFileType);
+            $reader->setReadDataOnly(true);
+            $spreadsheet = $reader->load(self::$inputFileName);
+            $translatedCompanyInfo = [];
+            for ($i = 2; $i <= 4; $i++) {
+                $translatedParagraph = $spreadsheet
+                    ->getSheetByName($lang)
+                    ->getCell('M' . $i)
+                    ->getValue();
+                array_push($translatedCompanyInfo, $translatedParagraph);
+            }
+            return $translatedCompanyInfo;
+        } else {
+            return false;
         }
-        return $translatedCompanyInfo;
     }
 
     public static function getFounderInfoByLang($lang)
     {
-        $reader = IOFactory::createReader(self::$inputFileType);
-        $reader->setReadDataOnly(true);
-        $spreadsheet = $reader->load(self::$inputFileName);
-        $translatedFounderInfo = [];
-        for ($i = 10; $i <= 14; $i++) {
-            $translatedParagraph = $spreadsheet
-                ->getSheetByName($lang)
-                ->getCell('M' . $i)
-                ->getValue();
-            array_push($translatedFounderInfo, $translatedParagraph);
+        if (self::checkSheetExist($lang)) {
+            $reader = IOFactory::createReader(self::$inputFileType);
+            $reader->setReadDataOnly(true);
+            $spreadsheet = $reader->load(self::$inputFileName);
+            $translatedFounderInfo = [];
+            for ($i = 10; $i <= 14; $i++) {
+                $translatedParagraph = $spreadsheet
+                    ->getSheetByName($lang)
+                    ->getCell('M' . $i)
+                    ->getValue();
+                array_push($translatedFounderInfo, $translatedParagraph);
+            }
+            return $translatedFounderInfo;
+        } else {
+            return false;
         }
-        return $translatedFounderInfo;
     }
 
     public static function getCharityInfoByLang($lang)
     {
-        $reader = IOFactory::createReader(self::$inputFileType);
-        $reader->setReadDataOnly(true);
-        $spreadsheet = $reader->load(self::$inputFileName);
-        $translatedCharityInfo = [];
-        for ($i = 29; $i <= 33; $i++) {
-            $translatedParagraph = $spreadsheet
-                ->getSheetByName($lang)
-                ->getCell('M' . $i)
-                ->getValue();
-            array_push($translatedCharityInfo, $translatedParagraph);
+        if (self::checkSheetExist($lang)) {
+            $reader = IOFactory::createReader(self::$inputFileType);
+            $reader->setReadDataOnly(true);
+            $spreadsheet = $reader->load(self::$inputFileName);
+            $translatedCharityInfo = [];
+            for ($i = 29; $i <= 33; $i++) {
+                $translatedParagraph = $spreadsheet
+                    ->getSheetByName($lang)
+                    ->getCell('M' . $i)
+                    ->getValue();
+                array_push($translatedCharityInfo, $translatedParagraph);
+            }
+            return $translatedCharityInfo;
+        } else {
+            return false;
         }
-        return $translatedCharityInfo;
     }
 
     public static function getPartnershipInfoByLang($lang)
     {
-        $reader = IOFactory::createReader(self::$inputFileType);
-        $reader->setReadDataOnly(true);
-        $spreadsheet = $reader->load(self::$inputFileName);
-        $translatedPartnershipInfo = [];
-        for ($i = 20; $i <= 23; $i++) {
-            $translatedParagraph = $spreadsheet
-                ->getSheetByName($lang)
-                ->getCell('M' . $i)
-                ->getValue();
-            array_push($translatedPartnershipInfo, $translatedParagraph);
+        if (self::checkSheetExist($lang)) {
+            $reader = IOFactory::createReader(self::$inputFileType);
+            $reader->setReadDataOnly(true);
+            $spreadsheet = $reader->load(self::$inputFileName);
+            $translatedPartnershipInfo = [];
+            for ($i = 20; $i <= 23; $i++) {
+                $translatedParagraph = $spreadsheet
+                    ->getSheetByName($lang)
+                    ->getCell('M' . $i)
+                    ->getValue();
+                array_push($translatedPartnershipInfo, $translatedParagraph);
+            }
+            return $translatedPartnershipInfo;
+        } else {
+            return false;
         }
-        return $translatedPartnershipInfo;
     }
 
     public static function getContactsInfoByLang($lang)
     {
-        $reader = IOFactory::createReader(self::$inputFileType);
-        $reader->setReadDataOnly(true);
-        $spreadsheet = $reader->load(self::$inputFileName);
-        $translatedContactsInfo = [];
-        for ($i = 39; $i <= 42; $i++) {
-            $translatedParagraph = $spreadsheet
-                ->getSheetByName($lang)
-                ->getCell('M' . $i)
-                ->getValue();
-            array_push($translatedContactsInfo, $translatedParagraph);
+        if (self::checkSheetExist($lang)) {
+            $reader = IOFactory::createReader(self::$inputFileType);
+            $reader->setReadDataOnly(true);
+            $spreadsheet = $reader->load(self::$inputFileName);
+            $translatedContactsInfo = [];
+            for ($i = 39; $i <= 42; $i++) {
+                $translatedParagraph = $spreadsheet
+                    ->getSheetByName($lang)
+                    ->getCell('M' . $i)
+                    ->getValue();
+                array_push($translatedContactsInfo, $translatedParagraph);
+            }
+            return $translatedContactsInfo;
+        } else {
+            return false;
         }
-        return $translatedContactsInfo;
     }
 
     public static function getHeaderSiteNavListByLang($lang)
     {
-        $reader = IOFactory::createReader(self::$inputFileType);
-        $reader->setReadDataOnly(true);
-        $spreadsheet = $reader->load(self::$inputFileName);
-        $translatedHeaderSiteNavList = [];
-        for ($i = 48; $i <= 54; $i++) {
-            $translatedNavName = $spreadsheet
-                ->getSheetByName($lang)
-                ->getCell('M' . $i)
-                ->getValue();
-            array_push($translatedHeaderSiteNavList, $translatedNavName);
+        if (self::checkSheetExist($lang)) {
+            $reader = IOFactory::createReader(self::$inputFileType);
+            $reader->setReadDataOnly(true);
+            $spreadsheet = $reader->load(self::$inputFileName);
+            $translatedHeaderSiteNavList = [];
+            for ($i = 48; $i <= 54; $i++) {
+                $translatedNavName = $spreadsheet
+                    ->getSheetByName($lang)
+                    ->getCell('M' . $i)
+                    ->getValue();
+                array_push($translatedHeaderSiteNavList, $translatedNavName);
+            }
+            return $translatedHeaderSiteNavList;
+        } else {
+            return null;
         }
-        return $translatedHeaderSiteNavList;
     }
 
 }

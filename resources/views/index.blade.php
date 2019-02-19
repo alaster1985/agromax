@@ -10,9 +10,9 @@
                 @foreach($categoriesUp as $category)
                     <div class="products__item col-sm-4 col-md-3">
                         <a class="products__img-wr" href="offers/?lang=en_GB&cat={{$category->id}}">
-                            <img src="{{asset($category->photo)}}" alt="{{$category->name}}">
+                            <img src="{{asset($category->photo)}}" alt="{{$category->new_name ?? $category->name}}">
                         </a>
-                        <h3 class="products__title">{{$category->name}}</h3>
+                        <h3 class="products__title">{{$category->new_name ?? $category->name}}</h3>
                         <p class="products__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
                             sollicitudin mi
                             ullamcorper, suscipit erat ac, pharetra magna. Donec vitae pharetra neque, at pulvinar mauris.
@@ -29,9 +29,9 @@
                     @foreach($categoriesLow as $category)
                         <div class="products__item col-sm-4 col-md-3">
                             <a class="products__img-wr" href="offers/?lang=en_GB&cat={{$category->id}}">
-                                <img src="{{asset($category->photo)}}" alt="{{$category->name}}">
+                                <img src="{{asset($category->photo)}}" alt="{{$category->new_name ?? $category->name}}">
                             </a>
-                            <h3 class="products__title">{{$category->name}}</h3>
+                            <h3 class="products__title">{{$category->new_name ?? $category->name}}</h3>
                             <p class="products__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
                                 sollicitudin mi
                                 ullamcorper, suscipit erat ac, pharetra magna. Donec vitae pharetra neque, at pulvinar mauris.

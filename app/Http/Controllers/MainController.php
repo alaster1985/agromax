@@ -51,12 +51,12 @@ class MainController extends Controller
             foreach ($categoriesUp as $category) {
                 $catId = $category->id;
                 $catNewName = GetExcelDataService::getCategoryNameByLangAndId($lang, $catId);
-                $category->name = $catNewName;
+                $category->new_name = $catNewName;
             }
             foreach ($categoriesLow as $category) {
                 $catId = $category->id;
                 $catNewName = GetExcelDataService::getCategoryNameByLangAndId($lang, $catId);
-                $category->name = $catNewName;
+                $category->new_name = $catNewName;
             }
         }
 

@@ -43,6 +43,16 @@
                                     </div>
                                 </form>
                             @endif
+                                <div class="col-md-4">
+                                    <div class="inline-form">
+                                        <a class="c-label" href="{{route('downloadTranslationFile')}}">Download current translation file</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="inline-form">
+                                        <a class="input-style" href="{{route('downloadBasicTranslationFile')}}">Download basic translation file</a>
+                                    </div>
+                                </div>
                             <span id="found" class="label label-info"></span>
                             <table id="stream_table" class='table table-striped table-bordered'>
                                 <thead>

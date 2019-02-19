@@ -24,16 +24,17 @@ class UploadTranslationFileRequest extends FormRequest
     public function rules()
     {
         return [
-            'translation' => 'required|mimes:xlsx|max:4096',
+//            'translation' => 'required|mimes:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet|max:4096',
+            'translation' => 'required|mimetypes:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet|max:4096',
         ];
     }
 
     public function messages()
     {
         return [
-            'photo.required' => 'Please, choose a translation file',
-            'photo.mime' => 'Use xlsx extension',
-            'photo.max' => 'Please give some a little smaller picture. Max 4 Mb',
+            'translation.required' => 'Please, choose a translation file',
+            'translation.mimes' => 'Use xlsx files only',
+            'translation.max' => 'Please give some a little smaller file. Max 4 Mb',
         ];
     }
 }

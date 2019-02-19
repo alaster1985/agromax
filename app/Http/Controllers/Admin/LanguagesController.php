@@ -20,7 +20,7 @@ class LanguagesController extends Controller
     public function viewLanguages()
     {
         $allLanguages = Language::all();
-        $allLanguages = $allLanguages->sortBy(function($allLanguages) {
+        $allLanguages = $allLanguages->sortBy(function ($allLanguages) {
             return sprintf('%-12s%s', $allLanguages->disable, $allLanguages->name);
         });
 
@@ -50,5 +50,15 @@ class LanguagesController extends Controller
         $file = new UploadTranslationFileService();
         $file->uploadTranslationFile($request);
         return redirect()->back()->with('message', 'DONE!');
+    }
+
+    public function downloadTranslationFile()
+    {
+        return response()->download('translation/translate.xlsx');
+    }
+
+    public function downloadBasicTranslationFile()
+    {
+        return response()->download('translate_basic.xlsx');
     }
 }

@@ -5,21 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33d6ce99-6b15-4c95-b8f5-855d36a87d25" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ExLotsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/viewExLots.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b90a904b-c787-44f1-b898-f4fe584e7dd1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b90a904b-c787-44f1-b898-f4fe584e7dd1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LanguagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LanguagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/UploadTranslationFileRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/UploadTranslationFileRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/GetExcelDataService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/GetExcelDataService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/UploadTranslationFileService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/UploadTranslationFileService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dump.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dump.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/LotStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/LotStoreRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Lot.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Lot.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_01_22_124536_create_lot_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_01_22_124536_create_lot_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/LotsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/LotsTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/images/products/{6A070A35-6EF6-E479-5905-E70850479922}.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/images/products/{A41EC8CE-A197-D660-6524-29ADFF74774B}.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/translate.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/public/translate.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/translate_basic.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/public/translate_basic.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/translation/translate.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/public/translation/translate.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/viewLanguages.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/viewLanguages.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/confirmation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/confirmation.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/createLot.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/createLot.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/editLots.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/editLots.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/menu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,38 +61,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="UploadTranslationFileService.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Services/UploadTranslationFileService.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-              <folding>
-                <element signature="e#32#68#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UploadTranslationFileRequest.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Requests/UploadTranslationFileRequest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LanguagesController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/LanguagesController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -159,16 +126,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/js/jquery.localizationTool.min.js" />
-        <option value="$PROJECT_DIR$/public/less/style.less" />
-        <option value="$PROJECT_DIR$/public/less/blocks/sliders.less" />
-        <option value="$PROJECT_DIR$/resources/views/admin/createLanguage.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/layouts/menu.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoriesController.php" />
-        <option value="$PROJECT_DIR$/app/Category.php" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/public/js/jquery.validate.js" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/OrderStoreRequest.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_22_124634_create_languages_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/LanguageStoreRequest.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/editLanguages.blade.php" />
@@ -188,7 +145,6 @@
         <option value="$PROJECT_DIR$/resources/views/admin/viewOrders.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/editOrders.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" />
-        <option value="$PROJECT_DIR$/database/seeds/LotsTableSeeder.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/ExclusiveLotRequest.php" />
         <option value="$PROJECT_DIR$/public/js/customscripts.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/OrdersController.php" />
@@ -196,7 +152,6 @@
         <option value="$PROJECT_DIR$/app/Order.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_18_124815_create_exlusive_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_18_124815_create_exclusive_table.php" />
-        <option value="$PROJECT_DIR$/app/ExclusiveLot.php" />
         <option value="$PROJECT_DIR$/resources/views/company.blade.php" />
         <option value="$PROJECT_DIR$/app/Language.php" />
         <option value="$PROJECT_DIR$/app/Services/UploadPhotoService.php" />
@@ -204,12 +159,24 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/MainController.php" />
         <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Services/GetExcelDataService.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/viewLanguages.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/UploadTranslationFileRequest.php" />
         <option value="$PROJECT_DIR$/app/Services/UploadTranslationFileService.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/LanguagesController.php" />
         <option value="$PROJECT_DIR$/dump.sql" />
+        <option value="$PROJECT_DIR$/resources/views/admin/editExLots.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/layouts/menu.blade.php" />
+        <option value="$PROJECT_DIR$/app/ExclusiveLot.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/viewExLots.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ExLotsController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/createLot.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/LotStoreRequest.php" />
+        <option value="$PROJECT_DIR$/app/Lot.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_01_22_124536_create_lot_table.php" />
+        <option value="$PROJECT_DIR$/database/seeds/LotsTableSeeder.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/editLots.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/LotsController.php" />
       </list>
     </option>
   </component>
@@ -383,12 +350,6 @@
             <path>
               <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
               <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -411,24 +372,6 @@
             <path>
               <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
               <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="translation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -443,6 +386,14 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agromax" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
@@ -484,10 +435,10 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Admin" />
       <recent name="$PROJECT_DIR$/app/Services" />
       <recent name="$PROJECT_DIR$/public/js" />
       <recent name="$PROJECT_DIR$/public/images" />
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/Admin" />
       <recent name="$PROJECT_DIR$/public/css" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -552,7 +503,7 @@
       <workItem from="1550235450624" duration="13580000" />
       <workItem from="1550301863832" duration="20971000" />
       <workItem from="1550474970058" duration="33077000" />
-      <workItem from="1550560726089" duration="9078000" />
+      <workItem from="1550560726089" duration="16226000" />
     </task>
     <task id="LOCAL-00001" summary="offers_done">
       <created>1548326886107</created>
@@ -743,11 +694,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550512131630</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="manager_order_start">
+      <created>1550574113971</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1550574113971</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="508949000" />
+    <option name="totallyTimeSpent" value="516097000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -791,7 +749,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="offers_for_exclusive_lot_done" />
     <MESSAGE value="relationships_fix" />
     <MESSAGE value="commit_1" />
     <MESSAGE value="commit_2" />
@@ -816,7 +773,8 @@
     <MESSAGE value="language_route_start" />
     <MESSAGE value="language_description_start" />
     <MESSAGE value="language_upload_translation_file" />
-    <option name="LAST_COMMIT_MESSAGE" value="language_upload_translation_file" />
+    <MESSAGE value="manager_order_start" />
+    <option name="LAST_COMMIT_MESSAGE" value="manager_order_start" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -824,102 +782,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_23_080700_create_statuses_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/StagesTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="22" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Condition.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Delivery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/viewOrders.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="89" column="159" selection-start-line="89" selection-start-column="46" selection-end-line="89" selection-end-column="159" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/editOrders.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="61" column="62" selection-start-line="61" selection-start-column="62" selection-end-line="61" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="178" selection-start-line="10" selection-start-column="178" selection-end-line="10" selection-end-column="178" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_22_124536_create_lot_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="24" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/LotsTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/ConditionsTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/LotsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-279" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/exclusive.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="42" column="26" lean-forward="true" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Lot.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="48" column="34" lean-forward="true" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/OrdersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_22_124548_create_order_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -969,13 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/ExclusiveLot.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="121" column="17" lean-forward="true" selection-start-line="121" selection-start-column="17" selection-end-line="121" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -1009,20 +864,6 @@
         <state relative-caret-position="-570" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/editCategories.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="87" column="8" lean-forward="true" selection-start-line="87" selection-start-column="8" selection-end-line="91" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CategoriesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="41" column="60" lean-forward="true" selection-start-line="41" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Category.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -1038,13 +879,6 @@
       </provider>
     </entry>
     <entry file="das://b90a904b-c787-44f1-b898-f4fe584e7dd1/schema/agromax/table/languages">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b90a904b-c787-44f1-b898-f4fe584e7dd1/schema/agromax/table/products">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1120,13 +954,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="57" column="146" selection-start-line="57" selection-start-column="118" selection-end-line="57" selection-end-column="146" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/viewLanguages.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
@@ -1138,27 +965,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/CategoryStoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/LanguagesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b90a904b-c787-44f1-b898-f4fe584e7dd1/schema/agromax/table/lots">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1182,7 +988,167 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Requests/UploadTranslationFileRequest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
-          <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="57" />
+          <caret line="35" column="57" lean-forward="true" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/LanguagesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/viewOrders.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="22" lean-forward="true" selection-end-line="135" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/viewLots.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="43" lean-forward="true" selection-end-line="97" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/menu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="63" column="80" selection-start-line="63" selection-start-column="80" selection-end-line="63" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/editExLots.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ExclusiveLot.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-41">
+          <caret line="50" column="30" lean-forward="true" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+          <folding>
+            <element signature="e#107#125#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/viewExLots.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1178">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ExLotsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#46#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/createCategory.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="44" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b90a904b-c787-44f1-b898-f4fe584e7dd1/schema/agromax/table/products">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/CategoryStoreRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_22_124536_create_lot_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="22" column="51" lean-forward="true" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CategoriesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="43" column="1" lean-forward="true" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b90a904b-c787-44f1-b898-f4fe584e7dd1/schema/agromax/table/lots">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/LotsTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/LotStoreRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="81" column="68" selection-start-line="81" selection-start-column="68" selection-end-line="81" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Lot.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="110" column="54" lean-forward="true" selection-start-line="110" selection-start-column="54" selection-end-line="110" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/LotsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="40" column="17" lean-forward="true" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/editCategories.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="61" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/editLots.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="77" column="34" selection-start-line="77" selection-start-column="34" selection-end-line="77" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/createLot.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="71" column="53" lean-forward="true" selection-start-line="66" selection-start-column="44" selection-end-line="71" selection-end-column="53" />
         </state>
       </provider>
     </entry>

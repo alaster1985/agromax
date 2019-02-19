@@ -46,14 +46,13 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-md-3">
                                         <div class="inline-form">
                                             <label class="c-label">Port</label>
                                             <input class="input-style" name="port" value="{{$lot->port}}"/>
                                         </div>
                                     </div>
-
-                                    <div class="col-md-4">
+                                    <div class="col-md-3">
                                         <div class="inline-form">
                                             <label class="c-label">Cateory</label>
                                             <select name="category">
@@ -67,7 +66,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-3">
                                         <div class="inline-form">
                                             <label class="c-label">Incoterms</label>
                                             <select name="delivery_id">
@@ -78,6 +77,18 @@
                                                         <script>document.getElementById("del{{$delivery->id}}").selected = true</script>
                                                     @endif
                                                 @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="inline-form">
+                                            <label class="c-label">Turkish</label>
+                                            <select name="turkish">
+                                                <option id="global" value="0">Global</option>
+                                                <option id="turkish" value="1">Turkish</option>
+                                                @if($lot->turkish === 1)
+                                                    <script>document.getElementById('turkish').selected = true</script>
+                                                @endif
                                             </select>
                                         </div>
                                     </div>

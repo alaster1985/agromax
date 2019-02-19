@@ -20,6 +20,7 @@ class CreateLotTable extends Migration
             $table->integer('tons');
             $table->integer('price');
             $table->string('port', 100);
+            $table->boolean('turkish')->default(0);
             $table->string('port_photo', 100);
             $table->boolean('special')->default(0);
             $table->timestamps();

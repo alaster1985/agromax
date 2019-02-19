@@ -15,6 +15,7 @@ class Lot extends Model
         'tons',
         'price',
         'port',
+        'turkish',
         'port_photo',
         'special',
     ];
@@ -107,6 +108,7 @@ class Lot extends Model
             $lotToUpdate->tons = $request->tons;
             $lotToUpdate->price = $request->price;
             $lotToUpdate->port = $request->port;
+            $lotToUpdate->turkish = $request->turkish;
             $productForCurrentLot = Product::find(Lot::find($request->lot_id)->product->id);
             $productForCurrentLot->name = $request->product_name;
             $productForCurrentLot->category_id = $request->category;

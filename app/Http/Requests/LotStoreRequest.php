@@ -39,6 +39,7 @@ class LotStoreRequest extends FormRequest
             'tons' => 'required|integer|max:10000|min:10',
             'price' => 'required|integer|max:100000|min:10',
             'port' => 'required|max:100|min:3',
+            'turkish' => 'required',
             'port_photo' => 'required_without:lot_id|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'delivery_id' => [
                 'required',
@@ -78,6 +79,7 @@ class LotStoreRequest extends FormRequest
             'port.required' => 'Please, set port name',
             'port.max' => 'Shorter please, max 100 characters',
             'port.min' => 'Very short port name. At least 3 characters',
+            'turkish.required' => 'Please, choose option for Turkish',
             'port_photo.required' => 'Please, choose a photo for port',
             'port_photo.image' => 'It was not an image',
             'port_photo.mime' => 'Nice try! But It was not an image',

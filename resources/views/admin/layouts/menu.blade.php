@@ -57,6 +57,14 @@
                         </ul>
                     </div>
                 </div>
+                <div class="single-menu">
+                    <h2><a title=""><i class="fa fa-paperclip"></i><span>Exclusive proposal</span></a></h2>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="{{route('viewExLots')}}" title="">All exclusive proposal</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </aside>

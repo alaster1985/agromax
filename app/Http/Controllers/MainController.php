@@ -39,27 +39,16 @@ class MainController extends Controller
 
     public function products(Request $request)
     {
-//        $a = GetExcelDataService::getDirect();
-//        dd($a);
-        $categoriesUp = Category::getUpperCategories();
-        $categoriesLow = Category::getLowerCategories();
+        $categoriesUpDef = Category::getUpperCategories();
+        $categoriesLowDef = Category::getLowerCategories();
         $lang = $request->lang;
         $headerNavListName = GetExcelDataService::getHeaderSiteNavListByLang($lang);
         if (!$lang) {
             $this->index();
         } else {
-            foreach ($categoriesUp as $category) {
-                $catId = $category->id;
-                $catNewName = GetExcelDataService::getCategoryNameByLangAndId($lang, $catId);
-                $category->new_name = $catNewName;
-            }
-            foreach ($categoriesLow as $category) {
-                $catId = $category->id;
-                $catNewName = GetExcelDataService::getCategoryNameByLangAndId($lang, $catId);
-                $category->new_name = $catNewName;
-            }
+            $categoriesUp = GetExcelDataService::getCategoriesNameByLangAndId($lang, $categoriesUpDef);
+            $categoriesLow = GetExcelDataService::getCategoriesNameByLangAndId($lang, $categoriesLowDef);
         }
-
         return view('index', ['categoriesUp' => $categoriesUp, 'categoriesLow' => $categoriesLow, 'newNavNames' => $headerNavListName]);
     }
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\MailController;
 use App\Http\Requests\OrderStoreRequest;
 use App\Order;
 use Illuminate\Http\Request;
@@ -22,6 +23,7 @@ class OrdersController extends Controller
         ];
 
         $allOrderInfo = array_merge($firstStageInfo, $clientInfo);
+        MailController::sendEmail($allOrderInfo);
         $order = new Order($allOrderInfo);
         $order->save();
         return redirect()->back()->with('message', 'DONE!');

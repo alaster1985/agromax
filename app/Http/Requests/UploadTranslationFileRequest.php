@@ -25,7 +25,7 @@ class UploadTranslationFileRequest extends FormRequest
     {
         return [
 //            'translation' => 'required|mimes:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet|max:4096',
-            'translation' => 'required|mimetypes:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet|max:4096',
+            'translation' => 'required|mimetypes:application/vnd.ms-excel,application/vnd.oasis.opendocument.text|max:4096',
         ];
     }
 

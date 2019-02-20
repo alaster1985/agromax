@@ -117,11 +117,13 @@ $(document).ready(function () {
                 required: true,
                 minlength: 2,
                 maxlength: 100,
+                regexp: '^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$',
             },
             last_name: {
                 required: true,
                 minlength: 2,
                 maxlength: 100,
+                regexp: '^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$',
             },
             linkedin: {
                 required: true,
@@ -141,6 +143,7 @@ $(document).ready(function () {
             company: {
                 minlength: 3,
                 maxlength: 100,
+                regexp: '^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$',
             },
         },
 
@@ -149,11 +152,13 @@ $(document).ready(function () {
                 required: 'Please, set your first name',
                 minlength: 'Shorter please, max 100 characters',
                 maxlength: 'Very short name. At least 2 characters',
+                regexp: 'Please, use only english letters',
             },
             last_name: {
                 required: 'Please, set your last name',
                 minlength: 'Shorter please, max 100 characters',
                 maxlength: 'Very short name. At least 2 characters',
+                regexp: 'Please, use only english letters',
             },
             linkedin: {
                 required: 'Please, set your linkedIn personal page',
@@ -173,6 +178,7 @@ $(document).ready(function () {
             company: {
                 minlength: 'Very short company name',
                 maxlength: 'Shorter please, max 100 characters',
+                regexp: 'Please, use only english letters',
             },
         }
     });
@@ -209,6 +215,7 @@ $(document).ready(function () {
                 },
                 minlength: 3,
                 maxlength: 25,
+                regexp: '^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$',
             },
             port: {
                 required: true,
@@ -248,6 +255,7 @@ $(document).ready(function () {
             otherName: {
                 minlength: 'Very short other name of product. At least 3 characters',
                 maxlength: 'Shorter please, max 25 characters',
+                regexp: 'Please, use only english letters',
             },
             port: {
                 required: 'Please, set port',

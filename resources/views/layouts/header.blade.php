@@ -33,7 +33,7 @@
                     </div>
                     <div class="header__site-nav-wrapper navbar-collapse collapse">
                         <ul @if(isset(Request::all()['lang']) && Request::all()['lang'] === 'ar_TN') class="header__site-nav site-nav__list--reverse" @else class="header__site-nav site-nav__list" @endif>
-                            <li class="site-nav__item"><a @if(Route::currentRouteName() === 'index')           class="site-nav__link site-nav__link--current" @else class="site-nav__link" @endif {{--class="site-nav__link"--}} href="products">{{$newNavNames[0] ?? 'Products'}}</a></li>
+                            <li class="site-nav__item"><a @if(Route::currentRouteName() === 'products')           class="site-nav__link site-nav__link--current" @else class="site-nav__link" @endif {{--class="site-nav__link"--}} href="products">{{$newNavNames[0] ?? 'Products'}}</a></li>
                             <li class="site-nav__item"><a @if(Route::currentRouteName() === 'company')         class="site-nav__link site-nav__link--current" @else class="site-nav__link" @endif {{--class="site-nav__link"--}} href="company">{{$newNavNames[1] ?? 'Company'}}</a></li>
                             <li class="site-nav__item"><a @if(Route::currentRouteName() === 'founder')         class="site-nav__link site-nav__link--current" @else class="site-nav__link" @endif {{--class="site-nav__link"--}} href="founder">{{$newNavNames[2] ?? 'Founder'}}</a></li>
                             <li class="site-nav__item"><a @if(Route::currentRouteName() === 'exclusive')       class="site-nav__link site-nav__link--current" @else class="site-nav__link" @endif {{--class="site-nav__link"--}} href="exclusive">{{$newNavNames[3] ?? 'Make exclusive order'}}</a></li>

@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ChangePasswordRequest;
 use App\Http\Requests\UserStoreRequest;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -51,6 +53,23 @@ class AdminController extends Controller
     {
         User::deleteUser($id);
         return redirect()->back()->with('message', 'DONE!');
+    }
+
+    public function changePassword()
+    {
+        $user = Auth::user();
+        return view('admin/changePassword', ['user' => $user]);
+    }
+
+    public function updatePassword(ChangePasswordRequest $request)
+    {
+        $result = User::updatePassword($request);
+        if ($result) {
+            return redirect()->back()->with('message', 'DONE!');
+        } else {
+            return redirect()->back()->with('message', 'WRONG OLD PASSWORD! TRY AGAIN!');
+        }
+
     }
 
 }

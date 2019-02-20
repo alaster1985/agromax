@@ -33,7 +33,7 @@
                                     <div class="col-md-4">
                                         <div class="inline-form">
                                             <label class="c-label">New Translation File</label>
-                                            <input class="input-style" name="translation" type="file"/>
+                                            <input class="input-style" name="translation" accept=".xlsx" type="file"/>
                                         </div>
                                     </div>
                                     <div class="col-md-4">

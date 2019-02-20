@@ -21,6 +21,9 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/dashboard', 'Admin\AdminController@dashboard')->name('dashboard');
     Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
+    Route::get('admin/changePassword', 'Admin\AdminController@changePassword')->name('changePassword');
+    Route::post('admin/updatePassword', 'Admin\AdminController@updatePassword')->name('updatePassword');
+
     Route::get('admin/viewUsers', 'Admin\AdminController@viewUsers')->name('viewUsers');
     Route::get('admin/editUsers', 'Admin\AdminController@editUsers')->name('editUsers');
     Route::post('admin/updateUsers', 'Admin\AdminController@updateUsers')->name('updateUsers');

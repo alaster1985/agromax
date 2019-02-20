@@ -32,8 +32,10 @@ class Order extends Model
 
     public static function setOrderInfoForFirstStage($request)
     {
+        $emailMarker = 0;
         if (isset($request->query()['offer'])) {
             $offer = $request->query()['offer'];
+            $emailMarker = Lot::find($request->query()['offer'])->turkish;
             $lotInfo = [
                 'product_id' => Lot::find($offer)->product->id,
                 'product_name' => Lot::find($offer)->product->name,
@@ -41,6 +43,7 @@ class Order extends Model
                 'tons' => Lot::find($offer)->tons,
                 'price' => Lot::find($offer)->price,
                 'port' => Lot::find($offer)->port,
+                'condition_id' => 1,
                 'exclusive' => 0,
             ];
 
@@ -58,8 +61,11 @@ class Order extends Model
                 'exclusive' => 1,
             ];
         }
-//        array_push($lotInfo, ['session_id' => Session::getId()]);
+        if ($request->query()['lang'] === 'tr_TR') {
+            $emailMarker = 1;
+        }
         $lotInfo['session_id'] = Session::getId();
+        $lotInfo['emailMarker'] = $emailMarker;
         return $lotInfo;
     }
 

@@ -56,7 +56,7 @@ class GetExcelDataService extends Controller
 
     public static function getCategoryNameByLangAndId($language, $categoryId)
     {
-        if (self::checkSheetExist($language)){
+        if (self::checkSheetExist($language)) {
             $category_row = $categoryId + 1;
             $reader = IOFactory::createReader(self::$inputFileType);
             $reader->setReadDataOnly(true);
@@ -69,7 +69,26 @@ class GetExcelDataService extends Controller
         } else {
             return null;
         }
+    }
 
+    public static function getCategoriesNameByLangAndId($language, $categories)
+    {
+        if (self::checkSheetExist($language)) {
+            $reader = IOFactory::createReader(self::$inputFileType);
+            $reader->setReadDataOnly(true);
+            $spreadsheet = $reader->load(self::$inputFileName);
+            foreach ($categories as $category) {
+                $category_row = $category->id + 1;
+                $translatedCategoryName = $spreadsheet
+                    ->getSheetByName($language)
+                    ->getCell('B' . $category_row)
+                    ->getValue();
+                $category->new_name = $translatedCategoryName;
+            }
+            return $categories;
+        } else {
+            return null;
+        }
     }
 
     public static function setProductsNameAndDescriptionForLotByIdAndLang($lots, $language)

@@ -2,8 +2,8 @@
 
 namespace App;
 
+use App\Http\Requests\ChangePasswordRequest;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Facades\Hash;
 
@@ -75,5 +75,19 @@ class User extends Authenticatable
         $userForDelete->isdeleted = 1;
         $userForDelete->password = Hash::make('default' . $userForDelete->name);
         $userForDelete->save();
+    }
+
+    public static function updatePassword(ChangePasswordRequest $request)
+    {
+        $current_password = $request->current_password;
+        $user = User::find(json_decode($request->user)->id)->first();
+        if (Hash::check($current_password, $user->password)) {
+            $user->password = Hash::make($request->password);
+            $user->save();
+            return true;
+        } else {
+            return false;
+        }
+
     }
 }

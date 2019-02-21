@@ -32,8 +32,8 @@ class Language extends Model
 
     public static function getLanguageById($id)
     {
-        $LanguageById = Language::find($id);
-        return $LanguageById;
+        $languageById = Language::find($id);
+        return $languageById;
     }
 
     public static function updateLanguage($request)

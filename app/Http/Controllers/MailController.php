@@ -4,16 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Condition;
 use App\Delivery;
+use Illuminate\Support\Facades\Mail;
 
 class MailController extends Controller
 {
     public static function sendEmail($allOrderInfo)
     {
-        $allOrderInfo['emailMarker'] ? $address = 'skrypnik.andrii@gmail.com' : $address = 'westerlandiya@mail.ru';
+        $allOrderInfo['emailMarker'] ? $address = 'bayramov@agromax.farm' : $address = 'sales@agromax.farm';
         $allOrderInfo['exclusive'] ? $exclusive = 'Yes' : $exclusive = 'No';
         $title = 'New Order';
         $eol = "\r\n";
-        $message = 'Hello! You have new order.' . $eol . $eol .
+        $messages = 'Hello! You have new order.' . $eol . $eol .
             'Client info.' . $eol .
             'First name: ' . $allOrderInfo['first_name'] . $eol .
             'Last name: ' . $allOrderInfo['last_name'] . $eol .
@@ -30,6 +31,9 @@ class MailController extends Controller
             'Port: ' . $allOrderInfo['port'] . $eol .
             'From Exclusive Order: ' . $exclusive . $eol;
 
-        mail($address, $title, $message);
+        Mail::raw($messages, function ($message) use ($address, $title){
+            $message->to($address, 'to me')->subject($title);
+            $message->from('post@agromax.farm');
+        });
     }
 }

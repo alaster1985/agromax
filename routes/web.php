@@ -54,6 +54,10 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/editLanguages', 'Admin\LanguagesController@editLanguages')->name('editLanguages');
     Route::post('admin/updateLanguage', 'Admin\LanguagesController@updateLanguage')->name('updateLanguage');
 
+    Route::get('admin/viewSocials', 'Admin\SocialsController@viewSocials')->name('viewSocials');
+    Route::get('admin/editSocials', 'Admin\SocialsController@editSocials')->name('editSocials');
+    Route::post('admin/updateSocial', 'Admin\SocialsController@updateSocial')->name('updateSocial');
+    
     Route::post('admin/uploadTranslationFile', 'Admin\LanguagesController@uploadTranslationFile')->name('uploadTranslationFile');
     Route::get('admin/downloadTranslationFile', 'Admin\LanguagesController@downloadTranslationFile')->name('downloadTranslationFile');
     Route::get('admin/downloadBasicTranslationFile', 'Admin\LanguagesController@downloadBasicTranslationFile')->name('downloadBasicTranslationFile');

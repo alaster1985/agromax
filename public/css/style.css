@@ -1101,6 +1101,10 @@ body {
     background-color: #8f5db7;
 }
 
+.socials-nw__item .fa-instagram {
+    background-color: #a727a6;
+}
+
 .socials-nw__item .fa-telegram::before {
     color: #0088cc;
     font-size: 50px;

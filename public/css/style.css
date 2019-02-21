@@ -1304,6 +1304,9 @@ body {
     }
 }
 
-.error{
+.error {
+    display: table-caption;
     color: red;
+    caption-side: bottom;
+    text-align: center;
 }

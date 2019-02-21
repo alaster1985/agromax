@@ -7,13 +7,19 @@
 
 /* General Setting */
 html * { 
-	outline: 0 !important; 
+	outline: 0 !important;
 }
+
+html {
+    height: 100%;
+}
+
 body {
     background: none repeat scroll 0 0 #ecedf0;
     margin: 0;
     overflow-x: hidden;
     padding: 0;
+    height: 100%;
 }
 p {
 	font-family:Roboto;
@@ -276,6 +282,7 @@ body .no-padding {
 .main {
     float: left;
     width: 100%;
+    height: 100%;
 }
 
 /* Header Sec */
@@ -785,6 +792,7 @@ min-height: inherit;
     float: left;
     position: relative;
     width: 100%;
+    min-height: 100%;
 }
 
 /* Sidebar */

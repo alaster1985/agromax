@@ -46,8 +46,8 @@ class MainController extends Controller
         if (!$lang) {
             $this->index();
         } else {
-            $categoriesUp = GetExcelDataService::getCategoriesNameByLangAndId($lang, $categoriesUpDef);
-            $categoriesLow = GetExcelDataService::getCategoriesNameByLangAndId($lang, $categoriesLowDef);
+            $categoriesUp = GetExcelDataService::setCategoriesNameByLangAndId($lang, $categoriesUpDef);
+            $categoriesLow = GetExcelDataService::setCategoriesNameByLangAndId($lang, $categoriesLowDef);
         }
         return view('index', ['categoriesUp' => $categoriesUp, 'categoriesLow' => $categoriesLow, 'newNavNames' => $headerNavListName]);
     }

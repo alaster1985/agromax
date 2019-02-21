@@ -14,7 +14,7 @@
                     @endif
                 </div>
                 <div class="single-menu">
-                    <h2><a title=""><i class="fa fa-desktop"></i><span>Orders</span></a></h2>
+                    <h2><a title=""><i class="fa fa-shopping-cart"></i><span>Orders</span></a></h2>
                     <div class="sub-menu">
                         <ul>
                             <li><a href="{{route('viewOrders')}}" title="">All Orders</a></li>
@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <div class="single-menu">
-                    <h2><a title=""><i class="fa fa-desktop"></i><span>Categories</span></a></h2>
+                    <h2><a title=""><i class="fa fa-seedling"></i><span>Categories</span></a></h2>
                     <div class="sub-menu">
                         <ul>
                             <li><a href="{{route('viewCategories')}}" title="">All Categories</a></li>
@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="single-menu">
-                    <h2><a title=""><i class="fa fa-paperclip"></i><span>Lots</span></a></h2>
+                    <h2><a title=""><i class="fa fa-tags"></i><span>Lots</span></a></h2>
                     <div class="sub-menu">
                         <ul>
                             <li><a href="{{route('viewLots')}}" title="">All Lots</a></li>
@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <div class="single-menu">
-                    <h2><a title=""><i class="fa fa-desktop"></i><span>Languages</span></a></h2>
+                    <h2><a title=""><i class="fa fa-globe"></i><span>Languages</span></a></h2>
                     <div class="sub-menu">
                         <ul>
                             <li><a href="{{route('viewLanguages')}}" title="">All Languages</a></li>
@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 {{--<div class="single-menu">--}}
-                    {{--<h2><a title=""><i class="fa fa-paperclip"></i><span>Exclusive proposal</span></a></h2>--}}
+                    {{--<h2><a title=""><i class="fa fa-shopping-basket"></i><span>Exclusive proposal</span></a></h2>--}}
                     {{--<div class="sub-menu">--}}
                         {{--<ul>--}}
                             {{--<li><a href="{{route('viewExLots')}}" title="">All exclusive proposal</a></li>--}}
@@ -66,7 +66,7 @@
                     {{--</div>--}}
                 {{--</div>--}}
                 <div class="single-menu">
-                    <h2><a title=""><i class="fa fa-paperclip"></i><span>Socials</span></a></h2>
+                    <h2><a title=""><i class="fa fa-globe-americas"></i><span>Socials</span></a></h2>
                     <div class="sub-menu">
                         <ul>
                             <li><a href="{{route('viewSocials')}}" title="">All socials</a></li>

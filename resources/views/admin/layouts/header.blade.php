@@ -7,7 +7,8 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900' rel='stylesheet' type='text/css'/>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'/>
 
-    <link rel="stylesheet" href="{{asset('font-awesome-4.2.0/css/font-awesome.css')}}" type="text/css"/>
+{{--    <link rel="stylesheet" href="{{asset('font-awesome-4.2.0/css/font-awesome.css')}}" type="text/css"/>--}}
+    <link rel="stylesheet" href="{{asset('css/fontawesome-free-5.6.3-web/css/all.css')}}" type="text/css"/>
     <link rel="stylesheet" type="text/css" media="all" href="{{asset('css/daterangepicker-bs3.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}" type="text/css"/>
     <link rel="stylesheet" href="{{asset('css/jquery-jvectormap.css')}}" type="text/css"/>

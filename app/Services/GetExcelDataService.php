@@ -11,48 +11,48 @@ class GetExcelDataService extends Controller
     public static $inputFileType = 'Xlsx';
     public static $inputFileName = 'translation/translate.xlsx';
 
-    public static function getDirect()
-    {
-        $reader = IOFactory::createReader(self::$inputFileType);
-        $reader->setReadDataOnly(true);
-        $spreadsheet = $reader->load(self::$inputFileName);
-        $allSheets = $spreadsheet->getSheetNames();
-        $cat = [
-            'id' => 'A',
-            'name' => 'B',
-        ];
-        $prod = [
-            'id' => 'G',
-            'name' => 'H',
-            'desc' => 'I',
-        ];
-        $data = [
-            'categories' => $cat,
-            'products' => $prod,
-        ];
-        $dir = [];
-        foreach ($allSheets as $key => $val) {
-            foreach ($data as $dat1 => $dat2) {
-                foreach ($dat2 as $k => $v) {
-                    foreach ($spreadsheet->getSheetByName($val)->getColumnIterator($startColumn = $v,
-                        $endColumn = $v) as $column) {
-                        $cellIterator = $column->getCellIterator();
-                        $cellIterator->setIterateOnlyExistingCells(false);
-                        $cells = [];
-                        foreach ($cellIterator as $key => $cell) {
-                            if ($key === 1 || $cell->getValue() === null) {
-                                continue;
-                            } else {
-                                $cells[] = $cell->getValue();
-                            }
-                        }
-                        $dir[$val][$dat1][$k] = $cells;
-                    }
-                }
-            }
-        }
-        return $dir;
-    }
+//    public static function getAllDirect()
+//    {
+//        $reader = IOFactory::createReader(self::$inputFileType);
+//        $reader->setReadDataOnly(true);
+//        $spreadsheet = $reader->load(self::$inputFileName);
+//        $allSheets = $spreadsheet->getSheetNames();
+//        $cat = [
+//            'id' => 'A',
+//            'name' => 'B',
+//        ];
+//        $prod = [
+//            'id' => 'G',
+//            'name' => 'H',
+//            'desc' => 'I',
+//        ];
+//        $data = [
+//            'categories' => $cat,
+//            'products' => $prod,
+//        ];
+//        $dir = [];
+//        foreach ($allSheets as $key => $val) {
+//            foreach ($data as $dat1 => $dat2) {
+//                foreach ($dat2 as $k => $v) {
+//                    foreach ($spreadsheet->getSheetByName($val)->getColumnIterator($startColumn = $v,
+//                        $endColumn = $v) as $column) {
+//                        $cellIterator = $column->getCellIterator();
+//                        $cellIterator->setIterateOnlyExistingCells(false);
+//                        $cells = [];
+//                        foreach ($cellIterator as $key => $cell) {
+//                            if ($key === 1 || $cell->getValue() === null) {
+//                                continue;
+//                            } else {
+//                                $cells[] = $cell->getValue();
+//                            }
+//                        }
+//                        $dir[$val][$dat1][$k] = $cells;
+//                    }
+//                }
+//            }
+//        }
+//        return $dir;
+//    }
 
     public static function getCategoryNameByLangAndId($language, $categoryId)
     {
@@ -71,7 +71,7 @@ class GetExcelDataService extends Controller
         }
     }
 
-    public static function getCategoriesNameByLangAndId($language, $categories)
+    public static function setCategoriesNameByLangAndId($language, $categories)
     {
         if (self::checkSheetExist($language)) {
             $reader = IOFactory::createReader(self::$inputFileType);

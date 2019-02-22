@@ -61,6 +61,12 @@ Route::middleware('auth')->group(function () {
     Route::post('admin/uploadTranslationFile', 'Admin\LanguagesController@uploadTranslationFile')->name('uploadTranslationFile');
     Route::get('admin/downloadTranslationFile', 'Admin\LanguagesController@downloadTranslationFile')->name('downloadTranslationFile');
     Route::get('admin/downloadBasicTranslationFile', 'Admin\LanguagesController@downloadBasicTranslationFile')->name('downloadBasicTranslationFile');
+
+    Route::get('admin/viewPresentations', 'Admin\PresentationsController@viewPresentations')->name('viewPresentations');
+    Route::get('admin/editPresentations', 'Admin\PresentationsController@editPresentations')->name('editPresentations');
+    Route::post('admin/updatePresentation', 'Admin\PresentationsController@updatePresentation')->name('updatePresentation');
+    Route::get('admin/createPresentation', 'Admin\PresentationsController@createPresentation')->name('createPresentation');
+    Route::post('admin/addPresentation', 'Admin\PresentationsController@addPresentation')->name('addPresentation');
 });
 
 Route::get('/', 'MainController@index')->name('index');

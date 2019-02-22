@@ -8,6 +8,7 @@ use App\Delivery;
 use App\Http\Requests\ExclusiveLotRequest;
 use App\Language;
 use App\Lot;
+use App\Presentation;
 use App\Product;
 use App\Services\GetExcelDataService;
 use Illuminate\Http\Request;
@@ -57,7 +58,8 @@ class MainController extends Controller
         $lang = $request->lang;
         $companyInfo = GetExcelDataService::getCompanyInfoByLang($lang);
         $headerNavListName = GetExcelDataService::getHeaderSiteNavListByLang($lang);
-        return view('company', ['companyInfo' => $companyInfo, 'newNavNames' => $headerNavListName]);
+        $presentations = Presentation::getPresentations()->where('disable', '=', 0);
+        return view('company', ['companyInfo' => $companyInfo, 'newNavNames' => $headerNavListName, 'presentations' => $presentations]);
     }
 
     public function partnership(Request $request)

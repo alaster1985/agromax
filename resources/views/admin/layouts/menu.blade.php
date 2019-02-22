@@ -73,6 +73,20 @@
                         </ul>
                     </div>
                 </div>
+                <div class="single-menu">
+                    <h2><a title=""><i class="fa fa-file-pdf"></i><span>Presentations</span></a></h2>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="{{route('viewPresentations')}}" title="">All Presentations</a></li>
+                        </ul>
+                        @if(\App\User::find(Auth::id())->role_id === 3)
+                        @else
+                            <ul>
+                                <li><a href="{{route('createPresentation')}}" title="">Add Presentation</a></li>
+                            </ul>
+                        @endif
+                    </div>
+                </div>
             </div>
         </div>
     </aside>

@@ -13,9 +13,7 @@ class UploadPhotoService extends Controller
 
     public function uploadProductPhoto($request)
     {
-//        $a = '/admin/'.substr(strrchr($request->getRequestUri(), "/"), 1);
         $uri = basename($request->getRequestUri());
-//        if ($request->getRequestUri() === '/admin/updateCategory') {
         if ($uri === 'updateCategory') {
             $image = $request->photo;
             if (file_exists(public_path('images/categories/') . $image->getClientOriginalName())) {

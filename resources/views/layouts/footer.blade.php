@@ -7,7 +7,7 @@
                     <ul class="socials-nw">
                         <li class="socials-nw__item" @if(\App\Social::find(1)->disable) style="display: none" @else style="display: inline-block" @endif><a class="socials-nw__link fab fa-skype" href="skype:{{\App\Social::find(1)->contact}}?call" target="_blank"><span class="visually-hidden">Skype</span></a></li>
                         <li class="socials-nw__item" @if(\App\Social::find(2)->disable) style="display: none" @else style="display: inline-block" @endif><a class="socials-nw__link fab fa-viber" href="viber://chat?number={{\App\Social::find(2)->contact}}" target="_blank"><span class="visually-hidden">Viber</span></a></li>
-                        <li class="socials-nw__item" @if(\App\Social::find(3)->disable) style="display: none" @else style="display: inline-block" @endif><a class="socials-nw__link fab fa-whatsapp" href="whatsapp://chat?phone={{\App\Social::find(3)->contact}}" target="_blank"><span class="visually-hidden">Whatsapp</span></a></li>
+                        <li class="socials-nw__item" @if(\App\Social::find(3)->disable) style="display: none" @else style="display: inline-block" @endif><a class="socials-nw__link fab fa-whatsapp" href="https://api.whatsapp.com/send?phone={{\App\Social::find(3)->contact}}" target="_blank"><span class="visually-hidden">Whatsapp</span></a></li>
                         <li class="socials-nw__item" @if(\App\Social::find(4)->disable) style="display: none" @else style="display: inline-block" @endif><a class="socials-nw__link fab fa-telegram" href="tg://resolve?domain={{\App\Social::find(4)->contact}}" target="_blank"><span class="visually-hidden">Telegram</span></a></li>
                     </ul>
                 </div>

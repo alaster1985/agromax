@@ -2,7 +2,7 @@
 <main>
     <section class="company container">
         <div class="row">
-            <div class="col-sm-10 col-sm-offset-1">
+            <div class="col-sm-10 col-sm-offset-1 company__div">
                 <div class="col-sm-3 col-md-4 col-md-offset-0">
                     <img src="images/logo.jpg" alt="Agromax">
                 </div>
@@ -12,9 +12,12 @@
                     <p class="company__desc">{{$companyInfo[2] ?? 'Our market mission - to facilitate the trade with agricultures for health food industry from  Black Sea countries\' farms.'}}</p>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-10 col-md-offset-1">
-                <iframe class="founder__presentation" src="{{asset('presentation.pdf')}}" scrolling="no"></iframe>
-            </div>
+            @foreach($presentations as $presentation)
+                <div class="col-sm-12 col-md-10 col-md-offset-1 company__div">
+                    <iframe class="founder__presentation" src="{{asset($presentation->file_path)}}"
+                            scrolling="no"></iframe>
+                </div>
+            @endforeach
         </div>
     </section>
 </main>

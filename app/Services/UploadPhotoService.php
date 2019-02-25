@@ -81,6 +81,26 @@ class UploadPhotoService extends Controller
         $image_resize->save($this->pathFile . $this->newFileName);
     }
 
+    public function uploadCharityPhoto($request)
+    {
+        $image = $request->photo;
+        if (file_exists(public_path('images/charity/') . $image->getClientOriginalName())) {
+            $this->newFileName = $image->getClientOriginalName();
+            return;
+        } else {
+            $image_resize = Image::make($image->getRealPath());
+            $this->pathFile = public_path('images/charity/');
+            $image_resize->resize(1024, 683);
+        }
+
+        $this->newFileName = self::getGUID()
+            . '.' . $image->getClientOriginalExtension();
+        if (!file_exists($this->pathFile)) {
+            mkdir($this->pathFile, 0777, true);
+        }
+        $image_resize->save($this->pathFile . $this->newFileName);
+    }
+
     public static function getGUID()
     {
         if (function_exists('com_create_guid')) {

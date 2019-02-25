@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Charity;
 use App\Condition;
 use App\Delivery;
 use App\Http\Requests\ExclusiveLotRequest;
@@ -116,8 +117,10 @@ class MainController extends Controller
     {
         $lang = $request->lang;
         $charityInfo = GetExcelDataService::getCharityInfoByLang($lang);
+        $charityPostsDefault = Charity::getCharityPosts()->where('disable', '=', 0)->sortByDesc('created_at');
+        $charityPosts = GetExcelDataService::setCharityTitleAndPostTextByIdsAndLang($charityPostsDefault, $lang);
         $headerNavListName = GetExcelDataService::getHeaderSiteNavListByLang($lang);
-        return view('charity', ['charityInfo' => $charityInfo, 'newNavNames' => $headerNavListName]);
+        return view('charity', ['charityInfo' => $charityInfo, 'newNavNames' => $headerNavListName, 'charityPosts' => $charityPosts]);
     }
 
     public function contacts(Request $request)

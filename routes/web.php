@@ -67,6 +67,12 @@ Route::middleware('auth')->group(function () {
     Route::post('admin/updatePresentation', 'Admin\PresentationsController@updatePresentation')->name('updatePresentation');
     Route::get('admin/createPresentation', 'Admin\PresentationsController@createPresentation')->name('createPresentation');
     Route::post('admin/addPresentation', 'Admin\PresentationsController@addPresentation')->name('addPresentation');
+
+    Route::get('admin/viewCharityPosts', 'Admin\CharityController@viewCharityPosts')->name('viewCharityPosts');
+    Route::get('admin/editCharityPosts', 'Admin\CharityController@editCharityPosts')->name('editCharityPosts');
+    Route::post('admin/updateCharityPost', 'Admin\CharityController@updateCharityPost')->name('updateCharityPost');
+    Route::get('admin/createCharityPost', 'Admin\CharityController@createCharityPost')->name('createCharityPost');
+    Route::post('admin/addCharityPost', 'Admin\CharityController@addCharityPost')->name('addCharityPost');
 });
 
 Route::get('/', 'MainController@index')->name('index');

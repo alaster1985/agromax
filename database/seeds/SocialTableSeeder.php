@@ -14,9 +14,9 @@ class SocialTableSeeder extends Seeder
     {
         $social = [
             'skype' => '+380919861009',
-            'viber' => '+380919861009',
-            'whatsapp' => '+380919861009',
-            'telegram' => '@tuufiagro',
+            'viber' => '380919861009',
+            'whatsapp' => '380919861009',
+            'telegram' => 'tuufiagro',
             'facebook' => 'https://www.facebook.com',
             'linkedin' => 'https://www.linkedin.com',
             'twitter' => 'https://twitter.com',

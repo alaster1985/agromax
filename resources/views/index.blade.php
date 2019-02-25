@@ -18,7 +18,7 @@
                             ullamcorper, suscipit erat ac, pharetra magna. Donec vitae pharetra neque, at pulvinar mauris.
                             Ut
                             malesuada ante vitae metus maximus, quis maximus nisl mollis.</p>
-                        <a class="products__btn" href="offers/?lang=en_GB&cat={{$category->id}}">Our offers</a>
+                        <a class="products__btn" href="offers/?lang=en_GB&cat={{$category->id}}">{{$newNavNames[7] ?? 'Our offers'}}</a>
                     </div>
                 @endforeach
             </div>
@@ -37,7 +37,7 @@
                                 ullamcorper, suscipit erat ac, pharetra magna. Donec vitae pharetra neque, at pulvinar mauris.
                                 Ut
                                 malesuada ante vitae metus maximus, quis maximus nisl mollis.</p>
-                            <a class="products__btn" href="offers/?lang=en_GB&cat={{$category->id}}">Our offers</a>
+                            <a class="products__btn" href="offers/?lang=en_GB&cat={{$category->id}}">{{$newNavNames[7] ?? 'Our offers'}}</a>
                         </div>
                     @endforeach
 

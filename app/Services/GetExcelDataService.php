@@ -268,7 +268,7 @@ class GetExcelDataService extends Controller
             $reader->setReadDataOnly(true);
             $spreadsheet = $reader->load(self::$inputFileName);
             $translatedHeaderSiteNavList = [];
-            for ($i = 48; $i <= 54; $i++) {
+            for ($i = 48; $i <= 55; $i++) {
                 $translatedNavName = $spreadsheet
                     ->getSheetByName($lang)
                     ->getCell('M' . $i)
@@ -279,6 +279,26 @@ class GetExcelDataService extends Controller
         } else {
             return null;
         }
+    }
+
+    public static function setCharityTitleAndPostTextByIdsAndLang($charityPosts, $language)
+    {
+        $reader = IOFactory::createReader(self::$inputFileType);
+        $reader->setReadDataOnly(true);
+        $spreadsheet = $reader->load(self::$inputFileName);
+
+        foreach ($charityPosts as $post) {
+            $charityPost_row = $post->id + 1;
+            $post->new_title = $spreadsheet
+                ->getSheetByName($language)
+                ->getCell('Q' . $charityPost_row)
+                ->getValue();
+            $post->new_post = $spreadsheet
+                ->getSheetByName($language)
+                ->getCell('R' . $charityPost_row)
+                ->getValue();
+        }
+        return $charityPosts;
     }
 
 }

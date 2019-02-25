@@ -87,6 +87,20 @@
                         @endif
                     </div>
                 </div>
+                <div class="single-menu">
+                    <h2><a title=""><i class="fa fa-donate"></i><span>Charity</span></a></h2>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="{{route('viewCharityPosts')}}" title="">All Charity Posts</a></li>
+                        </ul>
+                        @if(\App\User::find(Auth::id())->role_id === 3)
+                        @else
+                            <ul>
+                                <li><a href="{{route('createCharityPost')}}" title="">Add Charity Post</a></li>
+                            </ul>
+                        @endif
+                    </div>
+                </div>
             </div>
         </div>
     </aside>

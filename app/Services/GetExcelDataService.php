@@ -188,7 +188,7 @@ class GetExcelDataService extends Controller
             $reader->setReadDataOnly(true);
             $spreadsheet = $reader->load(self::$inputFileName);
             $translatedFounderInfo = [];
-            for ($i = 10; $i <= 14; $i++) {
+            for ($i = 10; $i <= 13; $i++) {
                 $translatedParagraph = $spreadsheet
                     ->getSheetByName($lang)
                     ->getCell('M' . $i)
@@ -207,14 +207,10 @@ class GetExcelDataService extends Controller
             $reader = IOFactory::createReader(self::$inputFileType);
             $reader->setReadDataOnly(true);
             $spreadsheet = $reader->load(self::$inputFileName);
-            $translatedCharityInfo = [];
-            for ($i = 29; $i <= 33; $i++) {
-                $translatedParagraph = $spreadsheet
-                    ->getSheetByName($lang)
-                    ->getCell('M' . $i)
-                    ->getValue();
-                array_push($translatedCharityInfo, $translatedParagraph);
-            }
+            $translatedCharityInfo = $spreadsheet
+                ->getSheetByName($lang)
+                ->getCell('M' . 29)
+                ->getValue();
             return $translatedCharityInfo;
         } else {
             return false;

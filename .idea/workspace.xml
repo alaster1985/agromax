@@ -5,22 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33d6ce99-6b15-4c95-b8f5-855d36a87d25" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_02_25_144950_create_charity_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/createCharity.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/editCharity.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/viewCharity.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b90a904b-c787-44f1-b898-f4fe584e7dd1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b90a904b-c787-44f1-b898-f4fe584e7dd1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/GetExcelDataService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/GetExcelDataService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/UploadPhotoService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/UploadPhotoService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/SocialTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/SocialTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/flags.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/flags.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/translate.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/public/translate.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/translate_basic.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/public/translate_basic.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/translation/translate.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/public/translation/translate.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/menu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/charity.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/charity.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/founder.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/founder.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translate.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/translate.xlsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,74 +53,25 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="agromax: schema" type="c314c289:MysqlImplModel$Schema" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="agromax@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="agromax: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="charities: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="CharityController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CharityController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-              <folding>
-                <element signature="e#46#62#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="MainController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MainController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1634">
-              <caret line="120" selection-start-line="120" selection-end-line="120" />
+            <state relative-caret-position="399">
+              <caret line="140" column="119" selection-start-line="140" selection-start-column="119" selection-end-line="140" selection-end-column="119" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/header.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="35" column="91" selection-start-line="35" selection-start-column="91" selection-end-line="35" selection-end-column="91" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GetExcelDataService.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Services/GetExcelDataService.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="299" column="9" lean-forward="true" selection-start-line="299" selection-start-column="9" selection-end-line="299" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="charity.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="charity.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/charity.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Charity.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Charity.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="41" column="34" lean-forward="true" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
-              <folding>
-                <element signature="e#23#59#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="190">
+              <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -142,7 +87,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getProductsByCategoryId</find>
       <find>offersAll()</find>
       <find />
       <find>offers__title</find>
@@ -172,6 +116,7 @@
       <find>Category</find>
       <find>category</find>
       <find>255</find>
+      <find>founder__presentation</find>
     </findStrings>
     <replaceStrings>
       <replace>href=&quot;</replace>
@@ -199,7 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/ChangePassordRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/ChangePasswordRequest.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/viewLanguages.blade.php" />
@@ -246,10 +190,11 @@
         <option value="$PROJECT_DIR$/app/Http/Requests/CharityStoreRequest.php" />
         <option value="$PROJECT_DIR$/app/Charity.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/CharityController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/layouts/header.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/MainController.php" />
+        <option value="$PROJECT_DIR$/resources/views/founder.blade.php" />
         <option value="$PROJECT_DIR$/app/Services/GetExcelDataService.php" />
         <option value="$PROJECT_DIR$/resources/views/charity.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/MainController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/layouts/header.blade.php" />
       </list>
     </option>
   </component>
@@ -435,12 +380,6 @@
             <path>
               <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
               <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -593,7 +532,8 @@
       <workItem from="1551084252206" duration="182000" />
       <workItem from="1551087024093" duration="431000" />
       <workItem from="1551087841417" duration="19000" />
-      <workItem from="1551102980058" duration="12513000" />
+      <workItem from="1551102980058" duration="12759000" />
+      <workItem from="1551166338275" duration="3740000" />
     </task>
     <task id="LOCAL-00001" summary="offers_done">
       <created>1548326886107</created>
@@ -819,11 +759,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550769623005</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="charity_start">
+      <created>1551116582931</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1551116582931</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="589389000" />
+    <option name="totallyTimeSpent" value="593375000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -844,7 +791,7 @@
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Run" order="3" />
       <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49519745" visible="true" weight="0.26837417" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14034152" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14194237" />
       <window_info anchor="bottom" id="Docker" order="8" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.11526147" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -864,19 +811,19 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="8" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.103521876" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32962137" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Run" order="3" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32962137" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.08751334" />
       <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49519745" visible="true" weight="0.26837417" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5048026" side_tool="true" weight="0.2594655" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Database Console" order="0" />
       <window_info anchor="bottom" id="Message" order="1" />
@@ -891,7 +838,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="commit_3" />
     <MESSAGE value="commit_4" />
     <MESSAGE value="validate_1" />
     <MESSAGE value="order_start" />
@@ -916,7 +862,8 @@
     <MESSAGE value="mail_start" />
     <MESSAGE value="mail_finish" />
     <MESSAGE value="stile_fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="stile_fix" />
+    <MESSAGE value="charity_start" />
+    <option name="LAST_COMMIT_MESSAGE" value="charity_start" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -924,27 +871,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/css/styledash.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/fontawesome-free-5.6.3-web/css/all.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="389" column="8" selection-start-line="389" selection-start-column="4" selection-end-line="389" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
@@ -1155,13 +1081,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/UploadPhotoService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="78" column="47" lean-forward="true" selection-start-line="78" selection-start-column="47" selection-end-line="78" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/editCategories.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -1232,16 +1151,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Charity.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="41" column="34" lean-forward="true" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
-          <folding>
-            <element signature="e#23#59#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CategoriesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -1249,41 +1158,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Charity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+          <folding>
+            <element signature="e#23#59#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CharityController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        <state relative-caret-position="320">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
           <folding>
             <element signature="e#46#62#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/charity.blade.php">
+    <entry file="das://b90a904b-c787-44f1-b898-f4fe584e7dd1/schema/agromax/table/charities">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/UploadPhotoService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+        <state relative-caret-position="54">
+          <caret line="78" column="47" lean-forward="true" selection-start-line="78" selection-start-column="47" selection-end-line="78" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Services/GetExcelDataService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="299" column="9" lean-forward="true" selection-start-line="299" selection-start-column="9" selection-end-line="299" selection-end-column="9" />
+        <state relative-caret-position="345">
+          <caret line="190" column="34" selection-start-line="190" selection-start-column="34" selection-end-line="190" selection-end-column="34" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/founder.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/charityar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MainController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1634">
-          <caret line="120" selection-start-line="120" selection-end-line="120" />
+        <state relative-caret-position="399">
+          <caret line="140" column="119" selection-start-line="140" selection-start-column="119" selection-end-line="140" selection-end-column="119" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/header.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/charity.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="35" column="91" selection-start-line="35" selection-start-column="91" selection-end-line="35" selection-end-column="91" />
+        <state relative-caret-position="190">
+          <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
         </state>
       </provider>
     </entry>

@@ -133,10 +133,12 @@ class MainController extends Controller
 
     public function founder(Request $request)
     {
+        $directory = 'videos';
+        $videos = array_diff(scandir($directory), array('..', '.'));
         $lang = $request->lang;
         $founderInfo = GetExcelDataService::getFounderInfoByLang($lang);
         $headerNavListName = GetExcelDataService::getHeaderSiteNavListByLang($lang);
-        return view('founder', ['founderInfo' => $founderInfo, 'newNavNames' => $headerNavListName]);
+        return view('founder', ['founderInfo' => $founderInfo, 'newNavNames' => $headerNavListName, 'videos' => $videos]);
     }
 
     public function offers(Request $request)

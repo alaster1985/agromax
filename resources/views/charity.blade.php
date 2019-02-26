@@ -8,7 +8,7 @@
                     <img src="images/charity-2.jpg" alt="Charity">
                 </div>
                 <div class="charity__desc col-sm-6">
-                    <p class="charity__desc">{{$charityInfo[0] ?? '"AgroMax trades with products for health food industry and does the support to health..".'}}</p>
+                    <p class="charity__desc">{{$charityInfo ?? '"AgroMax trades with products for health food industry and does the support to health..".'}}</p>
                 </div>
             </div>
 

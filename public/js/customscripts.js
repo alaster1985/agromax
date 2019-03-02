@@ -75,11 +75,11 @@ $(document).ready(function () {
     }
 
 
-    $('.products__btn , .products__img-wr').click(function () {
-        let href = $(this).attr('href');
-        href = href.replace('?lang=en_GB', '?lang=' + languageCode)
-        $(this).attr('href', href);
-    });
+    // $('.products__btn , .products__img-wr').click(function () {
+    //     let href = $(this).attr('href');
+    //     href = href.replace('?lang=en_GB', '?lang=' + languageCode)
+    //     $(this).attr('href', href);
+    // });
 
     $('.site-nav__link').click(function () {
         let href = $(this).attr('href');

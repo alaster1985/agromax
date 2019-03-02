@@ -5,38 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33d6ce99-6b15-4c95-b8f5-855d36a87d25" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Bold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Bold.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Thin.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Thin.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Thin.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Thin.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/charity/{A512DC45-0D6D-36BA-721E-69287C175111}.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/charity/{A728339E-0533-FAD4-1B6A-BA9C21FED63B}.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/charity/{BAE646E7-A5C6-92F8-4634-8B1D510CC200}.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/charity/{CDE47C05-B3F1-ECA5-3D76-4C0B71C611CE}.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b90a904b-c787-44f1-b898-f4fe584e7dd1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b90a904b-c787-44f1-b898-f4fe584e7dd1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_02_25_144950_create_charity_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_02_25_144950_create_charity_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/ProductsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ProductsTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dump.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dump.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/fonts.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/blocks/header.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/blocks/header.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/style.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/translate_basic.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/public/translate_basic.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/translation/translate.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/public/translation/translate.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/customscripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/customscripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,12 +40,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="customscripts.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/js/customscripts.js">
+      <file leaf-file-name="offers.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/offers.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="23" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="77" />
-            </state>
+            <state relative-caret-position="-285" />
           </provider>
         </entry>
       </file>
@@ -172,11 +141,9 @@
         <option value="$PROJECT_DIR$/resources/views/admin/editPresentations.blade.php" />
         <option value="$PROJECT_DIR$/app/Presentation.php" />
         <option value="$PROJECT_DIR$/resources/views/company.blade.php" />
-        <option value="$PROJECT_DIR$/public/js/customscripts.js" />
         <option value="$PROJECT_DIR$/resources/views/contacts.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/header.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/createCharity.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/layouts/menu.blade.php" />
@@ -197,6 +164,8 @@
         <option value="$PROJECT_DIR$/database/seeds/ProductsTableSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" />
         <option value="$PROJECT_DIR$/dump.sql" />
+        <option value="$PROJECT_DIR$/public/js/customscripts.js" />
+        <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
       </list>
     </option>
   </component>
@@ -454,21 +423,6 @@
               <item name="agromax" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -498,19 +452,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/public/images/categories" />
-      <recent name="$PROJECT_DIR$/public/images" />
-      <recent name="$PROJECT_DIR$/public/css" />
-      <recent name="$PROJECT_DIR$/public/images/products" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Admin" />
       <recent name="$PROJECT_DIR$/app/Services" />
       <recent name="$PROJECT_DIR$/public/js" />
       <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/public/css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/css" />
+      <recent name="$PROJECT_DIR$/public/less/blocks" />
+      <recent name="$PROJECT_DIR$/public/less" />
+      <recent name="$PROJECT_DIR$/public/fonts/roboto" />
+      <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -585,7 +539,8 @@
       <workItem from="1551252408680" duration="548000" />
       <workItem from="1551259002841" duration="1451000" />
       <workItem from="1551457610042" duration="65000" />
-      <workItem from="1551511888768" duration="244000" />
+      <workItem from="1551511888768" duration="544000" />
+      <workItem from="1551521106334" duration="1836000" />
     </task>
     <task id="LOCAL-00001" summary="offers_done">
       <created>1548326886107</created>
@@ -825,11 +780,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551171517473</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="font_fix">
+      <created>1551512181314</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1551512181315</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="600344000" />
+    <option name="totallyTimeSpent" value="602480000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -842,8 +804,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1030" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15314835" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1547492" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32962137" />
       <window_info anchor="bottom" id="Docker" order="8" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5048026" side_tool="true" weight="0.2594655" />
@@ -852,8 +815,8 @@
       <window_info anchor="bottom" id="Run" order="3" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49519745" visible="true" weight="0.26837417" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49519745" weight="0.26837417" />
+      <window_info anchor="bottom" id="Debug" order="4" visible="true" weight="0.3997773" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -869,19 +832,19 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="8" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.103521876" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32962137" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Run" order="3" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32962137" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.08751334" />
       <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49519745" visible="true" weight="0.26837417" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5048026" side_tool="true" weight="0.2594655" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Database Console" order="0" />
       <window_info anchor="bottom" id="Message" order="1" />
@@ -896,7 +859,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="validate_1" />
     <MESSAGE value="order_start" />
     <MESSAGE value="admin_start" />
     <MESSAGE value="add_other" />
@@ -921,7 +883,8 @@
     <MESSAGE value="stile_fix" />
     <MESSAGE value="charity_start" />
     <MESSAGE value="video_start" />
-    <option name="LAST_COMMIT_MESSAGE" value="video_start" />
+    <MESSAGE value="font_fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="font_fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -929,13 +892,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/js/customscripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="64" lean-forward="true" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://b90a904b-c787-44f1-b898-f4fe584e7dd1/schema/agromax/table/presentations">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -968,13 +924,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -1165,13 +1114,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MainController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="140" column="119" selection-start-line="140" selection-start-column="119" selection-end-line="140" selection-end-column="119" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1211,13 +1153,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="75" />
         </state>
       </provider>
     </entry>
@@ -1270,11 +1205,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MainController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="144" column="5" lean-forward="true" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="34" column="60" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/customscripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="23" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="77" />
+        <state relative-caret-position="38">
+          <caret line="77" column="4" lean-forward="true" selection-start-line="77" selection-start-column="4" selection-end-line="81" selection-end-column="10" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/confirmation.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1294" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/offers.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-285" />
       </provider>
     </entry>
   </component>

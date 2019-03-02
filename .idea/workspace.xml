@@ -5,16 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33d6ce99-6b15-4c95-b8f5-855d36a87d25" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Bold.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Bold.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Thin.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Thin.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Thin.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Thin.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/roboto/subset-Roboto-Thin.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/charity/{A512DC45-0D6D-36BA-721E-69287C175111}.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/charity/{A728339E-0533-FAD4-1B6A-BA9C21FED63B}.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/charity/{BAE646E7-A5C6-92F8-4634-8B1D510CC200}.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/charity/{CDE47C05-B3F1-ECA5-3D76-4C0B71C611CE}.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b90a904b-c787-44f1-b898-f4fe584e7dd1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b90a904b-c787-44f1-b898-f4fe584e7dd1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/GetExcelDataService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/GetExcelDataService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/flags.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/flags.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/translate.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/public/translate.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_02_25_144950_create_charity_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_02_25_144950_create_charity_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/ProductsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ProductsTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dump.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dump.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/fonts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/roboto/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/roboto/stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/less/blocks/header.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/blocks/header.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/less/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/style.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/translate_basic.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/public/translate_basic.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/translation/translate.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/public/translation/translate.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/charity.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/charity.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/founder.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/founder.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/translate.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/translate.xlsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,36 +64,16 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="agromax@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="agromax@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="agromax@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="agromax: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MainController.php">
+      <file leaf-file-name="customscripts.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/js/customscripts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="140" column="119" selection-start-line="140" selection-start-column="119" selection-end-line="140" selection-end-column="119" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="charity.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/charity.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+            <state relative-caret-position="266">
+              <caret line="23" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -87,7 +89,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>offersAll()</find>
       <find />
       <find>offers__title</find>
       <find>/</find>
@@ -115,8 +116,9 @@
       <find>atla</find>
       <find>Category</find>
       <find>category</find>
-      <find>255</find>
       <find>founder__presentation</find>
+      <find>255</find>
+      <find>user</find>
     </findStrings>
     <replaceStrings>
       <replace>href=&quot;</replace>
@@ -144,13 +146,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Requests/ChangePassordRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/ChangePasswordRequest.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/viewLanguages.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/UploadTranslationFileRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/LanguagesController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_21_084027_create_social_table.php" />
         <option value="$PROJECT_DIR$/app/Language.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/viewSocials.blade.php" />
@@ -174,13 +173,11 @@
         <option value="$PROJECT_DIR$/app/Presentation.php" />
         <option value="$PROJECT_DIR$/resources/views/company.blade.php" />
         <option value="$PROJECT_DIR$/public/js/customscripts.js" />
-        <option value="$PROJECT_DIR$/dump.sql" />
         <option value="$PROJECT_DIR$/resources/views/contacts.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/header.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_02_25_144950_create_charity_table.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/createCharity.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/layouts/menu.blade.php" />
         <option value="$PROJECT_DIR$/app/Services/UploadPhotoService.php" />
@@ -195,6 +192,11 @@
         <option value="$PROJECT_DIR$/resources/views/founder.blade.php" />
         <option value="$PROJECT_DIR$/app/Services/GetExcelDataService.php" />
         <option value="$PROJECT_DIR$/resources/views/charity.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_02_25_144950_create_charity_table.php" />
+        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/ProductsTableSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" />
+        <option value="$PROJECT_DIR$/dump.sql" />
       </list>
     </option>
   </component>
@@ -325,7 +327,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -380,7 +381,25 @@
             <path>
               <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
               <item name="agromax" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agromax" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="seeds" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agromax" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agromax" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
@@ -392,7 +411,32 @@
               <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
               <item name="agromax" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agromax" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="less" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agromax" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="less" type="462c0819:PsiDirectoryNode" />
+              <item name="blocks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agromax" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="translation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agromax" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="videos" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
@@ -441,6 +485,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -533,7 +578,14 @@
       <workItem from="1551087024093" duration="431000" />
       <workItem from="1551087841417" duration="19000" />
       <workItem from="1551102980058" duration="12759000" />
-      <workItem from="1551166338275" duration="3740000" />
+      <workItem from="1551166338275" duration="5615000" />
+      <workItem from="1551181054467" duration="2003000" />
+      <workItem from="1551184438186" duration="42000" />
+      <workItem from="1551191204771" duration="741000" />
+      <workItem from="1551252408680" duration="548000" />
+      <workItem from="1551259002841" duration="1451000" />
+      <workItem from="1551457610042" duration="65000" />
+      <workItem from="1551511888768" duration="244000" />
     </task>
     <task id="LOCAL-00001" summary="offers_done">
       <created>1548326886107</created>
@@ -766,11 +818,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551116582931</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="video_start">
+      <created>1551171517473</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1551171517473</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="593375000" />
+    <option name="totallyTimeSpent" value="600344000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -783,20 +842,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1030" extended-state="6" />
-    <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15314835" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32962137" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5048026" side_tool="true" weight="0.2594655" />
-      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Run" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49519745" visible="true" weight="0.26837417" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14194237" />
       <window_info anchor="bottom" id="Docker" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5048026" side_tool="true" weight="0.2594655" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.11526147" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49519745" visible="true" weight="0.26837417" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -811,19 +869,19 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="8" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.103521876" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32962137" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Run" order="3" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32962137" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.08751334" />
       <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49519745" visible="true" weight="0.26837417" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5048026" side_tool="true" weight="0.2594655" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Database Console" order="0" />
       <window_info anchor="bottom" id="Message" order="1" />
@@ -838,7 +896,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="commit_4" />
     <MESSAGE value="validate_1" />
     <MESSAGE value="order_start" />
     <MESSAGE value="admin_start" />
@@ -863,7 +920,8 @@
     <MESSAGE value="mail_finish" />
     <MESSAGE value="stile_fix" />
     <MESSAGE value="charity_start" />
-    <option name="LAST_COMMIT_MESSAGE" value="charity_start" />
+    <MESSAGE value="video_start" />
+    <option name="LAST_COMMIT_MESSAGE" value="video_start" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -871,73 +929,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="1303" column="5" selection-start-line="1303" selection-start-column="5" selection-end-line="1303" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_22_110046_create_presentation_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/viewSocials.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="51" column="44" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b90a904b-c787-44f1-b898-f4fe584e7dd1/schema/agromax/table/categories">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/UploadPdfService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="72" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/UploadTranslationFileService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/PresentationStoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="681">
-          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b90a904b-c787-44f1-b898-f4fe584e7dd1/schema/agromax/table/languages">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/company.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/customscripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="50" column="44" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
+        <state relative-caret-position="152">
+          <caret line="8" column="64" lean-forward="true" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="77" />
         </state>
       </provider>
     </entry>
@@ -945,13 +940,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dump.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14687">
-          <caret line="476" column="24" selection-start-line="476" selection-start-column="24" selection-end-line="476" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -976,13 +964,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://b90a904b-c787-44f1-b898-f4fe584e7dd1/schema/agromax/table/charity">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1001,13 +982,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="30" column="41" lean-forward="true" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_25_144950_create_charity_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -1102,13 +1076,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="71" column="102" lean-forward="true" selection-start-line="71" selection-start-column="102" selection-end-line="71" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/editLots.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -1158,37 +1125,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Charity.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
-          <folding>
-            <element signature="e#23#59#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CharityController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <element signature="e#46#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b90a904b-c787-44f1-b898-f4fe584e7dd1/schema/agromax/table/charities">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1218,6 +1158,13 @@
         <state relative-caret-position="-57" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/charity.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MainController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -1225,10 +1172,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/charity.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+        <state relative-caret-position="210">
+          <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="53" column="18" lean-forward="true" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="34" column="47" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-891">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Charity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b90a904b-c787-44f1-b898-f4fe584e7dd1/schema/agromax/table/charities">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_25_144950_create_charity_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="20" column="51" lean-forward="true" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b90a904b-c787-44f1-b898-f4fe584e7dd1/schema/agromax/table/roles">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b90a904b-c787-44f1-b898-f4fe584e7dd1/schema/agromax/table/languages">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="48" lean-forward="true" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/ProductsTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="63" column="11" lean-forward="true" selection-start-line="63" selection-start-column="11" selection-end-line="63" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/UsersTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dump.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1732">
+          <caret line="489" column="14" lean-forward="true" selection-start-line="489" selection-start-column="14" selection-end-line="489" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/customscripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="23" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="77" />
         </state>
       </provider>
     </entry>

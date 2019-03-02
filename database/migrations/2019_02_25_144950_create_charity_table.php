@@ -18,6 +18,7 @@ class CreateCharityTable extends Migration
             $table->string('title', 100);
             $table->string('photo', 100);
             $table->text('post');
+            $table->boolean('disable')->default(1);
             $table->timestamps();
         });
     }

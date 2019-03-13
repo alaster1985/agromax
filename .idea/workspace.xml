@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33d6ce99-6b15-4c95-b8f5-855d36a87d25" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/public/BingSiteAuth.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/hotoffer.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/ports/{2829FC70-FDF4-AF00-F58B-26065F9F3409}.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/ports/{41402937-F402-905C-5D2C-1F678FF116AC}.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/ports/{8B974537-45E1-332B-163C-CFF7D13F87A9}.jpeg" afterDir="false" />
@@ -14,26 +12,10 @@
       <change afterPath="$PROJECT_DIR$/public/images/products/{7ABED25C-D310-98FB-2BC1-B2C62BA10682}.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/presentations/{CA0EC01C-EADD-1D81-C70C-CC031208C37D}.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/presentations/{F75A436E-A271-45E9-C7F1-06720F2A3480}.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sitemap.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/hotOffers.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b90a904b-c787-44f1-b898-f4fe584e7dd1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b90a904b-c787-44f1-b898-f4fe584e7dd1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/sitemap.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Condition.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Condition.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/LotStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/LotStoreRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Lot.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Lot.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/GetExcelDataService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/GetExcelDataService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/dash/newscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/dash/newscript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/translate_basic.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/public/translate_basic.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/translation/translate.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/public/translation/translate.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/createLot.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/createLot.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/editLots.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/editLots.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/viewLots.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/viewLots.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/confirmation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/confirmation.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/offers.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/offers.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/sitemap.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -145,9 +127,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/seeds/SocialTableSeeder.php" />
-        <option value="$PROJECT_DIR$/resources/views/mail.blade.php" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MailController.php" />
         <option value="$PROJECT_DIR$/public/less/style.less" />
         <option value="$PROJECT_DIR$/resources/views/admin/layouts/footer.blade.php" />
@@ -187,15 +166,18 @@
         <option value="$PROJECT_DIR$/resources/views/admin/viewLots.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/LotStoreRequest.php" />
         <option value="$PROJECT_DIR$/resources/views/confirmation.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Services/GetExcelDataService.php" />
         <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Lot.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/MainController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/header.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/offers.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/hotOffers.blade.php" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/MainController.php" />
+        <option value="$PROJECT_DIR$/public/sitemap.xml" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/sitemap.blade.php" />
+        <option value="$PROJECT_DIR$/public/robots.txt" />
       </list>
     </option>
   </component>
@@ -333,145 +315,6 @@
               <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
               <item name="agromax" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Requests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="dash" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="translation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="videos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="passwords" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agromax" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agromax" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -584,7 +427,7 @@
       <workItem from="1551943245667" duration="1211000" />
       <workItem from="1552290660701" duration="1610000" />
       <workItem from="1552375464544" duration="12397000" />
-      <workItem from="1552461779466" duration="13131000" />
+      <workItem from="1552461779466" duration="17248000" />
     </task>
     <task id="LOCAL-00001" summary="offers_done">
       <created>1548326886107</created>
@@ -838,11 +681,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551522961629</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="add_hotOffers">
+      <created>1552484018419</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1552484018419</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="638510000" />
+    <option name="totallyTimeSpent" value="642627000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -865,7 +715,7 @@
       <window_info anchor="bottom" id="Run" order="3" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49519745" visible="true" weight="0.26837417" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49519745" weight="0.26837417" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.3997773" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -909,7 +759,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="admin_start" />
     <MESSAGE value="add_other" />
     <MESSAGE value="add_view_admin" />
     <MESSAGE value="add_edit_category" />
@@ -934,7 +783,8 @@
     <MESSAGE value="video_start" />
     <MESSAGE value="font_fix" />
     <MESSAGE value="routes_fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="routes_fix" />
+    <MESSAGE value="add_hotOffers" />
+    <option name="LAST_COMMIT_MESSAGE" value="add_hotOffers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -956,34 +806,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="40" column="4" lean-forward="true" selection-start-line="40" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/editCharity.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="33" column="85" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CategoriesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CharityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Services/UploadPhotoService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -1212,13 +1034,6 @@
     <entry file="file://$PROJECT_DIR$/app/Csvjj.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="82" column="69" selection-start-line="82" selection-start-column="60" selection-end-line="82" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/viewLots.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1272,13 +1087,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MainController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1294">
-          <caret line="59" column="5" lean-forward="true" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/hotOffers.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="599">
@@ -1316,6 +1124,44 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MainController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="187" column="20" selection-start-line="187" selection-start-column="20" selection-end-line="187" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/sitemap.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="7" lean-forward="true" selection-end-line="186" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="77" column="2" lean-forward="true" selection-start-line="77" selection-start-column="2" selection-end-line="77" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/sitemap.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="48" lean-forward="true" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/robots.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>

@@ -1,218 +1,187 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>http://agromax.farm/</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>http://agromax.farm/products</loc>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://agromax.farm/hotOffers</loc>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>http://agromax.farm/company</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/founder</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/partnership</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/charity</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/contacts</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/offers?lang=en_GB&amp;cat=3</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/offers?lang=en_GB&amp;cat=5</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/offers?lang=en_GB&amp;cat=8</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/offers?lang=en_GB&amp;cat=6</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/offers?lang=en_GB&amp;cat=10</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/offers?lang=en_GB&amp;cat=9</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/offers?lang=en_GB&amp;cat=4</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/offers?lang=en_GB&amp;cat=7</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/offers?lang=en_GB&amp;cat=12</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/offers?lang=en_GB&amp;cat=2</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/offers?lang=en_GB&amp;cat=11</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/offers?lang=en_GB&amp;cat=18</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/offers?lang=en_GB&amp;cat=19</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/offers?lang=en_GB&amp;cat=14</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/offers?lang=en_GB&amp;cat=15</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/offers?lang=en_GB&amp;cat=16</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/offers?lang=en_GB&amp;cat=20</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/offers?lang=en_GB&amp;cat=17</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/offers?lang=en_GB&amp;cat=13</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://agromax.farm/confirmation?lang=en_GB&amp;offer=4</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://agromax.farm/confirmation?cat=5&amp;lang=en_GB&amp;offer=4</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://agromax.farm/confirmation?lang=en_GB&amp;offer=6</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://agromax.farm/confirmation?cat=4&amp;lang=en_GB&amp;offer=6</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://agromax.farm/confirmation?lang=en_GB&amp;offer=7</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://agromax.farm/confirmation?cat=4&amp;lang=en_GB&amp;offer=7</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://agromax.farm/confirmation?lang=en_GB&amp;offer=8</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://agromax.farm/confirmation?cat=4&amp;lang=en_GB&amp;offer=8</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://agromax.farm/confirmation?lang=en_GB&amp;offer=2</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://agromax.farm/confirmation?cat=7&amp;lang=en_GB&amp;offer=2</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://agromax.farm/confirmation?lang=en_GB&amp;offer=3</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://agromax.farm/confirmation?cat=7&amp;lang=en_GB&amp;offer=3</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://agromax.farm/confirmation?lang=en_GB&amp;offer=9</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://agromax.farm/confirmation?cat=12&amp;lang=en_GB&amp;offer=9</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://agromax.farm/confirmation?lang=en_GB&amp;offer=1</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://agromax.farm/confirmation?cat=2&amp;lang=en_GB&amp;offer=1</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://agromax.farm/confirmation?lang=en_GB&amp;offer=5</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://agromax.farm/confirmation?cat=11&amp;lang=en_GB&amp;offer=5</loc>
-  <lastmod>2019-03-12T16:41:30+00:00</lastmod>
+  <lastmod>2019-03-13T14:25:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 </urlset>

@@ -11,6 +11,11 @@ class Condition extends Model
         return $this->hasMany('App\Order');
     }
 
+    public function lot()
+    {
+        return $this->hasMany('App\Lot');
+    }
+
     public static function getConditions()
     {
         $conditions = Condition::all()->where('id', '<>', 1);

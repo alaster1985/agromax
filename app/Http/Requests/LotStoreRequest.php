@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Category;
+use App\Condition;
 use App\Delivery;
 use App\Product;
 use Illuminate\Foundation\Http\FormRequest;
@@ -29,6 +30,7 @@ class LotStoreRequest extends FormRequest
     {
         $productsId = Product::getProducts()->pluck('id')->all();
         $deliveriesId = Delivery::getDeliveries()->pluck('id')->all();
+        $conditionsId = Condition::getConditions()->pluck('id')->all();
         $categoriesId = Category::getCategories()->pluck('id')->all();
         $productsId['new'] = 'new';
         return [
@@ -40,10 +42,15 @@ class LotStoreRequest extends FormRequest
             'price' => 'required|integer|max:100000|min:10',
             'port' => 'required|max:100|min:3',
             'turkish' => 'required',
+            'special' => 'required',
             'port_photo' => 'required_without:lot_id|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'delivery_id' => [
                 'required',
                 Rule::in($deliveriesId),
+            ],
+            'condition_id' => [
+                'required',
+                Rule::in($conditionsId),
             ],
             'newProductName' => 'nullable|required_if:productId,new|max:25|min:3',
             'new_product_photo' => 'nullable|required_if:productId,new|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
@@ -67,7 +74,7 @@ class LotStoreRequest extends FormRequest
     {
         return [
             'productId.required' => 'Please, select the product',
-            'productId.in' => 'Nice try BRO ;) But set product from this select',
+            'productId.in' => 'Nice try BRO ;) But set product from this list',
             'tons.required' => 'Please, set amount',
             'tons.integer' => 'Please, use only numbers for amount',
             'tons.max' => 'Seriously, over 10000 tons?',
@@ -80,12 +87,15 @@ class LotStoreRequest extends FormRequest
             'port.max' => 'Shorter please, max 100 characters',
             'port.min' => 'Very short port name. At least 3 characters',
             'turkish.required' => 'Please, choose option for Turkish',
+            'special.required' => 'Please, choose option for HOT offer',
             'port_photo.required' => 'Please, choose a photo for port',
             'port_photo.image' => 'It was not an image',
             'port_photo.mime' => 'Nice try! But It was not an image',
             'port_photo.max' => 'Please give some a little smaller picture. Max 2 Mb',
             'delivery_id.required' => 'Please, select the incoterms',
-            'delivery_id.in' => 'Nice try BRO ;) But set incoterms from this select',
+            'delivery_id.in' => 'Nice try BRO ;) But set incoterms from this list',
+            'condition_id.required' => 'Please, select the conditions',
+            'condition_id.in' => 'Please set conditions from list, except "default"',
             'newProductName.required_if' => 'Please, set new product name',
             'newProductName.max' => 'Shorter please, max 25 characters',
             'newProductName.min' => 'Very short new product name. At least 3 characters',
@@ -94,7 +104,7 @@ class LotStoreRequest extends FormRequest
             'new_product_photo.mime' => 'Nice try! But It was not an image',
             'new_product_photo.max' => 'Please give some a little smaller picture. Max 2 Mb',
             'category.required' => 'Please, select the category',
-            'category.in' => 'Nice try BRO ;) But set category from this select',
+            'category.in' => 'Nice try BRO ;) But set category from this list',
             'description.required_if' => 'Please, set default description for this product',
             'description.required_with' => 'Please, set default description for this product',
             'description.max' => 'Shorter please, max 10000 characters (default description)',

@@ -22,27 +22,49 @@
                                 @if ($errors)
                                     <div class="error" style="display: block">{{($errors->first())}}</div>
                                 @endif
-                                <div class="col-md-4">
-                                    <div class="inline-form">
-                                        <label class="c-label">Product name</label>
-                                        <select name="productId">
-                                            @foreach(\App\Product::all()->where('id', '<>', 1)->sortBy('name') as $product)
-                                                <option value="{{$product->id}}">{{$product->name}}</option>
-                                            @endforeach
-                                            <option value="new">New</option>
-                                        </select>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="inline-form">
+                                            <label class="c-label">Product name</label>
+                                            <select name="productId">
+                                                @foreach(\App\Product::all()->where('id', '<>', 1)->sortBy('name') as $product)
+                                                    <option value="{{$product->id}}">{{$product->name}}</option>
+                                                @endforeach
+                                                <option value="new">New</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="inline-form">
-                                        <label class="c-label">Amount</label>
-                                        <input class="input-style" value="{{old('tons')}}" name="tons"/>
+                                    <div class="col-md-2">
+                                        <div class="inline-form">
+                                            <label class="c-label">Amount</label>
+                                            <input class="input-style" value="{{old('tons')}}" name="tons"/>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="inline-form">
-                                        <label class="c-label">Price per ton</label>
-                                        <input class="input-style" value="{{old('price')}}" name="price"/>
+                                    <div class="col-md-2">
+                                        <div class="inline-form">
+                                            <label class="c-label">Price per ton</label>
+                                            <input class="input-style" value="{{old('price')}}" name="price"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="inline-form">
+                                            <label class="c-label">Hot offer</label>
+                                            <select name="special">
+                                                <option disabled selected>Choose option</option>
+                                                <option id="typical" value="0">Typical</option>
+                                                <option id="hot" value="1">HOT</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="inline-form">
+                                            <label class="c-label">Conditions</label>
+                                            <select name="condition_id">
+                                                @foreach(\App\Condition::getConditions() as $condition)
+                                                    <option value="{{$condition->id}}">{{$condition->condition}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -93,7 +115,8 @@
                                     <div class="col-md-4 newProduct" style="display: none">
                                         <div class="inline-form">
                                             <label class="c-label">New Product Name</label>
-                                            <input class="input-style" value="{{old('newProductName')}}" name="newProductName"/>
+                                            <input class="input-style" value="{{old('newProductName')}}"
+                                                   name="newProductName"/>
                                         </div>
                                     </div>
 
@@ -118,15 +141,15 @@
 
                                 {{--@foreach(\App\Language::all() as $language)--}}
 
-                                    {{--<div class="col-md-12 newProduct" style="display: none">--}}
-                                        {{--<div class="inline-form">--}}
-                                            {{--<label class="c-label">Description for {{$language->name}}</label>--}}
-                                            {{--<textarea rows="4" class="input-style"--}}
-                                                      {{--name="description_id[{{$language->id}}]"--}}
-                                                      {{--placeholder="Description for {{$language->name}}"--}}
-                                            {{-->{{old('description_id.' . $language->id)}}</textarea>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
+                                {{--<div class="col-md-12 newProduct" style="display: none">--}}
+                                {{--<div class="inline-form">--}}
+                                {{--<label class="c-label">Description for {{$language->name}}</label>--}}
+                                {{--<textarea rows="4" class="input-style"--}}
+                                {{--name="description_id[{{$language->id}}]"--}}
+                                {{--placeholder="Description for {{$language->name}}"--}}
+                                {{-->{{old('description_id.' . $language->id)}}</textarea>--}}
+                                {{--</div>--}}
+                                {{--</div>--}}
 
                                 {{--@endforeach--}}
 

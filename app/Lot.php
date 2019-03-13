@@ -12,6 +12,7 @@ class Lot extends Model
     protected $fillable = [
         'product_id',
         'delivery_id',
+        'condition_id',
         'tons',
         'price',
         'port',
@@ -33,11 +34,11 @@ class Lot extends Model
         return $allLots;
     }
 
-//    public static function getSpecialLots()
-//    {
-//        $specialLots = Lot::all()->where('special', '=', 1);
-//        return $specialLots;
-//    }
+    public static function getHotOffersLots()
+    {
+        $hotOffersLots = Lot::all()->where('special', '=', 1);
+        return $hotOffersLots;
+    }
 
     public static function getLotById($id)
     {
@@ -54,6 +55,11 @@ class Lot extends Model
     public function delivery()
     {
         return $this->belongsTo('App\Delivery');
+    }
+
+    public function condition()
+    {
+        return $this->belongsTo('App\Condition');
     }
 
     public function product()
@@ -105,10 +111,12 @@ class Lot extends Model
         DB::transaction(function () use ($request) {
             $lotToUpdate = Lot::find($request->lot_id);
             $lotToUpdate->delivery_id = $request->delivery_id;
+            $lotToUpdate->condition_id = $request->condition_id;
             $lotToUpdate->tons = $request->tons;
             $lotToUpdate->price = $request->price;
             $lotToUpdate->port = $request->port;
             $lotToUpdate->turkish = $request->turkish;
+            $lotToUpdate->special = $request->special;
             $productForCurrentLot = Product::find(Lot::find($request->lot_id)->product->id);
             $productForCurrentLot->name = $request->product_name;
             $productForCurrentLot->category_id = $request->category;

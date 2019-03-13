@@ -24,7 +24,7 @@
                                 @endif
                                 <input type="hidden" name="lot_id" value="{{$lot->id}}">
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-md-3">
                                         <div class="inline-form">
                                             <label class="c-label">Product name</label>
                                             <input class="input-style"
@@ -32,16 +32,42 @@
                                                    value="{{\App\Lot::find($lot->id)->product->name}}"/>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-2">
                                         <div class="inline-form">
                                             <label class="c-label">Amount</label>
                                             <input class="input-style" name="tons" value="{{$lot->tons}}"/>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-2">
                                         <div class="inline-form">
-                                            <label class="c-label">Price</label>
+                                            <label class="c-label">Price per ton</label>
                                             <input class="input-style" name="price" value="{{$lot->price}}"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="inline-form">
+                                            <label class="c-label">Hot offer</label>
+                                            <select name="special">
+                                                <option id="typical" value="0">Typical</option>
+                                                <option id="hot" value="1">HOT</option>
+                                                @if($lot->special === 1)
+                                                    <script>document.getElementById('hot').selected = true</script>
+                                                @endif
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="inline-form">
+                                            <label class="c-label">Conditions</label>
+                                            <select name="condition_id">
+                                                @foreach(\App\Condition::all() as $condition)
+                                                    <option id="cond{{$condition->id}}"
+                                                            value="{{$condition->id}}">{{$condition->condition}}</option>
+                                                    @if($condition->id === $lot->condition_id)
+                                                        <script>document.getElementById("cond{{$condition->id}}").selected = true</script>
+                                                    @endif
+                                                @endforeach
+                                            </select>
                                         </div>
                                     </div>
                                 </div>

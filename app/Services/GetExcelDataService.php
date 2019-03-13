@@ -6,6 +6,11 @@ use App\Http\Controllers\Controller;
 use PhpOffice\PhpSpreadsheet\Exception;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 
+/**
+    all magic numbers are numbers of rows in the translation file
+    +1 = offset for rows in the translation file because of head
+*/
+
 class GetExcelDataService extends Controller
 {
     public static $inputFileType = 'Xlsx';
@@ -264,7 +269,7 @@ class GetExcelDataService extends Controller
             $reader->setReadDataOnly(true);
             $spreadsheet = $reader->load(self::$inputFileName);
             $translatedHeaderSiteNavList = [];
-            for ($i = 48; $i <= 55; $i++) {
+            for ($i = 48; $i <= 58; $i++) {
                 $translatedNavName = $spreadsheet
                     ->getSheetByName($lang)
                     ->getCell('M' . $i)

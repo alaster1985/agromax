@@ -32,6 +32,30 @@
                     </tr>
                     </tbody>
                 </table>
+                <table class="offers__table">
+                    <thead>
+                    <tr>
+                        <th>Conditions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>{{$lot->condition->condition}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table class="offers__table">
+                    <thead>
+                    <tr>
+                        <th>Port</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>{{$lot->port}}</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="conformation__wr col-sm-7 col-sm-offset-1">
                 <h2 class="conformation__title">Fill the form</h2>

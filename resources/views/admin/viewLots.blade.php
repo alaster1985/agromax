@@ -30,6 +30,8 @@
                                     <th>Incoterms</th>
                                     <th>Amount</th>
                                     <th>Price  per ton</th>
+                                    <th>Hot offer</th>
+                                    <th>Conditions</th>
                                     <th>Port</th>
                                     <th>Port photo</th>
                                     <th>Created_at</th>
@@ -63,6 +65,12 @@
                                         </td>
                                         <td>
                                             {{$lot->price}}
+                                        </td>
+                                        <td>
+                                            {{$lot->special ? 'HOT' : 'Typical'}}
+                                        </td>
+                                        <td>
+                                            {{\App\Condition::find($lot->condition_id)->condition}}
                                         </td>
                                         <td>
                                             {{$lot->port}}

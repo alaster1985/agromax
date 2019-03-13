@@ -4,7 +4,7 @@
     @include('layouts.slider')
     <section class="products container">
         <div class="row products__list">
-            <h2 class="products__main-title col-sm-12">Our products</h2>
+            <h2 class="products__main-title col-sm-12">{{$newNavNames[8] ?? 'Our products'}}</h2>
             <div class="products__main">
                 {{--<h3 class="visually-hidden products__main-title  col-sm-12">AgroMax makes focus at trade with products for health food but can offer to buyers wholesale supplies of ...</h3>--}}
                 @foreach($categoriesUp as $category)
@@ -23,7 +23,7 @@
                 @endforeach
             </div>
             <div class="products__others">
-                <h2 class="products__main-title  col-sm-12">AgroMax trades with next products too.</h2>
+                <h2 class="products__main-title  col-sm-12">{{$newNavNames[9] ?? 'AgroMax trades with next products too.'}}</h2>
                 <div class="products__other-groups">
 
                     @foreach($categoriesLow as $category)

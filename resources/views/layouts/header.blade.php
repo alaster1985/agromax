@@ -32,14 +32,18 @@
                         </button>
                     </div>
                     <div class="header__site-nav-wrapper navbar-collapse collapse">
-                        <ul @if(isset(Request::all()['lang']) && Request::all()['lang'] === 'ar_TN') class="header__site-nav site-nav__list--reverse" @else class="header__site-nav site-nav__list" @endif>
-                            <li class="site-nav__item"><a @if(Route::currentRouteName() === 'products')           class="site-nav__link site-nav__link--current" @else class="site-nav__link" @endif {{--class="site-nav__link"--}} href="products">{{$newNavNames[0] ?? 'Products'}}</a></li>
-                            <li class="site-nav__item"><a @if(Route::currentRouteName() === 'company')         class="site-nav__link site-nav__link--current" @else class="site-nav__link" @endif {{--class="site-nav__link"--}} href="company">{{$newNavNames[1] ?? 'Company'}}</a></li>
-                            <li class="site-nav__item"><a @if(Route::currentRouteName() === 'founder')         class="site-nav__link site-nav__link--current" @else class="site-nav__link" @endif {{--class="site-nav__link"--}} href="founder">{{$newNavNames[2] ?? 'Founder'}}</a></li>
-                            <li class="site-nav__item"><a @if(Route::currentRouteName() === 'exclusive')       class="site-nav__link site-nav__link--current" @else class="site-nav__link" @endif {{--class="site-nav__link"--}} href="exclusive">{{$newNavNames[3] ?? 'Make exclusive order'}}</a></li>
-                            <li class="site-nav__item"><a @if(Route::currentRouteName() === 'partnership')     class="site-nav__link site-nav__link--current" @else class="site-nav__link" @endif {{--class="site-nav__link"--}} href="partnership">{{$newNavNames[4] ?? 'Partnership program'}}</a></li>
-                            <li class="site-nav__item"><a @if(Route::currentRouteName() === 'charity')         class="site-nav__link site-nav__link--current" @else class="site-nav__link" @endif {{--class="site-nav__link"--}} href="charity">{{$newNavNames[5] ?? 'Charity'}}</a></li>
-                            <li class="site-nav__item"><a @if(Route::currentRouteName() === 'contacts')        class="site-nav__link site-nav__link--current" @else class="site-nav__link" @endif {{--class="site-nav__link"--}} href="contacts">{{$newNavNames[6] ?? 'Contacts'}}</a></li>
+                        <ul @if(isset(Request::all()['lang']) && Request::all()['lang'] === 'ar_TN')class="header__site-nav site-nav__list--reverse" @else class="header__site-nav site-nav__list" @endif>
+
+                            {{--indexes of $newNavNames from getHeaderSiteNavListByLang method from translation file--}}
+                            <li class="site-nav__item"><a @if(Route::currentRouteName() === 'products')     class="site-nav__link site-nav__link--current" @else class="site-nav__link" @endif {{--class="site-nav__link"--}} href="products">{{$newNavNames[0] ?? 'Products'}}</a></li>
+                            <li class="site-nav__item"><a @if(Route::currentRouteName() === 'hotOffers')    class="site-nav__link site-nav__link--current" @else class="site-nav__link" @endif {{--class="site-nav__link"--}} href="hotOffers">{{$newNavNames[10] ?? 'Hot Offers'}}</a></li>
+                            <li class="site-nav__item"><a @if(Route::currentRouteName() === 'company')      class="site-nav__link site-nav__link--current" @else class="site-nav__link" @endif {{--class="site-nav__link"--}} href="company">{{$newNavNames[1] ?? 'Company'}}</a></li>
+                            <li class="site-nav__item"><a @if(Route::currentRouteName() === 'founder')      class="site-nav__link site-nav__link--current" @else class="site-nav__link" @endif {{--class="site-nav__link"--}} href="founder">{{$newNavNames[2] ?? 'Founder'}}</a></li>
+                            <li class="site-nav__item"><a @if(Route::currentRouteName() === 'exclusive')    class="site-nav__link site-nav__link--current" @else class="site-nav__link" @endif {{--class="site-nav__link"--}} href="exclusive">{{$newNavNames[3] ?? 'Make exclusive order'}}</a></li>
+                            <li class="site-nav__item"><a @if(Route::currentRouteName() === 'partnership')  class="site-nav__link site-nav__link--current" @else class="site-nav__link" @endif {{--class="site-nav__link"--}} href="partnership">{{$newNavNames[4] ?? 'Partnership program'}}</a></li>
+                            <li class="site-nav__item"><a @if(Route::currentRouteName() === 'charity')      class="site-nav__link site-nav__link--current" @else class="site-nav__link" @endif {{--class="site-nav__link"--}} href="charity">{{$newNavNames[5] ?? 'Charity'}}</a></li>
+                            <li class="site-nav__item"><a @if(Route::currentRouteName() === 'contacts')     class="site-nav__link site-nav__link--current" @else class="site-nav__link" @endif {{--class="site-nav__link"--}} href="contacts">{{$newNavNames[6] ?? 'Contacts'}}</a></li>
+
                             <li class="site-nav__item site-nav__item--search">
                                 <div class="site-nav__search-icon fa fa-search">
                                     <form class="site-nav__search-form">

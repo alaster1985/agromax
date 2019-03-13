@@ -43,13 +43,15 @@ class MainController extends Controller
     {
         $categoriesUpDef = Category::getUpperCategories();
         $categoriesLowDef = Category::getLowerCategories();
-        $lang = $request->lang;
-        $headerNavListName = GetExcelDataService::getHeaderSiteNavListByLang($lang);
+        $language = $request->lang;
+        $lang = Language::checkLanguageSet($language);
+
         if (!$lang) {
-            $this->index();
+            return $this->index();
         } else {
-            $categoriesUp = GetExcelDataService::setCategoriesNameByLangAndId($lang, $categoriesUpDef);
-            $categoriesLow = GetExcelDataService::setCategoriesNameByLangAndId($lang, $categoriesLowDef);
+            $headerNavListName = GetExcelDataService::getHeaderSiteNavListByLang($language);
+            $categoriesUp = GetExcelDataService::setCategoriesNameByLangAndId($language, $categoriesUpDef);
+            $categoriesLow = GetExcelDataService::setCategoriesNameByLangAndId($language, $categoriesLowDef);
         }
         return view('index', ['categoriesUp' => $categoriesUp, 'categoriesLow' => $categoriesLow, 'newNavNames' => $headerNavListName]);
     }
@@ -179,5 +181,20 @@ class MainController extends Controller
 //            $lots = Lot::getLotsByCategoryId($request->cat);
 //            return view('offers', ['lots' => $lots, 'category' => $category->name, 'language' => $language[0]]);
 //        }
+    }
+
+    public function hotOffers(Request $request)
+    {
+        $language = $request->lang;
+        $lang = Language::checkLanguageSet($language);
+        $headerNavListName = GetExcelDataService::getHeaderSiteNavListByLang($language);
+        $hotOffersLotsDefault = Lot::getHotOffersLots();
+
+        if ($lang) {
+            $lots = GetExcelDataService::setProductsNameAndDescriptionForLotByIdAndLang($hotOffersLotsDefault, $language);
+        } else {
+            $lots = $hotOffersLotsDefault;
+        }
+        return view('hotOffers', ['lots' => $lots, 'newNavNames' => $headerNavListName]);
     }
 }

@@ -76,6 +76,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/sitemap', function () {return Response::view('sitemap')->header('Content-Type', 'application/xml');});
+//Route::get('/teste', function () {return \App\Http\Controllers\MailController::testEmail();});
 
 Route::get('/', 'MainController@index')->name('index');
 Route::get('/exclusive', 'MainController@exclusive')->name('exclusive');

@@ -12,7 +12,7 @@
                         <a class="products__img-wr" href="offers?lang={{Request::all()['lang'] ?? 'en_GB'}}&cat={{$category->id}}">
                             <img src="{{asset($category->photo)}}" alt="{{$category->new_name ?? $category->name}}">
                         </a>
-                        <h3 class="products__title">{{$category->new_name ?? $category->name}}</h3>
+                        <h3 class="products__title"><strong>{{$category->new_name ?? $category->name}}</strong></h3>
                         <p class="products__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
                             sollicitudin mi
                             ullamcorper, suscipit erat ac, pharetra magna. Donec vitae pharetra neque, at pulvinar mauris.
@@ -23,7 +23,7 @@
                 @endforeach
             </div>
             <div class="products__others">
-                <h2 class="products__main-title  col-sm-12">{{$newNavNames[9] ?? 'AgroMax trades with next products too.'}}</h2>
+                <h2 class="products__main-title for_categoriesLow col-sm-12">{{$newNavNames[9] ?? 'AgroMax trades with next products too.'}}</h2>
                 <div class="products__other-groups">
 
                     @foreach($categoriesLow as $category)
@@ -31,7 +31,7 @@
                             <a class="products__img-wr" href="offers?lang={{Request::all()['lang'] ?? 'en_GB'}}&cat={{$category->id}}">
                                 <img src="{{asset($category->photo)}}" alt="{{$category->new_name ?? $category->name}}">
                             </a>
-                            <h3 class="products__title">{{$category->new_name ?? $category->name}}</h3>
+                            <h3 class="products__title"><strong>{{$category->new_name ?? $category->name}}</strong></h3>
                             <p class="products__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
                                 sollicitudin mi
                                 ullamcorper, suscipit erat ac, pharetra magna. Donec vitae pharetra neque, at pulvinar mauris.

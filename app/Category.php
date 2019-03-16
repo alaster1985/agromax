@@ -20,13 +20,13 @@ class Category extends Model
 
     public static function getUpperCategories()
     {
-        $categories = Category::all()->where('type', '=', 'upper')->sortBy('name');
+        $categories = Category::all()->where('type', '=', 'upper')->sortBy('name', SORT_NATURAL|SORT_FLAG_CASE);
         return $categories;
     }
 
     public static function getLowerCategories()
     {
-        $categories = Category::all()->where('type', '=', 'lower')->sortBy('name');
+        $categories = Category::all()->where('type', '=', 'lower')->sortBy('name', SORT_NATURAL|SORT_FLAG_CASE);
         return $categories;
     }
 
@@ -34,7 +34,7 @@ class Category extends Model
     {
         $categories = Category::all()
             ->where('id', '<>', 1)
-            ->sortBy('name');
+            ->sortBy('name', SORT_NATURAL|SORT_FLAG_CASE);
         return $categories;
     }
 

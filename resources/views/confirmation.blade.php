@@ -1,10 +1,5 @@
 @include('layouts.header')
 <main>
-    {{--@if(session()->has('message'))--}}
-        {{--<div class="alert alert-success" align="center">--}}
-            {{--{{ session()->get('message') }}--}}
-        {{--</div>--}}
-    {{--@endif--}}
     <section class="container conformation ">
         <div class="row">
             <div class="offers__item offers__item--selected col-sm-4">
@@ -12,27 +7,25 @@
                     <img src="{{asset($lot->port_photo)}}" alt="Our offers">
                 </a>
                 @if($lot->product_id == 1)
-                    <h3 class="offers__title">{{$lot->product_name}}</h3>
+                    <h3 class="offers__title"><strong>{{$lot->product_name}}</strong></h3>
                 @else
-                    <h3 class="offers__title">{{$lot->product_new_name ?? \App\Product::find($lot->product_id)->name}}</h3>
+                    <h3 class="offers__title"><strong>{{$lot->product_new_name ?? \App\Product::find($lot->product_id)->name}}</strong></h3>
                 @endif
-                <table class="offers__table">
+                <table class="offers__table for_offers_table">
                     <thead>
                     <tr>
                         <th>Incoterms</th>
-                        <th>Amount</th>
-                        <th>Price</th>
+                        <th>Port</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
                         <td>{{\App\Delivery::find($lot->delivery_id)->name}}</td>
-                        <td>{{$lot->tons}} tons</td>
-                        <td>{{$lot->price}} $</td>
+                        <td>{{$lot->port}}</td>
                     </tr>
                     </tbody>
                 </table>
-                <table class="offers__table">
+                <table class="offers__table for_offers_table">
                     <thead>
                     <tr>
                         <th>Conditions</th>
@@ -47,12 +40,14 @@
                 <table class="offers__table">
                     <thead>
                     <tr>
-                        <th>Port</th>
+                        <th>Amount</th>
+                        <th>Price/ton</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td>{{$lot->port}}</td>
+                        <td>{{$lot->tons}} tons</td>
+                        <td>{{$lot->price}} $</td>
                     </tr>
                     </tbody>
                 </table>

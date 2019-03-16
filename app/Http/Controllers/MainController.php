@@ -36,7 +36,8 @@ class MainController extends Controller
     {
         $categoriesUp = Category::getUpperCategories();
         $categoriesLow = Category::getLowerCategories();
-        return view('index', ['categoriesUp' => $categoriesUp, 'categoriesLow' => $categoriesLow]);
+        $keywords = Language::getKeywordsByLanguageCode('en_GB');
+        return view('index', ['categoriesUp' => $categoriesUp, 'categoriesLow' => $categoriesLow, 'keywords' => $keywords]);
     }
 
     public function products(Request $request)
@@ -45,6 +46,7 @@ class MainController extends Controller
         $categoriesLowDef = Category::getLowerCategories();
         $language = $request->lang;
         $lang = Language::checkLanguageSet($language);
+        $keywords = Language::getKeywordsByLanguageCode($language);
 
         if (!$lang) {
             return $this->index();
@@ -53,24 +55,26 @@ class MainController extends Controller
             $categoriesUp = GetExcelDataService::setCategoriesNameByLangAndId($language, $categoriesUpDef);
             $categoriesLow = GetExcelDataService::setCategoriesNameByLangAndId($language, $categoriesLowDef);
         }
-        return view('index', ['categoriesUp' => $categoriesUp, 'categoriesLow' => $categoriesLow, 'newNavNames' => $headerNavListName]);
+        return view('index', ['categoriesUp' => $categoriesUp, 'categoriesLow' => $categoriesLow, 'newNavNames' => $headerNavListName, 'keywords' => $keywords]);
     }
 
     public function company(Request $request)
     {
         $lang = $request->lang;
+        $keywords = Language::getKeywordsByLanguageCode($lang);
         $companyInfo = GetExcelDataService::getCompanyInfoByLang($lang);
         $headerNavListName = GetExcelDataService::getHeaderSiteNavListByLang($lang);
         $presentations = Presentation::getPresentations()->where('disable', '=', 0);
-        return view('company', ['companyInfo' => $companyInfo, 'newNavNames' => $headerNavListName, 'presentations' => $presentations]);
+        return view('company', ['companyInfo' => $companyInfo, 'newNavNames' => $headerNavListName, 'presentations' => $presentations, 'keywords' => $keywords]);
     }
 
     public function partnership(Request $request)
     {
         $lang = $request->lang;
+        $keywords = Language::getKeywordsByLanguageCode($lang);
         $partnershipInfo = GetExcelDataService::getPartnershipInfoByLang($lang);
         $headerNavListName = GetExcelDataService::getHeaderSiteNavListByLang($lang);
-        return view('partnership', ['partnershipInfo' => $partnershipInfo, 'newNavNames' => $headerNavListName]);
+        return view('partnership', ['partnershipInfo' => $partnershipInfo, 'newNavNames' => $headerNavListName, 'keywords' => $keywords]);
     }
 
     public function exclusive(Request $request)
@@ -79,23 +83,25 @@ class MainController extends Controller
         $deliveries = Delivery::getDeliveries();
         $conditions = Condition::getConditions();
         $productsDef = Product::getProducts();
+        $keywords = Language::getKeywordsByLanguageCode($lang);
         $products = GetExcelDataService::setProductsNameAndDescriptionByIdAndLang($productsDef, $lang);
         $headerNavListName = GetExcelDataService::getHeaderSiteNavListByLang($lang);
-        return view('exclusive', ['conditions' => $conditions, 'products' => $products, 'deliveries' => $deliveries, 'newNavNames' => $headerNavListName]);
+        return view('exclusive', ['conditions' => $conditions, 'products' => $products, 'deliveries' => $deliveries, 'newNavNames' => $headerNavListName, 'keywords' => $keywords]);
     }
 
     public function confirmationById(Request $request)
     {
         $language = $request->lang;
         $offer = $request->offer;
+        $keywords = Language::getKeywordsByLanguageCode($language);
         $headerNavListName = GetExcelDataService::getHeaderSiteNavListByLang($language);
         $lotD = Lot::getLotById($offer);
         $lot = GetExcelDataService::setProductNameAndDescriptionForLotByIdAndLang($lotD, $language);
         if (!is_null($lotD)) {
-            return view('confirmation', ['lot' => $lot, 'newNavNames' => $headerNavListName]);
+            return view('confirmation', ['lot' => $lot, 'newNavNames' => $headerNavListName, 'keywords' => $keywords]);
         } else {
             $lots = Lot::paginate(24);
-            return view('offers', ['lots' => $lots, 'newNavNames' => $headerNavListName]);
+            return view('offers', ['lots' => $lots, 'newNavNames' => $headerNavListName, 'keywords' => $keywords]);
         }
     }
 
@@ -109,28 +115,31 @@ class MainController extends Controller
 //
 //    };
         $lang = $request->lang;
+        $keywords = Language::getKeywordsByLanguageCode($lang);
         $exclusiveLotDef = Lot::makeExclusiveLot($request);
         $headerNavListName = GetExcelDataService::getHeaderSiteNavListByLang($lang);
         $exclusiveLot = GetExcelDataService::setProductNameAndDescriptionForLotByIdAndLang($exclusiveLotDef, $lang);
-        return view('confirmation', ['lot' => $exclusiveLot, 'newNavNames' => $headerNavListName]);
+        return view('confirmation', ['lot' => $exclusiveLot, 'newNavNames' => $headerNavListName, 'keywords' => $keywords]);
     }
 
     public function charity(Request $request)
     {
         $lang = $request->lang;
+        $keywords = Language::getKeywordsByLanguageCode($lang);
         $charityInfo = GetExcelDataService::getCharityInfoByLang($lang);
         $charityPostsDefault = Charity::getCharityPosts()->where('disable', '=', 0)->sortByDesc('created_at');
         $charityPosts = GetExcelDataService::setCharityTitleAndPostTextByIdsAndLang($charityPostsDefault, $lang);
         $headerNavListName = GetExcelDataService::getHeaderSiteNavListByLang($lang);
-        return view('charity', ['charityInfo' => $charityInfo, 'newNavNames' => $headerNavListName, 'charityPosts' => $charityPosts]);
+        return view('charity', ['charityInfo' => $charityInfo, 'newNavNames' => $headerNavListName, 'charityPosts' => $charityPosts, 'keywords' => $keywords]);
     }
 
     public function contacts(Request $request)
     {
         $lang = $request->lang;
+        $keywords = Language::getKeywordsByLanguageCode($lang);
         $contactsInfo = GetExcelDataService::getContactsInfoByLang($lang);
         $headerNavListName = GetExcelDataService::getHeaderSiteNavListByLang($lang);
-        return view('contacts', ['contactsInfo' => $contactsInfo, 'newNavNames' => $headerNavListName]);
+        return view('contacts', ['contactsInfo' => $contactsInfo, 'newNavNames' => $headerNavListName, 'keywords' => $keywords]);
     }
 
     public function founder(Request $request)
@@ -138,15 +147,17 @@ class MainController extends Controller
         $directory = 'videos';
         $videos = array_diff(scandir($directory), array('..', '.'));
         $lang = $request->lang;
+        $keywords = Language::getKeywordsByLanguageCode($lang);
         $founderInfo = GetExcelDataService::getFounderInfoByLang($lang);
         $headerNavListName = GetExcelDataService::getHeaderSiteNavListByLang($lang);
-        return view('founder', ['founderInfo' => $founderInfo, 'newNavNames' => $headerNavListName, 'videos' => $videos]);
+        return view('founder', ['founderInfo' => $founderInfo, 'newNavNames' => $headerNavListName, 'videos' => $videos, 'keywords' => $keywords]);
     }
 
     public function offers(Request $request)
     {
         $language = $request->lang;
         $categoryId = $request->cat;
+        $keywords = Language::getKeywordsByLanguageCode($language);
         $cat = Category::checkCategoryExist($categoryId);
         $lang = Language::checkLanguageSet($language);
         $headerNavListName = GetExcelDataService::getHeaderSiteNavListByLang($language);
@@ -157,18 +168,18 @@ class MainController extends Controller
             $lotsLotsByCategoryId = Lot::getLotsByCategoryId($categoryId);
             $lots = GetExcelDataService::setProductsNameAndDescriptionForLotByIdAndLang($lotsLotsByCategoryId,
                 $language);
-            return view('offers', ['lots' => $lots, 'category' => $categoryName, 'newNavNames' => $headerNavListName]);
+            return view('offers', ['lots' => $lots, 'category' => $categoryName, 'newNavNames' => $headerNavListName, 'keywords' => $keywords]);
         } elseif ($lang) {
             $lotsDefault = Lot::paginate(24);
             $lots = GetExcelDataService::setProductsNameAndDescriptionForLotByIdAndLang($lotsDefault, $language);
-            return view('offers', ['lots' => $lots, 'newNavNames' => $headerNavListName]);
+            return view('offers', ['lots' => $lots, 'newNavNames' => $headerNavListName, 'keywords' => $keywords]);
         } elseif ($cat) {
             $category = Category::getCategoryById($categoryId);
             $lots = Lot::getLotsByCategoryId($categoryId);
-            return view('offers', ['category' => $category->name, 'lots' => $lots, 'newNavNames' => $headerNavListName]);
+            return view('offers', ['category' => $category->name, 'lots' => $lots, 'newNavNames' => $headerNavListName, 'keywords' => $keywords]);
         } else {
             $lots = Lot::paginate(24);
-            return view('offers', ['lots' => $lots, 'newNavNames' => $headerNavListName]);
+            return view('offers', ['lots' => $lots, 'newNavNames' => $headerNavListName, 'keywords' => $keywords]);
         }
 
 
@@ -186,6 +197,7 @@ class MainController extends Controller
     public function hotOffers(Request $request)
     {
         $language = $request->lang;
+        $keywords = Language::getKeywordsByLanguageCode($language);
         $lang = Language::checkLanguageSet($language);
         $headerNavListName = GetExcelDataService::getHeaderSiteNavListByLang($language);
         $hotOffersLotsDefault = Lot::getHotOffersLots();
@@ -195,6 +207,6 @@ class MainController extends Controller
         } else {
             $lots = $hotOffersLotsDefault;
         }
-        return view('hotOffers', ['lots' => $lots, 'newNavNames' => $headerNavListName]);
+        return view('hotOffers', ['lots' => $lots, 'newNavNames' => $headerNavListName, 'keywords' => $keywords]);
     }
 }

@@ -16,12 +16,22 @@ class Language extends Model
         'name',
         'code',
         'code_page',
+        'keywords',
     ];
 
     public static function getLanguageByCode($code)
     {
         $language = Language::all()->where('code', '=', $code);
         return $language;
+    }
+
+    public static function getKeywordsByLanguageCode($code)
+    {
+        if (!self::checkLanguageSet($code) || !Language::all()->where('code', '=', $code)->first()->keywords) {
+            $code = 'en_GB';
+        }
+        $keywords = Language::all()->where('code', '=', $code)->first()->keywords;
+        return $keywords;
     }
 
     public static function getLanguages()
@@ -43,7 +53,7 @@ class Language extends Model
 //        $languageToUpdate->code = $request->code;
         $languageToUpdate->disable = $request->disable;
 //        $languageToUpdate->code_page = $request->code_page;
-        $languageToUpdate->code_page = 'for' . $request->name;
+//        $languageToUpdate->code_page = 'for' . $request->name;
         $languageToUpdate->save();
     }
 

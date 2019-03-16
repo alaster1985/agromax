@@ -11,21 +11,19 @@
                             <img style="width: 5%; position: absolute; top: 0; left: 0;" src="{{asset('images/hotoffer.jpg')}}">
                         @endif
                     </a>
-                    <h3 class="offers__title">{{$lot->product_name ?? $lot->product->name}}</h3>
+                    <h3 class="offers__title"><strong>{{$lot->product_name ?? $lot->product->name}}</strong></h3>
                     <p class="products__desc">{{$lot->description ?? \App\Product::find($lot->product_id)->description}}</p>
                     <table class="offers__table" style="margin-bottom: -2px">
                         <thead>
                         <tr>
                             <th>Incoterms</th>
-                            <th>Amount</th>
-                            <th>Price/ton</th>
+                            <th>Port</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <td>{{$lot->delivery->name}}</td>
-                            <td>{{$lot->tons}} tons</td>
-                            <td>from {{$lot->price}}$</td>
+                            <td>{{$lot->port}}</td>
                         </tr>
                         </tbody>
                     </table>
@@ -44,12 +42,14 @@
                     <table class="offers__table">
                         <thead>
                         <tr>
-                            <th>Port</th>
+                            <th>Amount</th>
+                            <th>Price/ton</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <td>{{$lot->port}}</td>
+                            <td>{{$lot->tons}} tons</td>
+                            <td>from {{$lot->price}}$</td>
                         </tr>
                         </tbody>
                     </table>

@@ -36,4 +36,13 @@ class MailController extends Controller
             $message->from('post@agromax.farm');
         });
     }
+
+//    public static function testEmail()
+//    {
+//        Mail::send('test', [], function ($message){
+//            $message->from('hello@app.com', 'Your Application');
+//
+//            $message->to('skrypnik.andrii@gmail.com', 'test')->subject('TEST');
+//        });
+//    }
 }

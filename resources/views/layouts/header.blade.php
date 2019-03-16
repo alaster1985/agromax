@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="{{strtolower($keywords)}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Agromax</title>
@@ -34,7 +34,8 @@
                     <div class="header__site-nav-wrapper navbar-collapse collapse">
                         <ul @if(isset(Request::all()['lang']) && Request::all()['lang'] === 'ar_TN')class="header__site-nav site-nav__list--reverse" @else class="header__site-nav site-nav__list" @endif>
 
-                            {{--indexes of $newNavNames from getHeaderSiteNavListByLang method from translation file--}}
+                            <!-- indexes of $newNavNames from getHeaderSiteNavListByLang method from translation file -->
+
                             <li class="site-nav__item"><a @if(Route::currentRouteName() === 'products')     class="site-nav__link site-nav__link--current" @else class="site-nav__link" @endif {{--class="site-nav__link"--}} href="products">{{$newNavNames[0] ?? 'Products'}}</a></li>
                             <li class="site-nav__item"><a @if(Route::currentRouteName() === 'hotOffers')    class="site-nav__link site-nav__link--current" @else class="site-nav__link" @endif {{--class="site-nav__link"--}} href="hotOffers">{{$newNavNames[10] ?? 'Hot Offers'}}</a></li>
                             <li class="site-nav__item"><a @if(Route::currentRouteName() === 'company')      class="site-nav__link site-nav__link--current" @else class="site-nav__link" @endif {{--class="site-nav__link"--}} href="company">{{$newNavNames[1] ?? 'Company'}}</a></li>

@@ -4,4 +4,4 @@ User-agent: Slurp
 Disallow:
 User-agent: *
 Disallow:
-Sitemap: http://agromax.farm/sitemap.xml
+Sitemap: http://agromax.farm/sitemap

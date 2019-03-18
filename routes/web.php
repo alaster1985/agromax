@@ -41,6 +41,8 @@ Route::middleware('auth')->group(function () {
     Route::post('admin/updateLot', 'Admin\LotsController@updateLot')->name('updateLot');
     Route::get('admin/createLot', 'Admin\LotsController@createLot')->name('createLot');
     Route::post('admin/addLot', 'Admin\LotsController@addLot')->name('addLot');
+    Route::get('admin/deleteLot/{id}', 'Admin\LotsController@deleteLot')->name('deleteLot');
+
 
     Route::get('admin/viewExLots', 'Admin\ExLotsController@viewExLots')->name('viewExLots');
 
@@ -77,6 +79,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/sitemap', function () {return Response::view('sitemap')->header('Content-Type', 'application/xml');});
 //Route::get('/teste', function () {return \App\Http\Controllers\MailController::testEmail();});
+Route::get('/testemail', function () {return view('mail');});
 
 Route::get('/', 'MainController@index')->name('index');
 Route::get('/exclusive', 'MainController@exclusive')->name('exclusive');

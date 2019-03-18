@@ -41,4 +41,10 @@ class LotsController extends Controller
         Lot::updateLot($request);
         return redirect()->back()->with('message', 'DONE!');
     }
+
+    public function deleteLot($id)
+    {
+        Lot::deleteLot($id);
+        return redirect()->back()->with('message', 'DONE!');
+    }
 }

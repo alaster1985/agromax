@@ -23,6 +23,7 @@ class CreateLotTable extends Migration
             $table->boolean('turkish')->default(0);
             $table->string('port_photo', 100);
             $table->boolean('special')->default(0);
+            $table->boolean('isdeleted')->default(0);
             $table->timestamps();
         });
     }

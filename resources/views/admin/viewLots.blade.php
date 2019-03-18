@@ -29,7 +29,7 @@
                                     <th>Category</th>
                                     <th>Incoterms</th>
                                     <th>Amount</th>
-                                    <th>Price  per ton</th>
+                                    <th>Price per ton</th>
                                     <th>Hot offer</th>
                                     <th>Conditions</th>
                                     <th>Port</th>
@@ -38,7 +38,8 @@
                                     <th>Updated_at</th>
                                     @if(\App\User::find(Auth::id())->role_id === 3)
                                     @else
-                                    <th>Edit</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
                                     @endif
                                 </tr>
                                 </thead>
@@ -52,7 +53,8 @@
                                             {{\App\Lot::find($lot->id)->product->name}}
                                         </td>
                                         <td>
-                                            <img style="height: 75px" src="{{asset(\App\Lot::find($lot->id)->product->photo)}}">
+                                            <img style="height: 75px"
+                                                 src="{{asset(\App\Lot::find($lot->id)->product->photo)}}">
                                         </td>
                                         <td>
                                             {{\App\Product::find($lot->product_id)->category->name}}
@@ -86,10 +88,16 @@
                                         </td>
                                         @if(\App\User::find(Auth::id())->role_id === 3)
                                         @else
-                                        <td>
-                                            {{--<a href="{{route('editLots',$lot->id)}}">+</a>--}}
-                                            <a href="editLots?lot={{$lot->id}}">+</a>
-                                        </td>
+                                            <td>
+                                                {{--<a href="{{route('editLots',$lot->id)}}">+</a>--}}
+                                                <a href="editLots?lot={{$lot->id}}">+</a>
+                                            </td>
+                                            <td>
+                                                {{ csrf_field()}}
+                                                <a href="{{route('deleteLot',$lot->id)}}"
+                                                   onclick="return confirm('Are you sure you want to delete this Bid?');">-</a>
+                                                {{ csrf_field()}}
+                                            </td>
                                         @endif
                                     </tr>
                                 @endforeach

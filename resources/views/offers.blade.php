@@ -13,7 +13,7 @@
                     <a class="offer__img-wr"
                        href="{{ Request::root() . '/confirmation?lang=' . (Request::all()['lang'] ?? 'en_GB') . '&offer=' . $lot->id}}">
                         @if($lot->special)
-                            <img style="width: 5%; position: absolute; top: 0; left: 0;" src="{{asset('images/hotoffer.jpg')}}">
+                            <img class="hot_offer_img" src="{{asset('images/hotoffer.jpg')}}">
                         @endif
                         <img src="{{asset($lot->product->photo)}}" alt="Our offers">
                     </a>

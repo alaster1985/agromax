@@ -95,7 +95,7 @@ class MainController extends Controller
         $offer = $request->offer;
         $keywords = Language::getKeywordsByLanguageCode($language);
         $headerNavListName = GetExcelDataService::getHeaderSiteNavListByLang($language);
-        $lotD = Lot::getLotById($offer);
+        $lotD = Lot::getLotById($offer); // default lot data
         $lot = GetExcelDataService::setProductNameAndDescriptionForLotByIdAndLang($lotD, $language);
         if (!is_null($lotD)) {
             return view('confirmation', ['lot' => $lot, 'newNavNames' => $headerNavListName, 'keywords' => $keywords]);
@@ -170,7 +170,7 @@ class MainController extends Controller
                 $language);
             return view('offers', ['lots' => $lots, 'category' => $categoryName, 'newNavNames' => $headerNavListName, 'keywords' => $keywords]);
         } elseif ($lang) {
-            $lotsDefault = Lot::paginate(24);
+            $lotsDefault = Lot::where('isdeleted', '=', 0)->paginate(24);
             $lots = GetExcelDataService::setProductsNameAndDescriptionForLotByIdAndLang($lotsDefault, $language);
             return view('offers', ['lots' => $lots, 'newNavNames' => $headerNavListName, 'keywords' => $keywords]);
         } elseif ($cat) {
@@ -178,7 +178,7 @@ class MainController extends Controller
             $lots = Lot::getLotsByCategoryId($categoryId);
             return view('offers', ['category' => $category->name, 'lots' => $lots, 'newNavNames' => $headerNavListName, 'keywords' => $keywords]);
         } else {
-            $lots = Lot::paginate(24);
+            $lots = Lot::where('isdeleted', '=', 0)->paginate(24);
             return view('offers', ['lots' => $lots, 'newNavNames' => $headerNavListName, 'keywords' => $keywords]);
         }
 

@@ -8,12 +8,12 @@
                        href="{{ Request::root() . '/confirmation?lang=' . (Request::all()['lang'] ?? 'en_GB') . '&offer=' . $lot->id}}">
                         <img src="{{asset($lot->product->photo)}}" alt="Our offers">
                         @if($lot->special)
-                            <img style="width: 5%; position: absolute; top: 0; left: 0;" src="{{asset('images/hotoffer.jpg')}}">
+                            <img class="hot_offer_img" src="{{asset('images/hotoffer.jpg')}}">
                         @endif
                     </a>
                     <h3 class="offers__title"><strong>{{$lot->product_name ?? $lot->product->name}}</strong></h3>
                     <p class="products__desc">{{$lot->description ?? \App\Product::find($lot->product_id)->description}}</p>
-                    <table class="offers__table" style="margin-bottom: -2px">
+                    <table class="offers__table for_offers_table">
                         <thead>
                         <tr>
                             <th>Incoterms</th>
@@ -27,7 +27,7 @@
                         </tr>
                         </tbody>
                     </table>
-                    <table class="offers__table" style="margin-bottom: -2px">
+                    <table class="offers__table for_offers_table">
                         <thead>
                         <tr>
                             <th>Conditions</th>

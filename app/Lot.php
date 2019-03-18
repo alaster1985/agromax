@@ -24,19 +24,27 @@ class Lot extends Model
     public static function getLotsByCategoryId($id)
     {
         $productsIdByCategoryId = Product::getProductsByCategoryId($id)->pluck('id')->all();
-        $lotsByCategoryId = Lot::all()->whereIn('product_id', $productsIdByCategoryId)->sortBy('product_id');
+        $lotsByCategoryId = Lot::all()
+            ->where('isdeleted', '=', 0)
+            ->whereIn('product_id', $productsIdByCategoryId);
+//            ->sortBy('product_id');
+        $lotsByCategoryId = $lotsByCategoryId->sortBy(function ($lotsByCategoryId) {
+            return sprintf('%-12s%s', $lotsByCategoryId->product_id, $lotsByCategoryId->port);
+        });
         return $lotsByCategoryId;
     }
 
     public static function getAllLots()
     {
-        $allLots = Lot::orderByDesc('created_at')->paginate(17);
+        $allLots = Lot::where('isdeleted', '=', 0)->orderByDesc('created_at')->paginate(17);
         return $allLots;
     }
 
     public static function getHotOffersLots()
     {
-        $hotOffersLots = Lot::all()->where('special', '=', 1);
+        $hotOffersLots = Lot::all()
+            ->where('special', '=', 1)
+            ->where('isdeleted', '=', 0);
         return $hotOffersLots;
     }
 
@@ -152,5 +160,12 @@ class Lot extends Model
 
             $lotToUpdate->save();
         });
+    }
+
+    public static function deleteLot($id)
+    {
+        $lotForDelet = Lot::find($id);
+        $lotForDelet->isdeleted = 1;
+        $lotForDelet->save();
     }
 }

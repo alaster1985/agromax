@@ -39,8 +39,9 @@ class MailController extends Controller
 
 //    public static function testEmail()
 //    {
-//        Mail::send('test', [], function ($message){
-//            $message->from('hello@app.com', 'Your Application');
+//        $aaa = 'asd';
+//        Mail::send('mail', ['eee' => $aaa], function ($message){
+//            $message->from('post@agromax.farm', 'Your Order');
 //
 //            $message->to('skrypnik.andrii@gmail.com', 'test')->subject('TEST');
 //        });

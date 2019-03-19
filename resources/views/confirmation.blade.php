@@ -2,55 +2,59 @@
 <main>
     <section class="container conformation ">
         <div class="row">
-            <div class="offers__item offers__item--selected col-sm-4">
-                <a class="offer__img-wr" href="#">
-                    <img src="{{asset($lot->port_photo)}}" alt="Our offers">
-                </a>
-                @if($lot->product_id == 1)
-                    <h3 class="offers__title"><strong>{{$lot->product_name}}</strong></h3>
-                @else
-                    <h3 class="offers__title"><strong>{{$lot->product_new_name ?? \App\Product::find($lot->product_id)->name}}</strong></h3>
-                @endif
-                <table class="offers__table for_offers_table">
-                    <thead>
-                    <tr>
-                        <th>Incoterms</th>
-                        <th>Port</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>{{\App\Delivery::find($lot->delivery_id)->name}}</td>
-                        <td>{{$lot->port}}</td>
-                    </tr>
-                    </tbody>
-                </table>
-                <table class="offers__table for_offers_table">
-                    <thead>
-                    <tr>
-                        <th>Conditions</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>{{$lot->condition->condition}}</td>
-                    </tr>
-                    </tbody>
-                </table>
-                <table class="offers__table">
-                    <thead>
-                    <tr>
-                        <th>Amount</th>
-                        <th>Price/ton</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>{{$lot->tons}} tons</td>
-                        <td>{{$lot->price}} $</td>
-                    </tr>
-                    </tbody>
-                </table>
+            <div itemscope itemtype="http://schema.org/Product">
+                <div class="offers__item offers__item--selected col-sm-4">
+                    <a class="offer__img-wr" href="#">
+                        <img itemprop="image" src="{{asset($lot->port_photo)}}" alt="Our offers">
+                    </a>
+                    @if($lot->product_id == 1)
+                        <h3 itemprop="name" class="offers__title"><strong>{{$lot->product_name}}</strong></h3>
+                    @else
+                        <h3 itemprop="name" class="offers__title"><strong>{{$lot->product_new_name ?? \App\Product::find($lot->product_id)->name}}</strong></h3>
+                    @endif
+                    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <table class="offers__table for_offers_table">
+                            <thead>
+                            <tr>
+                                <th>Incoterms</th>
+                                <th>Port</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>{{$lot->delivery->name}}</td>
+                                <td>{{$lot->port}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="offers__table for_offers_table">
+                            <thead>
+                            <tr>
+                                <th>Conditions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>{{$lot->condition->condition}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="offers__table">
+                            <thead>
+                            <tr>
+                                <th>Amount</th>
+                                <th>Price/ton</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>{{$lot->tons}} tons</td>
+                                <td><span itemprop="price">{{$lot->price}}</span><span itemprop="priceCurrency" content="USD"> $</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
             <div class="conformation__wr col-sm-7 col-sm-offset-1">
                 <h2 class="conformation__title">Fill the form</h2>
@@ -100,7 +104,6 @@
     </section>
     <div @if (session()->has('message')) class="modal-overlay active" @else class="modal-overlay" @endif></div>
     <div @if (session()->has('message')) class="modal__confirm active" @else class="modal__confirm" @endif>Your order has been processed<span class="modal__confirm-close fa fa-times"></span>
-    {{--<div class="modal__confirm">Your order has been processed<span class="modal__confirm-close fa fa-times"></span>--}}
     </div>
 </main>
 @include('layouts.footer')

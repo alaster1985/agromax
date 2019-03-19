@@ -54,37 +54,29 @@
                 width: auto !important;
             }
         }
+
+        @media (max-width: 620px) {
+
+            .socials{
+                width: 100% !important;;
+                margin-bottom: 10px !important;;
+            }
+        }
         /* -------------------------------------
             PRESERVE THESE STYLES IN THE HEAD
         ------------------------------------- */
         @media all {
-            .ExternalClass {
-                width: 100%;
+            .socials a:hover,
+            .socials a:focus{
+                opacity: 0.8;
             }
-            .ExternalClass,
-            .ExternalClass p,
-            .ExternalClass span,
-            .ExternalClass font,
-            .ExternalClass td,
-            .ExternalClass div {
-                line-height: 100%;
-            }
-            .apple-link a {
-                color: inherit !important;
-                font-family: inherit !important;
-                font-size: inherit !important;
-                font-weight: inherit !important;
-                line-height: inherit !important;
-                text-decoration: none !important;
-            }
-            .btn-primary table td:hover {
-                background-color: #34495e !important;
-            }
-            .btn-primary a:hover {
-                background-color: #34495e !important;
-                border-color: #34495e !important;
+
+            .link:hover,
+            .link:focus{
+                color: #c480c4 !important;
             }
         }
+
     </style>
 </head>
 <body class="" style="background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
@@ -103,11 +95,11 @@
                         <td class="wrapper" style="font-family: sans-serif; font-size: 14px; vertical-align: top; box-sizing: border-box; padding: 20px;">
                             <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                                 <tr style="text-align: center">
-                                    <td><a href="http://agromax.farm" style="display: block; width=100px; height=auto; margin-bottom: 50px;"><img src="http://agromax.farm/images/logo.jpg" alt="Agromax" width="100px" height="auto"></a></td>
+                                    <td><a href="http://agromax.farm" style="display: block; width: 100px; height: auto; margin-bottom: 50px;"><img src="{{$message->embed(public_path() . '/images/logo.jpg')}}" alt="Agromax" width="100px" height="auto"></a></td>
                                 </tr>
                                 <tr>
                                     <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">
-                                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Dr Client,</p>
+                                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Dr Client, {{$eee}}</p>
                                         <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Your order has been processed.</p>
                                         <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">................................................</p>
                                         <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">We will contact you soon !</p>
@@ -125,18 +117,24 @@
                 <div class="footer" style="clear: both; Margin-top: 10px; text-align: center; width: 100%;">
                     <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                         <tr>
-                            <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center;">
-                                <ul style="padding: 0; margin: 0; list-style-type: none">
-                                    <li style="display: inline-block"><a class="fab fa-skype" href="skype:+380919861009?call" target="_blank" style="text-decoration: none;"></a></li>
-                                    <li style="display: inline-block"><a class="fab fa-viber" href="viber://chat?number=380919861009" target="_blank" style="text-decoration: none;"></a></li>
-                                    <li style="display: inline-block"><a class="fab fa-whatsapp" href="https://api.whatsapp.com/send?phone=380919861009" target="_blank" style="text-decoration: none;"></a></li>
-                                    <li style="display: inline-block"><a class="fab fa-telegram" href="tg://resolve?domain=tuufiagro" target="_blank" style="text-decoration: none;"></a></li>
+                            <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center; ">
+                                <ul class="socials" style="padding: 0; margin: 0; list-style-type: none; width: 50%; display: inline-block;">
+                                    <li style="display: inline-block ; margin-right: 3px; margin-left: 3px;"><a href="skype:+380919861009?call" target="_blank" style="display: block;"><img src="{{$message->embed(public_path() . '/images/email/skype.png')}}" alt="Skype" style="width: 40px; height: 40px;"></a></li>
+                                    <li style="display: inline-block ; margin-right: 3px; margin-left: 3px;"><a href="viber://chat?number=380919861009" target="_blank" style="display: block;"><img src="{{$message->embed(public_path() . '/images/email/viber.png')}}" alt="viber" style="width: 40px; height: 40px;"></a></li>
+                                    <li style="display: inline-block ; margin-right: 3px; margin-left: 3px;"><a href="https://api.whatsapp.com/send?phone=380919861009" target="_blank" style="display: block;"><img src="{{$message->embed(public_path() . '/images/email/whatsapp.png')}}" alt="whatsapp" style="width: 40px; height: 40px;"></a></li>
+                                    <li style="display: inline-block ; margin-right: 3px; margin-left: 3px;"><a href="tg://resolve?domain=tuufiagro" target="_blank" style="display: block;"><img src="{{$message->embed(public_path() . '/images/email/telegram.png')}}" alt="telegram" style="width: 40px; height: 40px;"></a></li>
+                                </ul>
+                                <ul class="socials" style="padding: 0; margin: 0; list-style-type: none; width: 50%; display: inline-block;">
+                                    <li style="display: inline-block ; margin-right: 3px; margin-left: 3px;"><a href="https://www.facebook.com" target="_blank" style="display: block;"><img src="{{$message->embed(public_path() . '/images/email/facebook.png')}}" alt="facebook" style="width: 40px; height: 40px;"></a></li>
+                                    <li style="display: inline-block ; margin-right: 3px; margin-left: 3px;"><a href="https://www.linkedin.com" target="_blank" style="display: block;"><img src="{{$message->embed(public_path() . '/images/email/lin.png')}}" alt="linkedin" style="width: 40px; height: 40px;"></a></li>
+                                    <li style="display: inline-block ; margin-right: 3px; margin-left: 3px;"><a href="https://twitter.com/AgroMax14" target="_blank" style="display: block;"><img src="{{$message->embed(public_path() . '/images/email/twitter.png')}}" alt="twitter" style="width: 40px; height: 40px;"></a></li>
+                                    <li style="display: inline-block ; margin-right: 3px; margin-left: 3px;"><a href="https://www.instagram.com" target="_blank" style="display: block;"><img src="{{$message->embed(public_path() . '/images/email/instagram.png')}}" alt="instagram" style="width: 37px; height: 37px;"></a></li>
                                 </ul>
                             </td>
                         </tr>
                         <tr>
-                            <td class="content-block powered-by" style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center;">
-                                Email:<a  href="mailto:sales@agromax.farm" style="color: #999999; font-size: 12px; text-align: center; text-decoration: none;">sales@agromax.farm</a>.
+                            <td class="content-block powered-by" style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 16px; color: #000000; text-align: center;">
+                                Email:<a class="link"  href="mailto:sales@agromax.farm" style="color: #999999; font-size: 16px; text-align: center; text-decoration: none;  margin-left: 5px;">sales@agromax.farm</a>
                             </td>
                         </tr>
                     </table>

@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
-    <meta name="keywords" content="{{strtolower($keywords)}}">
+    <div itemscope itemtype="http://schema.org/CreativeWork">
+        <meta itemprop="keywords" name="keywords" content="{{strtolower($keywords)}}">
+    </div>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Agromax</title>
@@ -23,7 +25,13 @@
         </div>
         <div class="row clearfix">
             <div class="header__bottom col-sm-12">
-                <div class="header__logo-wr"><a href="{{ Request::root() }}"><img src="{{asset('images/logo.jpg')}}" alt="Agromax"></a>
+                <div itemscope itemtype="http://schema.org/Brand">
+                    <h1 itemprop="name" style="display: none">agromax</h1>
+                    <div class="header__logo-wr">
+                        <a href="{{ Request::root() }}" itemprop="url">
+                            <img itemprop="logo" src="{{asset('images/logo.jpg')}}" alt="Agromax">
+                        </a>
+                    </div>
                 </div>
                 <div class="header__site-nav site-nav navbar navbar-default clearfix" role="navigation">
                     <div class="navbar-header">
